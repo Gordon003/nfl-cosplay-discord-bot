@@ -1,25 +1,42 @@
 # bot.py
 import os
-
 import discord
+from discord.ext import commands
 from dotenv import load_dotenv
-
-from utils import read_csv
+import asyncio
+from commands.nfl_commands import setup as setup_nfl
 
 load_dotenv()
 TOKEN = os.getenv('DISCORD_TOKEN')
 GUILD = os.getenv('DISCORD_GUILD')
 
-client = discord.Client(intents=discord.Intents.default())
+# Bot setup
+intents = discord.Intents.default()
+intents.message_content = True
+bot = commands.Bot(command_prefix='!', intents=intents)
 
-# setting up the bot
-teams_info = read_csv.get_teams_info()
-teams_character = read_csv.get_teams_character()
-
-@client.event
+@bot.event
 async def on_ready():
-    print(f'{client.user} has connected to Discord!')
-    for guild in client.guilds:
+    print(f'{bot.user} has connected to Discord!')
+    for guild in bot.guilds:
         print(f'Connected to: {guild.name} (id: {guild.id})')
 
-client.run(TOKEN)
+@bot.event
+async def on_command_error(ctx, error):
+    """Handle command errors"""
+    if isinstance(error, commands.CommandNotFound):
+        await ctx.send(f"❌ Command not found! Try `!help` for available commands.")
+    else:
+        print(f"Error: {error}")
+        await ctx.send(f"❌ An error occurred: {error}")
+
+async def setup_commands():
+    """Load all command modules"""
+    await setup_nfl(bot)
+
+async def main():
+    await setup_commands()
+    await bot.start(os.getenv('DISCORD_TOKEN'))
+
+if __name__ == "__main__":
+    asyncio.run(main())

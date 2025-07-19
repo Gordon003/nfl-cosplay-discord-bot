@@ -1,4 +1,5 @@
 import csv
+import os
 
 def read_from_csv(file_path):
     try:
@@ -16,4 +17,4 @@ def get_teams_info():
     return read_from_csv('data/nfl_teams.csv')
 
 def get_teams_character():
-    return read_from_csv('data/nfl_teams_character.csv')
+    return read_from_csv('data/nfl_characters.csv')
