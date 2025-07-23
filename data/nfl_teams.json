@@ -1,0 +1,130 @@
+{
+  "cardinals": {
+    "name": "Arizona Cardinals",
+    "abbreviation": "ARI"
+  },
+  "falcons": {
+    "name": "Atlanta Falcons",
+    "abbreviation": "ATL"
+  },
+  "ravens": {
+    "name": "Baltimore Ravens",
+    "abbreviation": "BAL"
+  },
+  "bills": {
+    "name": "Buffalo Bills",
+    "abbreviation": "BUF"
+  },
+  "panthers": {
+    "name": "Carolina Panthers",
+    "abbreviation": "CAR"
+  },
+  "bears": {
+    "name": "Chicago Bears",
+    "abbreviation": "CHI"
+  },
+  "bengals": {
+    "name": "Cincinnati Bengals",
+    "abbreviation": "CIN"
+  },
+  "browns": {
+    "name": "Cleveland Browns",
+    "abbreviation": "CLE"
+  },
+  "cowboys": {
+    "name": "Dallas Cowboys",
+    "abbreviation": "DAL"
+  },
+  "broncos": {
+    "name": "Denver Broncos",
+    "abbreviation": "DEN"
+  },
+  "lions": {
+    "name": "Detroit Lions",
+    "abbreviation": "DET"
+  },
+  "packers": {
+    "name": "Green Bay Packers",
+    "abbreviation": "GB"
+  },
+  "texans": {
+    "name": "Houston Texans",
+    "abbreviation": "HOU"
+  },
+  "colts": {
+    "name": "Indianapolis Colts",
+    "abbreviation": "IND"
+  },
+  "jaguars": {
+    "name": "Jacksonville Jaguars",
+    "abbreviation": "JAX"
+  },
+  "chiefs": {
+    "name": "Kansas City Chiefs",
+    "abbreviation": "KC"
+  },
+  "raiders": {
+    "name": "Las Vegas Raiders",
+    "abbreviation": "LV"
+  },
+  "chargers": {
+    "name": "Los Angeles Chargers",
+    "abbreviation": "LAC"
+  },
+  "rams": {
+    "name": "Los Angeles Rams",
+    "abbreviation": "LAR"
+  },
+  "dolphins": {
+    "name": "Miami Dolphins",
+    "abbreviation": "MIA"
+  },
+  "vikings": {
+    "name": "Minnesota Vikings",
+    "abbreviation": "MIN"
+  },
+  "patriots": {
+    "name": "New England Patriots",
+    "abbreviation": "NE"
+  },
+  "saints": {
+    "name": "New Orleans Saints",
+    "abbreviation": "NO"
+  },
+  "giants": {
+    "name": "New York Giants",
+    "abbreviation": "NYG"
+  },
+  "jets": {
+    "name": "New York Jets",
+    "abbreviation": "NYJ"
+  },
+  "eagles": {
+    "name": "Philadelphia Eagles",
+    "abbreviation": "PHI"
+  },
+  "steelers": {
+    "name": "Pittsburgh Steelers",
+    "abbreviation": "PIT"
+  },
+  "49ers": {
+    "name": "San Francisco 49ers",
+    "abbreviation": "SF"
+  },
+  "seahawks": {
+    "name": "Seattle Seahawks",
+    "abbreviation": "SEA"
+  },
+  "buccaneers": {
+    "name": "Tampa Bay Buccaneers",
+    "abbreviation": "TB"
+  },
+  "titans": {
+    "name": "Tennessee Titans",
+    "abbreviation": "TEN"
+  },
+  "commanders": {
+    "name": "Washington Commanders",
+    "abbreviation": "WAS"
+  }
+}

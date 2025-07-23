@@ -1,0 +1,237 @@
+{
+    "alejandro": {
+        "name": "Alejandro",
+        "nickname": "Al",
+        "gender": "Male"
+    },
+    "anne_maria": {
+        "name": "Anne Maria",
+        "nickname": "Jersey Girl",
+        "gender": "Female"
+    },
+    "beth": {
+        "name": "Beth",
+        "nickname": "The Wannabe",
+        "gender": "Female"
+    },
+    "brick": {
+        "name": "Brick",
+        "nickname": "The Cadet",
+        "gender": "Male"
+    },
+    "bridgette": {
+        "name": "Bridgette",
+        "nickname": "The Surfer Girl",
+        "gender": "Female"
+    },
+    "cameron": {
+        "name": "Cameron",
+        "nickname": "The Bubble Boy",
+        "gender": "Male"
+    },
+    "carrie": {
+        "name": "Carrie",
+        "nickname": "The Racer",
+        "gender": "Female"
+    },
+    "chef": {
+        "name": "Chef Hatchet",
+        "nickname": "Chef",
+        "gender": "Male"
+    },
+    "courtney": {
+        "name": "Courtney",
+        "nickname": "The Type A",
+        "gender": "Female"
+    },
+    "crimson": {
+        "name": "Crimson",
+        "nickname": "The Goth",
+        "gender": "Female"
+    },
+    "dakota": {
+        "name": "Dakota",
+        "nickname": "The Fame-Monger",
+        "gender": "Female"
+    },
+    "dawn": {
+        "name": "Dawn",
+        "nickname": "The Moonchild",
+        "gender": "Female"
+    },
+    "duncan": {
+        "name": "Duncan",
+        "nickname": "The Delinquent",
+        "gender": "Male"
+    },
+    "ella": {
+        "name": "Ella",
+        "nickname": "The Fairytale Princess",
+        "gender": "Female"
+    },
+    "geoff": {
+        "name": "Geoff",
+        "nickname": "The Party Guy",
+        "gender": "Male"
+    },
+    "gwen": {
+        "name": "Gwen",
+        "nickname": "The Loner",
+        "gender": "Female"
+    },
+    "harold": {
+        "name": "Harold",
+        "nickname": "The Dork",
+        "gender": "Male"
+    },
+    "heather": {
+        "name": "Heather",
+        "nickname": "The Queen Bee",
+        "gender": "Female"
+    },
+    "izzy": {
+        "name": "Izzy",
+        "nickname": "The Psycho Hose Beast",
+        "gender": "Female"
+    },
+    "jasmine": {
+        "name": "Jasmine",
+        "nickname": "The Outback Survivalist",
+        "gender": "Female"
+    },
+    "jen": {
+        "name": "Jen",
+        "nickname": "The Fashionista Twin",
+        "gender": "Female"
+    },
+    "jo": {
+        "name": "Jo",
+        "nickname": "The Take-No-Prisoners Jockette",
+        "gender": "Female"
+    },
+    "josee": {
+        "name": "Josee",
+        "nickname": "The Ice Dancer",
+        "gender": "Female"
+    },
+    "julia": {
+        "name": "Julia",
+        "nickname": "The Influencer",
+        "gender": "Female"
+    },
+    "kitty": {
+        "name": "Kitty",
+        "nickname": "The Optimist",
+        "gender": "Female"
+    },
+    "leonard": {
+        "name": "Leonard",
+        "nickname": "The LARPer",
+        "gender": "Male"
+    },
+    "leshawna": {
+        "name": "Leshawna",
+        "nickname": "The Sister with 'Tude",
+        "gender": "Female"
+    },
+    "lightning": {
+        "name": "Lightning",
+        "nickname": "The Athlete",
+        "gender": "Male"
+    },
+    "lindsay": {
+        "name": "Lindsay",
+        "nickname": "The Dumb Princess",
+        "gender": "Female"
+    },
+    "max": {
+        "name": "Max",
+        "nickname": "The Evil Mastermind",
+        "gender": "Male"
+    },
+    "mike": {
+        "name": "Mike",
+        "nickname": "The Multiple Personality Disorder",
+        "gender": "Male"
+    },
+    "mk": {
+        "name": "MK",
+        "nickname": "The Hacker",
+        "gender": "Female"
+    },
+    "noah": {
+        "name": "Noah",
+        "nickname": "The Schemer",
+        "gender": "Male"
+    },
+    "owen": {
+        "name": "Owen",
+        "nickname": "The Party Guy",
+        "gender": "Male"
+    },
+    "priya": {
+        "name": "Priya",
+        "nickname": "The Overachiever",
+        "gender": "Female"
+    },
+    "rodney": {
+        "name": "Rodney",
+        "nickname": "The Gentle Giant",
+        "gender": "Male"
+    },
+    "sam": {
+        "name": "Sam",
+        "nickname": "The Nice-Guy Gamer",
+        "gender": "Male"
+    },
+    "samey": {
+        "name": "Samey",
+        "nickname": "The Cheerful Twin",
+        "gender": "Female"
+    },
+    "scarlett": {
+        "name": "Scarlett",
+        "nickname": "The Quiet Genius",
+        "gender": "Female"
+    },
+    "scott": {
+        "name": "Scott",
+        "nickname": "The Devious",
+        "gender": "Male"
+    },
+    "shawn": {
+        "name": "Shawn",
+        "nickname": "The Conspiracy Nut",
+        "gender": "Male"
+    },
+    "sky": {
+        "name": "Sky",
+        "nickname": "The Olympian-in-Training",
+        "gender": "Female"
+    },
+    "sugar": {
+        "name": "Sugar",
+        "nickname": "The Pageant Queen",
+        "gender": "Female"
+    },
+    "topher": {
+        "name": "Topher",
+        "nickname": "The Chris Wannabe",
+        "gender": "Male"
+    },
+    "trent": {
+        "name": "Trent",
+        "nickname": "The Cool Guy",
+        "gender": "Male"
+    },
+    "tyler": {
+        "name": "Tyler",
+        "nickname": "The Jock",
+        "gender": "Male"
+    },
+    "zoey": {
+        "name": "Zoey",
+        "nickname": "The Indie Chick",
+        "gender": "Female"
+    }
+}

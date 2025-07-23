@@ -14,14 +14,12 @@ class NFLCommands(commands.Cog, name="NFL"):
     @commands.command(
         name='team',
         help='Get the character assigned to a particular team',
-        brief='Get character assigned to that team',
-        description='This command finds which character is assigned to that particular team',
         usage='<team_name>'
     )
     async def get_team_character(self, ctx, *, team_name):
         assigned_character = None
         for char in self.characters_data[1:]:
-            if char[0] == team_name:
+            if char[0].lower() == team_name.lower():
                 assigned_character = char[1]
                 break
         if assigned_character:
@@ -33,7 +31,6 @@ class NFLCommands(commands.Cog, name="NFL"):
         name='teams',
         help='Output all NFL teams',
         brief='Output all NFL teams',
-        description='This command outputs all NFL teams'
     )
     async def get_all_teams(self, ctx):
         team_name_list = []
@@ -44,8 +41,6 @@ class NFLCommands(commands.Cog, name="NFL"):
     @commands.command(
         name='character-nfl-teams',
         help='Output a table of [team, character]',
-        brief='Output a table of [team, character]',
-        description='This command outputs pairs of [team, character]'
     )
     async def get_all_teams_character(self, ctx):
         
@@ -62,5 +57,5 @@ class NFLCommands(commands.Cog, name="NFL"):
         await ctx.send(f"```\n{output}\n```")
 
 
-async def setup(bot):
-    await bot.add_cog(NFLCommands(bot))
+async def setup(bot, teams_data, characters_data):
+    await bot.add_cog(NFLCommands(bot, teams_data, characters_data))

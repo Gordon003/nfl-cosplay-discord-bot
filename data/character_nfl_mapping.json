@@ -1,0 +1,130 @@
+{
+    "ella": {
+        "name": "Ella",
+        "assigned_team": "cardinals"
+    },
+    "dakota": {
+        "name": "Dakota",
+        "assigned_team": "falcons"
+    },
+    "gwen": {
+        "name": "Gwen",
+        "assigned_team": "ravens"
+    },
+    "owen": {
+        "name": "Owen",
+        "assigned_team": "bills"
+    },
+    "kitty": {
+        "name": "Kitty",
+        "assigned_team": "panthers"
+    },
+    "izzy": {
+        "name": "Izzy",
+        "assigned_team": "bears"
+    },
+    "samey": {
+        "name": "Samey",
+        "assigned_team": "bengals"
+    },
+    "scott": {
+        "name": "Scott",
+        "assigned_team": "browns"
+    },
+    "geoff": {
+        "name": "Geoff",
+        "assigned_team": "cowboys"
+    },
+    "rodney": {
+        "name": "Rodney",
+        "assigned_team": "broncos"
+    },
+    "courtney": {
+        "name": "Courtney",
+        "assigned_team": "lions"
+    },
+    "carrie": {
+        "name": "Carrie",
+        "assigned_team": "packers"
+    },
+    "alejandro": {
+        "name": "Alejandro",
+        "assigned_team": "texans"
+    },
+    "priya": {
+        "name": "Priya",
+        "assigned_team": "colts"
+    },
+    "jasmine": {
+        "name": "Jasmine",
+        "assigned_team": "jaguars"
+    },
+    "zoey": {
+        "name": "Zoey",
+        "assigned_team": "chiefs"
+    },
+    "crimson": {
+        "name": "Crimson",
+        "assigned_team": "raiders"
+    },
+    "lightning": {
+        "name": "Lightning",
+        "assigned_team": "chargers"
+    },
+    "julia": {
+        "name": "Julia",
+        "assigned_team": "rams"
+    },
+    "bridgette": {
+        "name": "Bridgette",
+        "assigned_team": "dolphins"
+    },
+    "leonard": {
+        "name": "Leonard",
+        "assigned_team": "vikings"
+    },
+    "brick": {
+        "name": "Brick",
+        "assigned_team": "patriots"
+    },
+    "leshawna": {
+        "name": "Leshawna",
+        "assigned_team": "saints"
+    },
+    "jen": {
+        "name": "Jen",
+        "assigned_team": "giants"
+    },
+    "anne_maria": {
+        "name": "Anne Maria",
+        "assigned_team": "jets"
+    },
+    "dawn": {
+        "name": "Dawn",
+        "assigned_team": "eagles"
+    },
+    "mk": {
+        "name": "MK",
+        "assigned_team": "steelers"
+    },
+    "josee": {
+        "name": "Josee",
+        "assigned_team": "49ers"
+    },
+    "duncan": {
+        "name": "Duncan",
+        "assigned_team": "seahawks"
+    },
+    "heather": {
+        "name": "Heather",
+        "assigned_team": "buccaneers"
+    },
+    "trent": {
+        "name": "Trent",
+        "assigned_team": "titans"
+    },
+    "tyler": {
+        "name": "Tyler",
+        "assigned_team": "commanders"
+    }
+}
