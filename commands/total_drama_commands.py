@@ -1,6 +1,7 @@
 import discord
 from discord.ext import commands
 from table2ascii import table2ascii, PresetStyle
+from utils import parse_discord_arg
 import shlex
 
 class TotalDramaCommands(commands.Cog):
@@ -68,51 +69,32 @@ class TotalDramaCommands(commands.Cog):
         usage='[--sort-by team|character]',
         aliases=['all', 'assignments']
     )
-    async def show_assignments(self, ctx, *, args: str = ""):
+    async def show_team_character_assignments(self, ctx, *, args: str = ""):
         """Get all teams and characters assigned to them"""
 
-        # Parse arguments for flags
-        sort_by = "team"  # default
-        
-        if args:
-            try:
-                # Split arguments safely
-                arg_list = shlex.split(args)
-                
-                i = 0
-                while i < len(arg_list):
-                    arg = arg_list[i]
-                    
-                    # Handle --sort-by
-                    if arg == "--sort-by" and i + 1 < len(arg_list):
-                        sort_by = arg_list[i + 1].lower()
-                        i += 2
-                    elif arg.startswith("--sort-by="):
-                        sort_by = arg.split("=", 1)[1].lower()
-                        i += 1
-                    
-                    else:
-                        i += 1
-
-            except Exception as e:
-                await ctx.send(f"❌ Error parsing arguments: {e}")
-                return
+        # Get sort_by param from 
+        try:
+            sort_by =parse_discord_arg.parse_discord_argument(args, "--sort-by")
+            if sort_by is None:
+                sort_by = "team"
+        except Exception as e:
+            sort_by = "team" # default
 
         # Validate sort_by parameter
         valid_sorts = {
             'team': 'team_name',
             't': 'team_name',
             'character': 'character_name',
-            'char': 'character_name',
             'c': 'character_name'
         }
 
         if sort_by not in valid_sorts:
             await ctx.send(f"❌ Invalid --sort-by parameter: {sort_by}")
             return
-        else:
-            sort_by = valid_sorts[sort_by]
+            
+        sort_by = valid_sorts[sort_by]
 
+        # get each character and team info
         character_team_map_list = []
         for character_key in self.bot.characters_nfl_mapping_data.keys():
             character_name = self.bot.total_drama_characters_data[character_key]["name"]
@@ -125,6 +107,7 @@ class TotalDramaCommands(commands.Cog):
         elif sort_by == 'character_name':
             character_team_map_list.sort(key=lambda x: x[0])
 
+        # display in discord-friendly table
         output = table2ascii(
             header=["Character", "Team"],
             body=character_team_map_list,
