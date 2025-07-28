@@ -1,3 +1,4 @@
+import random
 import discord
 from discord.ext import commands
 from table2ascii import table2ascii, PresetStyle
@@ -67,7 +68,6 @@ class TotalDramaCommands(commands.Cog):
         name='list',
         help='Show all character-team assignments with optional sorting and filtering',
         usage='[--sort-by team|character]',
-        aliases=['all', 'assignments']
     )
     async def show_team_character_assignments(self, ctx, *, args: str = ""):
         """Get all teams and characters assigned to them"""
@@ -113,8 +113,29 @@ class TotalDramaCommands(commands.Cog):
             body=character_team_map_list,
             style=PresetStyle.thin_box
         )
-
         await ctx.send(f"```\n{output}\n```")
 
+    @total_drama.command(
+        name='random',
+        help='Get a random pairing of character and team',
+    )
+    async def show_random_team_character(self, ctx):
+        """Get all teams and characters assigned to them"""
+
+        # Get random character and team key
+        rand_char_key = random.choice(list(self.bot.characters_nfl_mapping_data.keys()))
+        rand_team_key = self.bot.characters_nfl_mapping_data[rand_char_key]["assigned_team"] 
+
+        # Get character and team info
+        character_name = self.bot.total_drama_characters_data[rand_char_key]["name"]
+        team_name = self.bot.nfl_teams_data[rand_team_key]["name"]
+
+        embed = discord.Embed(
+            title=f"🏈 {team_name}",
+            description=f"**Character:** {character_name}",
+            color=0x00ff00
+        )
+        await ctx.send(embed=embed)
+    
 async def setup(bot):
     await bot.add_cog(TotalDramaCommands(bot))
