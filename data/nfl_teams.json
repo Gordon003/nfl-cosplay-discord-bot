@@ -3,192 +3,256 @@
     "name": "Arizona Cardinals",
     "abbreviation": "ARI",
     "conference": "NFC",
-    "division": "West"
+    "division": "West",
+    "id": 92765,
+    "logo": "https://highlightly.net/american-football/images/teams/92765.png"
   },
   "falcons": {
     "name": "Atlanta Falcons",
     "abbreviation": "ATL",
     "conference": "NFC",
-    "division": "South"
+    "division": "South",
+    "id": 92736,
+    "logo": "https://highlightly.net/american-football/images/teams/92736.png"
   },
   "ravens": {
     "name": "Baltimore Ravens",
     "abbreviation": "BAL",
     "conference": "AFC",
-    "division": "North"
+    "division": "North",
+    "id": 92743,
+    "logo": "https://highlightly.net/american-football/images/teams/92743.png"
   },
   "bills": {
     "name": "Buffalo Bills",
     "abbreviation": "BUF",
     "conference": "AFC",
-    "division": "East"
+    "division": "East",
+    "id": 92740,
+    "logo": "https://highlightly.net/american-football/images/teams/92740.png"
   },
   "panthers": {
     "name": "Carolina Panthers",
     "abbreviation": "CAR",
     "conference": "NFC",
-    "division": "South"
+    "division": "South",
+    "id": 92741,
+    "logo": "https://highlightly.net/american-football/images/teams/92741.png"
   },
   "bears": {
     "name": "Chicago Bears",
     "abbreviation": "CHI",
     "conference": "NFC",
-    "division": "North"
+    "division": "North",
+    "id": 92733,
+    "logo": "https://highlightly.net/american-football/images/teams/92733.png"
   },
   "bengals": {
     "name": "Cincinnati Bengals",
     "abbreviation": "CIN",
     "conference": "AFC",
-    "division": "North"
+    "division": "North",
+    "id": 92730,
+    "logo": "https://highlightly.net/american-football/images/teams/92730.png"
   },
   "browns": {
     "name": "Cleveland Browns",
     "abbreviation": "CLE",
     "conference": "AFC",
-    "division": "North"
+    "division": "North",
+    "id": 92745,
+    "logo": "https://highlightly.net/american-football/images/teams/92745.png"
   },
   "cowboys": {
     "name": "Dallas Cowboys",
     "abbreviation": "DAL",
     "conference": "NFC",
-    "division": "East"
+    "division": "East",
+    "id": 92746,
+    "logo": "https://highlightly.net/american-football/images/teams/92746.png"
   },
   "broncos": {
     "name": "Denver Broncos",
     "abbreviation": "DEN",
     "conference": "AFC",
-    "division": "West"
+    "division": "West",
+    "id": 92764,
+    "logo": "https://highlightly.net/american-football/images/teams/92764.png"
   },
   "lions": {
     "name": "Detroit Lions",
     "abbreviation": "DET",
     "conference": "NFC",
-    "division": "North"
+    "division": "North",
+    "id": 92754,
+    "logo": "https://highlightly.net/american-football/images/teams/92754.png"
   },
   "packers": {
     "name": "Green Bay Packers",
     "abbreviation": "GB",
     "conference": "NFC",
-    "division": "North"
+    "division": "North",
+    "id": 92742,
+    "logo": "https://highlightly.net/american-football/images/teams/92742.png"
   },
   "texans": {
     "name": "Houston Texans",
     "abbreviation": "HOU",
     "conference": "AFC",
-    "division": "South"
+    "division": "South",
+    "id": 92748,
+    "logo": "https://highlightly.net/american-football/images/teams/92748.png"
   },
   "colts": {
     "name": "Indianapolis Colts",
     "abbreviation": "IND",
     "conference": "AFC",
-    "division": "South"
+    "division": "South",
+    "id": 92731,
+    "logo": "https://highlightly.net/american-football/images/teams/92731.png"
   },
   "jaguars": {
     "name": "Jacksonville Jaguars",
     "abbreviation": "JAX",
     "conference": "AFC",
-    "division": "South"
+    "division": "South",
+    "id": 92737,
+    "logo": "https://highlightly.net/american-football/images/teams/92737.png"
   },
   "chiefs": {
     "name": "Kansas City Chiefs",
     "abbreviation": "KC",
     "conference": "AFC",
-    "division": "West"
+    "division": "West",
+    "id": 92732,
+    "logo": "https://highlightly.net/american-football/images/teams/92732.png"
   },
   "raiders": {
     "name": "Las Vegas Raiders",
     "abbreviation": "LV",
     "conference": "AFC",
-    "division": "West"
+    "division": "West",
+    "id": 92738,
+    "logo": "https://highlightly.net/american-football/images/teams/92738.png"
   },
   "chargers": {
     "name": "Los Angeles Chargers",
     "abbreviation": "LAC",
     "conference": "AFC",
-    "division": "West"
+    "division": "West",
+    "id": 92747,
+    "logo": "https://highlightly.net/american-football/images/teams/92747.png"
   },
   "rams": {
     "name": "Los Angeles Rams",
     "abbreviation": "LAR",
     "conference": "NFC",
-    "division": "West"
+    "division": "West",
+    "id": 92749,
+    "logo": "https://highlightly.net/american-football/images/teams/92749.png"
   },
   "dolphins": {
     "name": "Miami Dolphins",
     "abbreviation": "MIA",
     "conference": "AFC",
-    "division": "East"
+    "division": "East",
+    "id": 92735,
+    "logo": "https://highlightly.net/american-football/images/teams/92735.png"
   },
   "vikings": {
     "name": "Minnesota Vikings",
     "abbreviation": "MIN",
     "conference": "NFC",
-    "division": "North"
+    "division": "North",
+    "id": 92751,
+    "logo": "https://highlightly.net/american-football/images/teams/92751.png"
   },
   "patriots": {
     "name": "New England Patriots",
     "abbreviation": "NE",
     "conference": "AFC",
-    "division": "East"
+    "division": "East",
+    "id": 92767,
+    "logo": "https://highlightly.net/american-football/images/teams/92767.png"
   },
   "saints": {
     "name": "New Orleans Saints",
     "abbreviation": "NO",
     "conference": "NFC",
-    "division": "South"
+    "division": "South",
+    "id": 92768,
+    "logo": "https://highlightly.net/american-football/images/teams/92768.png"
   },
   "giants": {
     "name": "New York Giants",
     "abbreviation": "NYG",
     "conference": "NFC",
-    "division": "East"
+    "division": "East",
+    "id": 92753,
+    "logo": "https://highlightly.net/american-football/images/teams/92753.png"
   },
   "jets": {
     "name": "New York Jets",
     "abbreviation": "NYJ",
     "conference": "AFC",
-    "division": "East"
+    "division": "East",
+    "id": 92752,
+    "logo": "https://highlightly.net/american-football/images/teams/92752.png"
   },
   "eagles": {
     "name": "Philadelphia Eagles",
     "abbreviation": "PHI",
     "conference": "NFC",
-    "division": "East"
+    "division": "East",
+    "id": 92750,
+    "logo": "https://highlightly.net/american-football/images/teams/92750.png"
   },
   "steelers": {
     "name": "Pittsburgh Steelers",
     "abbreviation": "PIT",
     "conference": "AFC",
-    "division": "North"
+    "division": "North",
+    "id": 92755,
+    "logo": "https://highlightly.net/american-football/images/teams/92755.png"
   },
   "49ers": {
     "name": "San Francisco 49ers",
     "abbreviation": "SF",
     "conference": "NFC",
-    "division": "West"
+    "division": "West",
+    "id": 92739,
+    "logo": "https://highlightly.net/american-football/images/teams/92739.png"
   },
   "seahawks": {
     "name": "Seattle Seahawks",
     "abbreviation": "SEA",
     "conference": "NFC",
-    "division": "West"
+    "division": "West",
+    "id": 92744,
+    "logo": "https://highlightly.net/american-football/images/teams/92744.png"
   },
   "buccaneers": {
     "name": "Tampa Bay Buccaneers",
     "abbreviation": "TB",
     "conference": "NFC",
-    "division": "South"
+    "division": "South",
+    "id": 92734,
+    "logo": "https://highlightly.net/american-football/images/teams/92734.png"
   },
   "titans": {
     "name": "Tennessee Titans",
     "abbreviation": "TEN",
     "conference": "AFC",
-    "division": "South"
+    "division": "South",
+    "id": 92769,
+    "logo": "https://highlightly.net/american-football/images/teams/92769.png"
   },
   "commanders": {
     "name": "Washington Commanders",
     "abbreviation": "WAS",
     "conference": "NFC",
-    "division": "East"
+    "division": "East",
+    "id": 92766,
+    "logo": "https://highlightly.net/american-football/images/teams/92766.png"
   }
 }
