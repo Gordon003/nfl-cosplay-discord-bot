@@ -1,61 +1,78 @@
-from discord import Color, Embed
+import discord
 from discord.ext import commands
-from utils import read_csv
 from table2ascii import table2ascii, PresetStyle
+from utils.nfl_utils import filter_next_games_by_team_id
+from utils.date import convert_date
 
-class NFLCommands(commands.Cog, name="NFL"):
-    """NFL-related commands"""
+class NFLCommands(commands.Cog, name="NFL Commands"):
     
     def __init__(self, bot):
         self.bot = bot
-        self.teams_data = read_csv.get_teams_info()
-        self.characters_data = read_csv.get_teams_character()
+
+    @commands.group(name='nfl', invoke_without_command=True)
+    async def nfl(self, ctx):
+        if ctx.invoked_subcommand is None:
+            embed = discord.Embed(
+                title="🏈 NFL Commands",
+                description="Use these commands to explore NFL teams and characters!",
+                color=0x800080
+            )
+            embed.add_field(
+                name="Commands:",
+                value="`!nfl team <team_name>` - Get character for a team\n"
+                      "`!nfl character <character_name>` - Get team for a character\n",
+                inline=False
+            )
+            embed.add_field(
+                name="Examples:",
+                value="`!nfl team cowboys`\n"
+                      "`!nfl character heather`\n",
+                inline=False
+            )
+            await ctx.send(embed=embed)
     
-    @commands.command(
-        name='team',
-        help='Get the character assigned to a particular team',
+    @nfl.command(
+        name='schedule',
+        help='Get team upcoming schedule',
         usage='<team_name>'
     )
-    async def get_team_character(self, ctx, *, team_name):
-        assigned_character = None
-        for char in self.characters_data[1:]:
-            if char[0].lower() == team_name.lower():
-                assigned_character = char[1]
-                break
-        if assigned_character:
-            await ctx.send(f"Team '{team_name}' has been assigned character: {assigned_character}")
-        else:
-            await ctx.send(f"Team '{team_name}' not found!")
+    async def get_team_schedule(self, ctx, *, team_name):
+        team_name_lower = team_name.lower().replace(' ', '_')
+        team_data = self.bot.nfl_teams_data[team_name_lower]
+        team_id = team_data["id"]
+        try:
+            params = {
+                'league': 'NFL',
+                'season': 2025
+            }
+            response = self.bot.cached_nfl_request("/matches", params)
 
-    @commands.command(
-        name='teams',
-        help='Output all NFL teams',
-        brief='Output all NFL teams',
-    )
-    async def get_all_teams(self, ctx):
-        team_name_list = []
-        for team in self.teams_data[1:]:
-            team_name_list.append(team[0])
-        await ctx.send(f"All teams name: {sorted(team_name_list)}")
+            games = filter_next_games_by_team_id(response["data"], team_id)
 
-    @commands.command(
-        name='character-nfl-teams',
-        help='Output a table of [team, character]',
-    )
-    async def get_all_teams_character(self, ctx):
-        
-        characters_list = []
-        for character in self.characters_data[1:]:
-            characters_list.append([character[0], character[1]])
+            output_value_table = []
+            for game in games:
+                output_value_table.append([convert_date(game["date"]), game["homeTeam"]["name"], game["awayTeam"]["name"]])
 
-        output = table2ascii(
-            header=["Team", "Character"],
-            body=characters_list,
-            style=PresetStyle.thin_box
-        )
+            # display in discord-friendly table
+            output = table2ascii(
+                header=["Date", "Home", "Away"],
+                body=output_value_table,
+                style=PresetStyle.thin_box
+            )
 
-        await ctx.send(f"```\n{output}\n```")
+            # get total drama charater
+            total_drama_char_id = self.bot.get_character_key_by_team(team_name_lower)
+            total_drama_char_name = self.bot.total_drama_characters_data[total_drama_char_id]["name"]
+
+            embed = discord.Embed(
+                title=f"🏈 Upcoming matches for {total_drama_char_name}'s {team_name.upper()}",
+                description=f"```\n{output}\n```",
+            )
+            await ctx.send(embed=embed)
+        except Exception as e:
+            print("error", e)
+            await ctx.send(f"❌ An error occurred: {e}")
 
 
-async def setup(bot, teams_data, characters_data):
-    await bot.add_cog(NFLCommands(bot, teams_data, characters_data))
+async def setup(bot):
+    await bot.add_cog(NFLCommands(bot))

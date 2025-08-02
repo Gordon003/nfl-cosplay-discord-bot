@@ -3,9 +3,8 @@ import discord
 from discord.ext import commands
 from table2ascii import table2ascii, PresetStyle
 from utils import parse_discord_arg
-import shlex
 
-class TotalDramaCommands(commands.Cog):
+class TotalDramaCommands(commands.Cog, name="Total Drama Commands"):
 
     def __init__(self, bot):
         self.bot = bot

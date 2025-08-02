@@ -3,3 +3,4 @@
 **/*.pyc
 **/*.pyo
 **/cache/
+http_cache.sqlite
