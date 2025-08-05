@@ -7,6 +7,7 @@ from utils.read_json import load_nfl_teams, load_characters_nfl_mapping, load_to
 import asyncio
 from utils.api_cache import APICache
 from utils.nfl_api_utils import cached_request
+from loguru import logger
 
 # Load env
 load_dotenv()
@@ -27,11 +28,11 @@ class MyBot(commands.Bot):
         self.nfl_teams_data = load_nfl_teams()
         self.characters_nfl_mapping_data = load_characters_nfl_mapping()
         self.total_drama_characters_data = load_total_drama_characters()
-        print("✅ Loaded Total Drama & NFL data")
+        logger.debug("✅ Loaded Total Drama & NFL data")
 
         # load cache
         self.cache = APICache(cache_dir="./cache", expiration_hours=24)
-        print("✅ Loaded API Cache")
+        logger.debug("✅ Loaded API Cache")
 
     def cached_nfl_request(self, url, params=None):
 
@@ -44,13 +45,13 @@ class MyBot(commands.Bot):
         try:
             return cached_request(self.cache, "get", full_url, headers=header, params=params)
         except Exception as e:
-            print(f"Error: {e}")
+            logger.error(f"Error: {e}")
             raise Exception(f"Error: {e}")
 
     async def on_ready(self):
-        print(f'{self.user} has connected to Discord!')
+        logger.info(f'{self.user} has connected to Discord!')
         for guild in self.guilds:
-            print(f'Connected to: {guild.name} (id: {guild.id})')
+            logger.info(f'Connected to: {guild.name} (id: {guild.id})')
         
         # Load cogs after bot is ready
         await self.load_cogs()
@@ -64,7 +65,7 @@ class MyBot(commands.Bot):
         elif isinstance(error, commands.MissingPermissions):
             await ctx.send(f"❌ You don't have permission to use this command!")
         else:
-            print(f"Error: {error}")
+            logger.info(f"Error: {error}")
             await ctx.send(f"❌ An error occurred: {error}")
 
     async def load_cogs(self):
@@ -72,14 +73,14 @@ class MyBot(commands.Bot):
         try:
             # Load Total Drama commands
             await self.load_extension('commands.total_drama_commands')
-            print("✅ Loaded Total Drama commands")
+            logger.info("✅ Loaded Total Drama commands")
             
             # Load NFL commands (when ready)
             await self.load_extension('commands.nfl_commands')
-            print("✅ Loaded NFL commands")
+            logger.info("✅ Loaded NFL commands")
             
         except Exception as e:
-            print(f"❌ Failed to load cogs: {e}")
+            logger.error(f"❌ Failed to load cogs: {e}")
 
 # Create bot instance
 bot = MyBot(command_prefix='!', intents=intents)
@@ -89,7 +90,7 @@ async def main():
     try:
         await bot.start(TOKEN)
     except Exception as e:
-        print(f"❌ Failed to start bot: {e}")
+        logger.error(f"❌ Failed to start bot: {e}")
 
 if __name__ == "__main__":
     asyncio.run(main())

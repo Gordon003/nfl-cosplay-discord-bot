@@ -1,17 +1,18 @@
 import requests
+from loguru import logger
 
 def cached_request(
     cache, method, url, headers=None, params=None, json=None, use_cache=True, api_timeout=30
 ):
     """Make a request with caching for GET requests"""
-    print(f"Making request: {url}")
+    logger.debug(f"Making request: {url}")
     if method.lower() == "get" and use_cache:
         # Try to get from cache first
         cached_response = cache.get(url, params)
         if cached_response is not None:
-            print(f"CACHE HIT: {url}")
+            logger.debug(f"CACHE HIT: {url}")
             return cached_response
-        print(f"CACHE MISS: {url}")
+        logger.debug(f"CACHE MISS: {url}")
     # Make request - raise exception if timed out
     try:
         if method.lower() == "get":
@@ -25,19 +26,19 @@ def cached_request(
         try:
             result = response.json()
             cache.set(url, result, params)
-            print(f"CACHE SAVED: {url}")
+            logger.debug(f"CACHE SAVED: {url}")
             return result
         except Exception as e:
-            print(f"Error parsing JSON or caching: {str(e)}")
+            logger.error(f"Error parsing JSON or caching: {str(e)}")
             return None
     elif response.status_code == 200:
         try:
             return response.json()
         except Exception as e:
-            print(f"Error parsing JSON: {str(e)}")
+            logger.error(f"Error parsing JSON: {str(e)}")
             return None
     else:
-        print(f"Request failed: {response.status_code} - {response.text}")
+        logger.error(f"Request failed: {response.status_code} - {response.text}")
         return None
     
 def format_time(seconds):

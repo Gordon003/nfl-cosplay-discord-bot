@@ -1,14 +1,15 @@
 import json
+from loguru import logger
 
 def load_json(file_path):
     try:
         with open(file_path, 'r') as f:
             return json.load(f)
     except FileNotFoundError:
-        print(f"❌ Teams file not found: {file_path}")
+        logger.error(f"❌ Teams file not found: {file_path}")
         return None
     except json.JSONDecodeError as e:
-        print(f"❌ Invalid JSON for {file_path}: {e}")
+        logger.error(f"❌ Invalid JSON for {file_path}: {e}")
         return None
 
 

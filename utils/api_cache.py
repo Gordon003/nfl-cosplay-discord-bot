@@ -2,6 +2,7 @@ import hashlib
 import os
 import pickle
 from datetime import datetime, timedelta
+from loguru import logger
 class APICache:
 
     def __init__(self, cache_dir="./cache", expiration_hours=24):
@@ -29,9 +30,9 @@ class APICache:
                 if datetime.now() - cached_data["timestamp"] < self.expiration_delta:
                     return cached_data["data"]
                 else:
-                    print(f"Cache expired for {url}")
+                    logger.info(f"Cache expired for {url}")
             except Exception as e:
-                print(f"Error loading cache: {e}")
+                logger.error(f"Error loading cache: {e}")
 
         return None
     
@@ -45,7 +46,7 @@ class APICache:
                 pickle.dump(cache_data, f)
             return True
         except Exception as e:
-            print(f"Error saving cache: {e}")
+            logger.error(f"Error saving cache: {e}")
             return False
         
     def clear(self, url=None, params=None):
@@ -58,6 +59,6 @@ class APICache:
         else:
             for file in os.listdir(self.cache_dir):
                 os.remove(os.path.join(self.cache_dir, file))
-            print("Cache cleared")
+            logger.info("Cache cleared")
             return True
         return False

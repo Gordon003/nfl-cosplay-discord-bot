@@ -1,6 +1,7 @@
 from datetime import datetime
 from time import timezone
 
+from loguru import logger
 from requests_cache import timedelta
 
 def get_next_scheduled_games_by_team_id(games_list, team_id, num_games=5):
@@ -47,7 +48,7 @@ def get_gameweek_by_offset(games_data, offset=0):
                     
         except (ValueError, KeyError) as e:
             # Skip games with invalid date format
-            print(f"Skipping game with invalid date: {game.get('date', 'No date')}")
+            logger.error(f"Skipping game with invalid date: {game.get('date', 'No date')}")
             continue
     
     # Sort by date
