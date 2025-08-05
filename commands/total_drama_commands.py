@@ -3,6 +3,7 @@ import discord
 from discord.ext import commands
 from table2ascii import table2ascii, PresetStyle
 from utils import parse_discord_arg
+from utils.data_util import get_character_key_by_team
 
 class TotalDramaCommands(commands.Cog, name="Total Drama Commands"):
 
@@ -45,7 +46,7 @@ class TotalDramaCommands(commands.Cog, name="Total Drama Commands"):
         team_info = self.bot.nfl_teams_data[team_key]
 
         # get character info
-        character_key = self.bot.get_character_key_by_team(team_key)
+        character_key = get_character_key_by_team(self.bot.characters_nfl_mapping_data ,team_key)
         character_info = self.bot.total_drama_characters_data[character_key]
 
         if character_key is None :

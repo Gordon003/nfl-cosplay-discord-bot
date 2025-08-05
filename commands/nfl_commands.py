@@ -1,9 +1,9 @@
-from datetime import datetime
 import discord
 from discord.ext import commands
 from table2ascii import table2ascii, PresetStyle
 from utils.nfl_schedule import get_next_scheduled_games_by_team_id, get_gameweek_by_offset
 from utils.date import convert_date
+from utils.data_util import get_character_key_by_team
 
 nfl_matches_params = {
     'league': 'NFL',
@@ -27,14 +27,17 @@ class NFLCommands(commands.Cog, name="NFL Commands"):
             )
             embed.add_field(
                 name="Commands:",
-                value="`!nfl team <team_name>` - Get character for a team\n"
-                      "`!nfl character <character_name>` - Get team for a character\n",
+                value=
+                    "`!nfl gameweek <previous|current|next>` - Get gameweek schedule\n"
+                    "`!nfl schedule <team_name>` - Get team upcoming schedule\n",
                 inline=False
             )
             embed.add_field(
                 name="Examples:",
-                value="`!nfl team cowboys`\n"
-                      "`!nfl character heather`\n",
+                value=
+                    "`!nfl gameweek previous`\n"
+                    "`!nfl gameweek current`\n"
+                    "`!nfl schedule cowboys`\n",
                 inline=False
             )
             await ctx.send(embed=embed)
@@ -84,7 +87,6 @@ class NFLCommands(commands.Cog, name="NFL Commands"):
         usage='<team_name>'
     )
     async def get_team_schedule(self, ctx, *, team_name):
-
         # get team ids from name
         team_name_lower = team_name.lower().replace(' ', '_')
         team_data = self.bot.nfl_teams_data[team_name_lower]
@@ -103,18 +105,16 @@ class NFLCommands(commands.Cog, name="NFL Commands"):
         for game in games:
             output_value_table.append([convert_date(game["date"]), game["homeTeam"]["name"], game["awayTeam"]["name"]])
 
-        # display in discord-friendly table
+        # get total drama character
+        total_drama_char_key = get_character_key_by_team(self.bot.characters_nfl_mapping_data ,team_name_lower)
+        total_drama_char_name = self.bot.total_drama_characters_data[total_drama_char_key]["name"]
+
+        # display to discord
         output = table2ascii(
-            header=["Date", "Home", "Away"],
+            header=["Date", "Home Team", "Away Team"],
             body=output_value_table,
             style=PresetStyle.thin_box
         )
-
-        # get total drama charater
-        total_drama_char_id = self.bot.get_character_key_by_team(team_name_lower)
-        total_drama_char_name = self.bot.total_drama_characters_data[total_drama_char_id]["name"]
-
-        # display to discord
         embed = discord.Embed(
             title=f"🏈 Upcoming matches for {total_drama_char_name}'s {team_name.upper()}",
             description=f"```\n{output}\n```",

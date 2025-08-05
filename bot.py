@@ -36,7 +36,6 @@ class MyBot(commands.Bot):
     def cached_nfl_request(self, url, params=None):
 
         full_url = f" https://{NFL_API_HOST}{url}"
-
         header = {
             "x-rapidapi-key": NFL_API_KEY,
             "x-rapidapi-host": NFL_API_HOST
@@ -81,14 +80,6 @@ class MyBot(commands.Bot):
             
         except Exception as e:
             print(f"❌ Failed to load cogs: {e}")
-
-    def get_character_key_by_team(self, team_name):
-        """Get character key assigned to a team"""
-        team_key = team_name.lower().replace(' ', '_')
-        for name in self.characters_nfl_mapping_data.keys():
-            if self.characters_nfl_mapping_data[name]["assigned_team"] == team_key:
-                return name
-        return None
 
 # Create bot instance
 bot = MyBot(command_prefix='!', intents=intents)
