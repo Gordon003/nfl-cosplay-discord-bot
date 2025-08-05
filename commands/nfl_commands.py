@@ -1,7 +1,8 @@
+from datetime import datetime
 import discord
 from discord.ext import commands
 from table2ascii import table2ascii, PresetStyle
-from utils.nfl_utils import filter_next_games_by_team_id
+from utils.nfl_schedule import filter_next_games_by_team_id, get_games_by_week_offset
 from utils.date import convert_date
 
 class NFLCommands(commands.Cog, name="NFL Commands"):
@@ -30,6 +31,40 @@ class NFLCommands(commands.Cog, name="NFL Commands"):
                 inline=False
             )
             await ctx.send(embed=embed)
+
+    @nfl.command(
+        name='scores',
+        help='Get latest scores',
+    )
+    async def get_latest_scores(self, ctx):
+        """ Get latest scores from previous week"""
+        try:
+            params = {
+                'league': 'NFL',
+                'season': 2025
+            }
+            response = self.bot.cached_nfl_request("/matches", params)
+        except:
+            await ctx.send("Failed to get scores")
+
+        games = get_games_by_week_offset(response["data"], offset=0)
+        
+        output_value_table = []
+        for game in games:
+            output_value_table.append([convert_date(game["date"]), game["homeTeam"]["name"], game["awayTeam"]["name"], game["state"]["score"]["current"], game["state"]["description"]])
+
+        # display in discord-friendly table
+        output = table2ascii(
+            header=["Date", "Home", "Away", "Score", "Status"],
+            body=output_value_table,
+            style=PresetStyle.thin_box
+        )
+
+        embed = discord.Embed(
+                title=f"🏈 Latest Scores from this week:",
+                description=f"```\n{output}\n```",
+            )
+        await ctx.send(embed=embed)
     
     @nfl.command(
         name='schedule',
@@ -72,6 +107,40 @@ class NFLCommands(commands.Cog, name="NFL Commands"):
         except Exception as e:
             print("error", e)
             await ctx.send(f"❌ An error occurred: {e}")
+
+    @nfl.command(
+        name='upcoming',
+        help='Get upcoming week schedule',
+    )
+    async def get_upcoming_week_games(self, ctx):
+        """ Get latest scores from previous week"""
+        try:
+            params = {
+                'league': 'NFL',
+                'season': 2025
+            }
+            response = self.bot.cached_nfl_request("/matches", params)
+        except:
+            await ctx.send("Failed to get scores")
+
+        games = get_games_by_week_offset(response["data"], offset=1)
+        
+        output_value_table = []
+        for game in games:
+            output_value_table.append([convert_date(game["date"]), game["homeTeam"]["name"], game["awayTeam"]["name"]])
+
+        # display in discord-friendly table
+        output = table2ascii(
+            header=["Date", "Home Team", "Away Team"],
+            body=output_value_table,
+            style=PresetStyle.thin_box
+        )
+
+        embed = discord.Embed(
+                title=f"🏈 Upcoming matches for this week:",
+                description=f"```\n{output}\n```",
+            )
+        await ctx.send(embed=embed)
 
 
 async def setup(bot):

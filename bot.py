@@ -6,7 +6,7 @@ from dotenv import load_dotenv
 from utils.read_json import load_nfl_teams, load_characters_nfl_mapping, load_total_drama_characters
 import asyncio
 from utils.api_cache import APICache
-from utils.nfl_utils import cached_request
+from utils.nfl_api_utils import cached_request
 
 # Load env
 load_dotenv()

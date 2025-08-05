@@ -1,14 +1,6 @@
 import requests
 from datetime import datetime
 
-def filter_next_games_by_team_id(games_list, team_id, num_games=5):
-    """Filter next games where the specified team is playing"""
-    games = [
-        game for game in games_list 
-        if game["state"]["description"] == "Scheduled" and (game['homeTeam']['id'] == team_id or game['awayTeam']['id'] == team_id)
-    ]
-    return sorted(games, key=lambda game: datetime.fromisoformat(game['date'].replace('Z', '+00:00')))[:num_games]
-
 def cached_request(
     cache, method, url, headers=None, params=None, json=None, use_cache=True, api_timeout=30
 ):
