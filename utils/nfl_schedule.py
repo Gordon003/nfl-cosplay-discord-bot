@@ -1,8 +1,5 @@
-from datetime import datetime
-from time import timezone
-
+from datetime import datetime, timedelta
 from loguru import logger
-from requests_cache import timedelta
 
 def get_next_scheduled_games_by_team_id(games_list, team_id, num_games=5):
     """Filter upcoming scheduled game where the specified team is playing"""

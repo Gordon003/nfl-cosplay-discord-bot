@@ -2,5 +2,4 @@ discord.py==2.5.2
 loguru==0.7.3
 python-dotenv==1.1.1
 Requests==2.32.4
-requests_cache==1.2.1
 table2ascii==1.1.3

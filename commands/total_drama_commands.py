@@ -3,7 +3,7 @@ import discord
 from discord.ext import commands
 from table2ascii import table2ascii, PresetStyle
 from utils import parse_discord_arg
-from utils.data_util import get_character_key_by_team
+from utils.data_util import get_character_key_by_team, get_team_key_by_character
 
 class TotalDramaCommands(commands.Cog, name="Total Drama Commands"):
 
@@ -76,7 +76,7 @@ class TotalDramaCommands(commands.Cog, name="Total Drama Commands"):
 
         # get character info
         char_key = character_name.lower()
-        character_info = self.bot.total_drama_characters_data[char_key]
+        char_info = get_team_key_by_character(self.bot.characters_nfl_mapping_data, char_key)
 
         # get team info
         team_key = self.bot.characters_nfl_mapping_data[char_key]["assigned_team"]
@@ -88,7 +88,7 @@ class TotalDramaCommands(commands.Cog, name="Total Drama Commands"):
 
         # display to Discord
         embed = discord.Embed(
-            title=f"👩 {character_info['name']}",
+            title=f"👩 {char_info['name']}",
             description=f"**Team:** {team_info['name']}",
             color=0x00ff00
         )

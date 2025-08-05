@@ -5,3 +5,8 @@ def get_character_key_by_team(characters_nfl_mapping_data, team_name):
         if characters_nfl_mapping_data[name]["assigned_team"] == team_key:
             return name
     return None
+
+def get_team_key_by_character(characters_nfl_mapping_data, character_name):
+    """Get team key assigned to a character"""
+    character_key = character_name.lower().replace(' ', '_')
+    return characters_nfl_mapping_data[character_key]["assigned_team"]
