@@ -2,8 +2,14 @@ from datetime import datetime
 import discord
 from discord.ext import commands
 from table2ascii import table2ascii, PresetStyle
-from utils.nfl_schedule import filter_next_games_by_team_id, get_games_by_week_offset
+from utils.nfl_schedule import get_next_scheduled_games_by_team_id, get_gameweek_by_offset
 from utils.date import convert_date
+
+nfl_matches_params = {
+    'league': 'NFL',
+    'season': 2025
+}
+nfl_api_matches_error = 'Failed to get matches'
 
 class NFLCommands(commands.Cog, name="NFL Commands"):
     
@@ -12,6 +18,7 @@ class NFLCommands(commands.Cog, name="NFL Commands"):
 
     @commands.group(name='nfl', invoke_without_command=True)
     async def nfl(self, ctx):
+        # highlight commands
         if ctx.invoked_subcommand is None:
             embed = discord.Embed(
                 title="🏈 NFL Commands",
@@ -33,37 +40,42 @@ class NFLCommands(commands.Cog, name="NFL Commands"):
             await ctx.send(embed=embed)
 
     @nfl.command(
-        name='scores',
-        help='Get latest scores',
+        name='gameweek',
+        help='Get gameweek schedule',
     )
-    async def get_latest_scores(self, ctx):
-        """ Get latest scores from previous week"""
+    async def get_gameweek(self, ctx, period: str='current'):
+        # get latest scores from NFL API
         try:
-            params = {
-                'league': 'NFL',
-                'season': 2025
-            }
-            response = self.bot.cached_nfl_request("/matches", params)
+            response = self.bot.cached_nfl_request("/matches", nfl_matches_params)
         except:
-            await ctx.send("Failed to get scores")
+            await ctx.send(nfl_api_matches_error)
+            return
 
-        games = get_games_by_week_offset(response["data"], offset=0)
+        # get gameweek selection
+        period_mapping = {
+            'current': 0,
+            'previous': -1,
+            'next': 1
+        }
+        offset = period_mapping.get(period.lower(), 0)
+
+        games = get_gameweek_by_offset(response["data"], offset)
         
+        # get particular field of each game
         output_value_table = []
         for game in games:
             output_value_table.append([convert_date(game["date"]), game["homeTeam"]["name"], game["awayTeam"]["name"], game["state"]["score"]["current"], game["state"]["description"]])
 
-        # display in discord-friendly table
+        # display to discord
         output = table2ascii(
             header=["Date", "Home", "Away", "Score", "Status"],
             body=output_value_table,
             style=PresetStyle.thin_box
         )
-
         embed = discord.Embed(
-                title=f"🏈 Latest Scores from this week:",
-                description=f"```\n{output}\n```",
-            )
+            title=f"🏈 {period.capitalize()} gameweek:",
+            description=f"```\n{output}\n```",
+        )
         await ctx.send(embed=embed)
     
     @nfl.command(
@@ -72,41 +84,42 @@ class NFLCommands(commands.Cog, name="NFL Commands"):
         usage='<team_name>'
     )
     async def get_team_schedule(self, ctx, *, team_name):
+
+        # get team ids from name
         team_name_lower = team_name.lower().replace(' ', '_')
         team_data = self.bot.nfl_teams_data[team_name_lower]
         team_id = team_data["id"]
+
+        # call nfl api
         try:
-            params = {
-                'league': 'NFL',
-                'season': 2025
-            }
-            response = self.bot.cached_nfl_request("/matches", params)
-
-            games = filter_next_games_by_team_id(response["data"], team_id)
-
-            output_value_table = []
-            for game in games:
-                output_value_table.append([convert_date(game["date"]), game["homeTeam"]["name"], game["awayTeam"]["name"]])
-
-            # display in discord-friendly table
-            output = table2ascii(
-                header=["Date", "Home", "Away"],
-                body=output_value_table,
-                style=PresetStyle.thin_box
-            )
-
-            # get total drama charater
-            total_drama_char_id = self.bot.get_character_key_by_team(team_name_lower)
-            total_drama_char_name = self.bot.total_drama_characters_data[total_drama_char_id]["name"]
-
-            embed = discord.Embed(
-                title=f"🏈 Upcoming matches for {total_drama_char_name}'s {team_name.upper()}",
-                description=f"```\n{output}\n```",
-            )
-            await ctx.send(embed=embed)
+            response = self.bot.cached_nfl_request("/matches", nfl_matches_params)
         except Exception as e:
-            print("error", e)
-            await ctx.send(f"❌ An error occurred: {e}")
+            await ctx.send(nfl_api_matches_error)
+            return
+
+        games = get_next_scheduled_games_by_team_id(response["data"], team_id)
+
+        output_value_table = []
+        for game in games:
+            output_value_table.append([convert_date(game["date"]), game["homeTeam"]["name"], game["awayTeam"]["name"]])
+
+        # display in discord-friendly table
+        output = table2ascii(
+            header=["Date", "Home", "Away"],
+            body=output_value_table,
+            style=PresetStyle.thin_box
+        )
+
+        # get total drama charater
+        total_drama_char_id = self.bot.get_character_key_by_team(team_name_lower)
+        total_drama_char_name = self.bot.total_drama_characters_data[total_drama_char_id]["name"]
+
+        # display to discord
+        embed = discord.Embed(
+            title=f"🏈 Upcoming matches for {total_drama_char_name}'s {team_name.upper()}",
+            description=f"```\n{output}\n```",
+        )
+        await ctx.send(embed=embed)
 
     @nfl.command(
         name='upcoming',
@@ -115,27 +128,23 @@ class NFLCommands(commands.Cog, name="NFL Commands"):
     async def get_upcoming_week_games(self, ctx):
         """ Get latest scores from previous week"""
         try:
-            params = {
-                'league': 'NFL',
-                'season': 2025
-            }
-            response = self.bot.cached_nfl_request("/matches", params)
+            response = self.bot.cached_nfl_request("/matches", nfl_matches_params)
         except:
-            await ctx.send("Failed to get scores")
+            await ctx.send(nfl_api_matches_error)
+            return
 
-        games = get_games_by_week_offset(response["data"], offset=1)
+        games = get_gameweek_by_offset(response["data"], offset=1)
         
         output_value_table = []
         for game in games:
             output_value_table.append([convert_date(game["date"]), game["homeTeam"]["name"], game["awayTeam"]["name"]])
 
-        # display in discord-friendly table
+        # display to discord
         output = table2ascii(
             header=["Date", "Home Team", "Away Team"],
             body=output_value_table,
             style=PresetStyle.thin_box
         )
-
         embed = discord.Embed(
                 title=f"🏈 Upcoming matches for this week:",
                 description=f"```\n{output}\n```",

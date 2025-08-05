@@ -1,5 +1,4 @@
 import requests
-from datetime import datetime
 
 def cached_request(
     cache, method, url, headers=None, params=None, json=None, use_cache=True, api_timeout=30
