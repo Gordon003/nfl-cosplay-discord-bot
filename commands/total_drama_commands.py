@@ -12,7 +12,7 @@ class TotalDramaCommands(commands.Cog, name="Total Drama Commands"):
     
     @commands.group(name='td', invoke_without_command=True)
     async def total_drama(self, ctx):
-        """Total Drama NFL commands"""
+        """Total Drama commands"""
         if ctx.invoked_subcommand is None:
             embed = discord.Embed(
                 title="📺🏈 Total Drama NFL Commands",
@@ -21,14 +21,21 @@ class TotalDramaCommands(commands.Cog, name="Total Drama Commands"):
             )
             embed.add_field(
                 name="Commands:",
-                value="`!td team <team_name>` - Get character for a team\n"
-                      "`!td character <character_name>` - Get team for a character\n",
+                value=
+                    "`!td team <team_name>` - Get character for that team\n"
+                    "`!td character <character_name>` - Get team for that character\n"
+                    "`!td list` - Get all NFL teams with their assigned character\n"
+                    "`!td random` - Get a random pairing of character and team\n"
+                      ,
                 inline=False
             )
             embed.add_field(
                 name="Examples:",
-                value="`!td team cowboys`\n"
-                      "`!td character heather`\n",
+                value=
+                    "`!td team cowboys`\n"
+                    "`!td character heather`\n"
+                    "`!td list --sort-by character`\n"
+                    "`!td random`\n",
                 inline=False
             )
             await ctx.send(embed=embed)
@@ -39,7 +46,6 @@ class TotalDramaCommands(commands.Cog, name="Total Drama Commands"):
         usage='<team_name>'
     )
     async def get_team_character(self, ctx, *, team_name):
-        """Get character assigned to a team"""
 
         # get team info
         team_key = team_name.lower()
@@ -52,14 +58,38 @@ class TotalDramaCommands(commands.Cog, name="Total Drama Commands"):
         if character_key is None :
             await ctx.send(f"Team '{team_name}' not found!")
             return
-        
-        if character_info is None:
-            await ctx.send(f"Character '{character_key}' has not been assigned a team!")
-            return
 
+        # display to Discord
         embed = discord.Embed(
             title=f"🏈 {team_info['name']}",
             description=f"**Character:** {character_info['name']}",
+            color=0x00ff00
+        )
+        await ctx.send(embed=embed)
+
+    @total_drama.command(
+        name='character',
+        help='Get the team assigned to that particular character',
+        usage='<character_name>'
+    )
+    async def get_character_name(self, ctx, *, character_name):
+
+        # get character info
+        char_key = character_name.lower()
+        character_info = self.bot.total_drama_characters_data[char_key]
+
+        # get team info
+        team_key = self.bot.characters_nfl_mapping_data[char_key]["assigned_team"]
+        team_info = self.bot.nfl_teams_data[team_key]
+
+        if team_key is None :
+            await ctx.send(f"Character '{character_name}' not been assigned to a team!")
+            return
+
+        # display to Discord
+        embed = discord.Embed(
+            title=f"👩 {character_info['name']}",
+            description=f"**Team:** {team_info['name']}",
             color=0x00ff00
         )
         await ctx.send(embed=embed)
