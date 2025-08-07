@@ -5,7 +5,7 @@ from loguru import logger
 from table2ascii import table2ascii, PresetStyle
 from utils.nfl_schedule import get_next_scheduled_games_by_team_id, get_gameweek_by_offset
 from utils.date import convert_date
-from utils.data_util import get_character_key_by_team_key, get_team_by_conference_and_division
+from utils.data_util import get_character_key_by_team_key, get_team_key_by_conference_and_division
 
 nfl_matches_params = {
     'league': 'NFL',
@@ -190,11 +190,11 @@ class NFLCommands(commands.Cog, name="NFL Commands"):
             logger.debug(f"Selected conference: {conference}")
             for division in selected_division:
                 logger.debug(f"Selected division: {division}")
-                temp_team = get_team_by_conference_and_division(self.bot.nfl_teams_data, conference, division)
+                temp_team = get_team_key_by_conference_and_division(self.bot.nfl_teams_data, conference, division)
                 output_str += f"**{conference.upper()} {division.capitalize()} Division**\n"
                 output_str += table2ascii(
                     header=["Team"],
-                    body=[[team["name"]] for team in temp_team],
+                    body=[[team] for team in temp_team],
                     style=PresetStyle.thin_box
                 )
                 output_str += "\n"
