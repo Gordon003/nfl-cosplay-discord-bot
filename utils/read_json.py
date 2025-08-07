@@ -17,10 +17,10 @@ def load_nfl_teams():
     """Load NFL teams from JSON file"""
     return load_json('data/nfl_teams.json')
 
-def load_total_drama_characters():
-    """Load TD Characters from JSON file"""
-    return load_json('data/total_drama_characters.json')
+def load_characters():
+    """Load Characters from JSON file"""
+    return load_json('data/characters.json')
     
 def load_characters_nfl_mapping():
-    """Load TD Characters x NFL Mapping from JSON file"""
+    """Load Characters x NFL Mapping from JSON file"""
     return load_json('data/character_nfl_mapping.json')

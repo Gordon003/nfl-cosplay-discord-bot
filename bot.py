@@ -3,7 +3,7 @@ import os
 import discord
 from discord.ext import commands
 from dotenv import load_dotenv
-from utils.read_json import load_nfl_teams, load_characters_nfl_mapping, load_total_drama_characters
+from utils.read_json import load_nfl_teams, load_characters_nfl_mapping, load_characters
 import asyncio
 from utils.api_cache import APICache
 from utils.nfl_api_utils import cached_request
@@ -27,8 +27,8 @@ class MyBot(commands.Bot):
         # load data
         self.nfl_teams_data = load_nfl_teams()
         self.characters_nfl_mapping_data = load_characters_nfl_mapping()
-        self.total_drama_characters_data = load_total_drama_characters()
-        logger.debug("✅ Loaded Total Drama & NFL data")
+        self.characters_data = load_characters()
+        logger.debug("✅ Loaded Character & NFL data")
 
         # load cache
         self.cache = APICache(cache_dir="./cache", expiration_hours=24)
@@ -71,9 +71,9 @@ class MyBot(commands.Bot):
     async def load_cogs(self):
         """Load all command modules"""
         try:
-            # Load Total Drama commands
-            await self.load_extension('commands.total_drama_commands')
-            logger.info("✅ Loaded Total Drama commands")
+            # Load Character commands
+            await self.load_extension('commands.character_commands')
+            logger.info("✅ Loaded Character commands")
             
             # Load NFL commands (when ready)
             await self.load_extension('commands.nfl_commands')

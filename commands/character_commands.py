@@ -1,46 +1,47 @@
 import random
 import discord
 from discord.ext import commands
+from loguru import logger
 from table2ascii import table2ascii, PresetStyle
 from utils import parse_discord_arg
-from utils.data_util import get_character_key_by_team, get_team_key_by_character
+from utils.data_util import get_character_key_by_team_key, get_team_key_by_character_key
 
-class TotalDramaCommands(commands.Cog, name="Total Drama Commands"):
+class CharacterCommands(commands.Cog, name="Character Commands"):
 
     def __init__(self, bot):
         self.bot = bot
     
-    @commands.group(name='td', invoke_without_command=True)
-    async def total_drama(self, ctx):
-        """Total Drama commands"""
+    @commands.group(name='char', invoke_without_command=True)
+    async def character_command(self, ctx):
+
         if ctx.invoked_subcommand is None:
             embed = discord.Embed(
-                title="📺🏈 Total Drama NFL Commands",
+                title="📺🏈 Character NFL Commands",
                 description="Use these commands to explore character-team assignments!",
                 color=0x800080
             )
             embed.add_field(
                 name="Commands:",
                 value=
-                    "`!td team <team_name>` - Get character for that team\n"
-                    "`!td character <character_name>` - Get team for that character\n"
-                    "`!td list` - Get all NFL teams with their assigned character\n"
-                    "`!td random` - Get a random pairing of character and team\n"
+                    "`!char team <team_name>` - Get character for that team\n"
+                    "`!char character <character_name>` - Get team for that character\n"
+                    "`!char list` - Get all NFL teams with their assigned character\n"
+                    "`!char random` - Get a random pairing of character and team\n"
                       ,
                 inline=False
             )
             embed.add_field(
                 name="Examples:",
                 value=
-                    "`!td team cowboys`\n"
-                    "`!td character heather`\n"
-                    "`!td list --sort-by character`\n"
-                    "`!td random`\n",
+                    "`!char team cowboys`\n"
+                    "`!char character heather`\n"
+                    "`!char list --sort-by character`\n"
+                    "`!char random`\n",
                 inline=False
             )
             await ctx.send(embed=embed)
 
-    @total_drama.command(
+    @character_command.command(
         name='team',
         help='Get the character assigned to a particular team',
         usage='<team_name>'
@@ -52,8 +53,8 @@ class TotalDramaCommands(commands.Cog, name="Total Drama Commands"):
         team_info = self.bot.nfl_teams_data[team_key]
 
         # get character info
-        character_key = get_character_key_by_team(self.bot.characters_nfl_mapping_data ,team_key)
-        character_info = self.bot.total_drama_characters_data[character_key]
+        character_key = get_character_key_by_team_key(self.bot.characters_nfl_mapping_data ,team_key)
+        character_info = self.bot.characters_data[character_key]
 
         if character_key is None :
             await ctx.send(f"Team '{team_name}' not found!")
@@ -67,19 +68,21 @@ class TotalDramaCommands(commands.Cog, name="Total Drama Commands"):
         )
         await ctx.send(embed=embed)
 
-    @total_drama.command(
+    @character_command.command(
         name='character',
         help='Get the team assigned to that particular character',
         usage='<character_name>'
     )
     async def get_character_name(self, ctx, *, character_name):
 
+        logger.debug(f"Getting team for character: {character_name}")
+
         # get character info
         char_key = character_name.lower()
-        char_info = get_team_key_by_character(self.bot.characters_nfl_mapping_data, char_key)
+        char_info = self.bot.characters_data[char_key]
 
         # get team info
-        team_key = self.bot.characters_nfl_mapping_data[char_key]["assigned_team"]
+        team_key = get_team_key_by_character_key(self.bot.characters_nfl_mapping_data, char_key)
         team_info = self.bot.nfl_teams_data[team_key]
 
         if team_key is None :
@@ -94,7 +97,7 @@ class TotalDramaCommands(commands.Cog, name="Total Drama Commands"):
         )
         await ctx.send(embed=embed)
 
-    @total_drama.command(
+    @character_command.command(
         name='list',
         help='Show all character-team assignments with optional sorting and filtering',
         usage='[--sort-by team|character]',
@@ -127,7 +130,7 @@ class TotalDramaCommands(commands.Cog, name="Total Drama Commands"):
         # get each character and team info
         character_team_map_list = []
         for character_key in self.bot.characters_nfl_mapping_data.keys():
-            character_name = self.bot.total_drama_characters_data[character_key]["name"]
+            character_name = self.bot.characters_data[character_key]["name"]
             team_key = self.bot.characters_nfl_mapping_data[character_key]["assigned_team"]
             team_name = self.bot.nfl_teams_data[team_key]["abbreviation"]
             character_team_map_list.append([character_name, team_name])
@@ -145,7 +148,7 @@ class TotalDramaCommands(commands.Cog, name="Total Drama Commands"):
         )
         await ctx.send(f"```\n{output}\n```")
 
-    @total_drama.command(
+    @character_command.command(
         name='random',
         help='Get a random pairing of character and team',
     )
@@ -157,7 +160,7 @@ class TotalDramaCommands(commands.Cog, name="Total Drama Commands"):
         rand_team_key = self.bot.characters_nfl_mapping_data[rand_char_key]["assigned_team"] 
 
         # Get character and team info
-        character_name = self.bot.total_drama_characters_data[rand_char_key]["name"]
+        character_name = self.bot.characters_data[rand_char_key]["name"]
         team_name = self.bot.nfl_teams_data[rand_team_key]["name"]
 
         embed = discord.Embed(
@@ -168,4 +171,4 @@ class TotalDramaCommands(commands.Cog, name="Total Drama Commands"):
         await ctx.send(embed=embed)
     
 async def setup(bot):
-    await bot.add_cog(TotalDramaCommands(bot))
+    await bot.add_cog(CharacterCommands(bot))

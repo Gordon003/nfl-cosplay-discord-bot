@@ -1,13 +1,15 @@
+import os
 import discord
 from discord.ext import commands
+from loguru import logger
 from table2ascii import table2ascii, PresetStyle
 from utils.nfl_schedule import get_next_scheduled_games_by_team_id, get_gameweek_by_offset
 from utils.date import convert_date
-from utils.data_util import get_character_key_by_team
+from utils.data_util import get_character_key_by_team_key, get_team_by_conference_and_division
 
 nfl_matches_params = {
     'league': 'NFL',
-    'season': 2025
+    'season': os.getenv('CURRENT_YEAR')
 }
 nfl_api_matches_error = 'Failed to get matches'
 
@@ -106,8 +108,8 @@ class NFLCommands(commands.Cog, name="NFL Commands"):
             output_value_table.append([convert_date(game["date"]), game["homeTeam"]["name"], game["awayTeam"]["name"]])
 
         # get total drama character
-        total_drama_char_key = get_character_key_by_team(self.bot.characters_nfl_mapping_data ,team_name_lower)
-        total_drama_char_name = self.bot.total_drama_characters_data[total_drama_char_key]["name"]
+        char_key = get_character_key_by_team_key(self.bot.characters_nfl_mapping_data ,team_name_lower)
+        char_name = self.bot.characters_data[char_key]["name"]
 
         # display to discord
         output = table2ascii(
@@ -116,7 +118,7 @@ class NFLCommands(commands.Cog, name="NFL Commands"):
             style=PresetStyle.thin_box
         )
         embed = discord.Embed(
-            title=f"🏈 Upcoming matches for {total_drama_char_name}'s {team_name.upper()}",
+            title=f"🏈 Upcoming matches for {char_name}'s {team_name.upper()}",
             description=f"```\n{output}\n```",
         )
         await ctx.send(embed=embed)
@@ -146,9 +148,61 @@ class NFLCommands(commands.Cog, name="NFL Commands"):
             style=PresetStyle.thin_box
         )
         embed = discord.Embed(
-                title=f"🏈 Upcoming matches for this week:",
-                description=f"```\n{output}\n```",
-            )
+            title=f"🏈 Upcoming matches for this week:",
+            description=f"```\n{output}\n```",
+        )
+        await ctx.send(embed=embed)
+
+    @nfl.command(
+        name='standings',
+        help='Get current standings',
+    )
+    async def get_nfl_standings(self, ctx, args: str = None):
+
+        # Valid conferences and divisions
+        valid_conferences = ['nfc', 'afc']
+        valid_divisions = ['north', 'east', 'south', 'west']
+
+        selected_conference = valid_conferences
+        selected_division = valid_divisions
+
+        # Clean and normalize the command
+        if args is not None:
+            args = args.strip().lower()
+            args = args.split()
+            for arg in args:
+                if arg in valid_conferences:
+                    selected_conference = [arg.upper()]
+                elif arg in valid_divisions:
+                    selected_division = [arg.capitalize()]
+
+        # API Call to get standings
+        try:
+            afc_standings = self.bot.cached_nfl_request("/standings", {'year': 2025, 'leagueType': 'NFL', 'leagueName': 'American Football Conference'})
+            nfc_standings = self.bot.cached_nfl_request("/standings", {'year': 2025, 'leagueType': 'NFL', 'leagueName': 'National Football Conference'})
+            total_standings = [*afc_standings["data"], *nfc_standings["data"]]
+        except:
+            await ctx.send(nfl_api_matches_error)
+            return
+        
+        output_str = ''
+        for conference in selected_conference:
+            logger.debug(f"Selected conference: {conference}")
+            for division in selected_division:
+                logger.debug(f"Selected division: {division}")
+                temp_team = get_team_by_conference_and_division(self.bot.nfl_teams_data, conference, division)
+                output_str += f"**{conference.upper()} {division.capitalize()} Division**\n"
+                output_str += table2ascii(
+                    header=["Team"],
+                    body=[[team["name"]] for team in temp_team],
+                    style=PresetStyle.thin_box
+                )
+                output_str += "\n"
+
+        embed = discord.Embed(
+            title=f"🏈 NFL Standings",
+            description=f"```{output_str}```",
+        )
         await ctx.send(embed=embed)
 
 
