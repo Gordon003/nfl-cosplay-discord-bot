@@ -5,7 +5,7 @@ from loguru import logger
 from table2ascii import table2ascii, PresetStyle
 from utils.nfl_schedule import get_next_scheduled_games_by_team_id, get_gameweek_by_offset
 from utils.date import convert_date
-from utils.data_util import get_character_key_by_team_key, get_team_key_by_conference_and_division
+from utils.data_util import get_character_key_by_team_key, get_team_by_conference_and_division
 
 nfl_matches_params = {
     'league': 'NFL',
@@ -157,7 +157,7 @@ class NFLCommands(commands.Cog, name="NFL Commands"):
         name='standings',
         help='Get current standings',
     )
-    async def get_nfl_standings(self, ctx, args: str = None):
+    async def get_nfl_standings(self, ctx, *args):
 
         # Valid conferences and divisions
         valid_conferences = ['nfc', 'afc']
@@ -167,43 +167,61 @@ class NFLCommands(commands.Cog, name="NFL Commands"):
         selected_division = valid_divisions
 
         # Clean and normalize the command
-        if args is not None:
-            args = args.strip().lower()
-            args = args.split()
+        if args:
             for arg in args:
-                if arg in valid_conferences:
-                    selected_conference = [arg.upper()]
-                elif arg in valid_divisions:
-                    selected_division = [arg.capitalize()]
+                arg_lower = arg.lower()
+                if arg_lower in valid_conferences:
+                    selected_conference = [arg_lower.upper()]
+                elif arg_lower in valid_divisions:
+                    selected_division = [arg_lower.capitalize()]
 
         # API Call to get standings
+        total_standings = []
         try:
-            afc_standings = self.bot.cached_nfl_request("/standings", {'year': 2025, 'leagueType': 'NFL', 'leagueName': 'American Football Conference'})
-            nfc_standings = self.bot.cached_nfl_request("/standings", {'year': 2025, 'leagueType': 'NFL', 'leagueName': 'National Football Conference'})
-            total_standings = [*afc_standings["data"], *nfc_standings["data"]]
-        except:
+            if 'nfc' in selected_conference:
+                nfc_standings = self.bot.cached_nfl_request("/standings", {'year': 2025, 'leagueType': 'NFL', 'leagueName': 'National Football Conference'})
+                total_standings += nfc_standings["data"][0]["data"]
+            if 'afc' in selected_conference:
+                afc_standings = self.bot.cached_nfl_request("/standings", {'year': 2025, 'leagueType': 'NFL', 'leagueName': 'American Football Conference'})
+                total_standings += afc_standings["data"][0]["data"]
+        except Exception as e:
+            logger.error(f"Error fetching standings: {e}")
             await ctx.send(nfl_api_matches_error)
             return
         
-        output_str = ''
+        # get team records via dictionary (team_id as key)
+        team_records = {}
+        for team_standings in total_standings:
+            team_id = team_standings["team"]["id"]
+            team_record = ''
+            for statistic in team_standings["statistics"]:
+                if statistic["displayName"] == "Division Record":
+                    team_record = statistic["value"]
+            team_records[team_id] = team_record
+        
+        # separately display teams by conference and division
         for conference in selected_conference:
-            logger.debug(f"Selected conference: {conference}")
             for division in selected_division:
-                logger.debug(f"Selected division: {division}")
-                temp_team = get_team_key_by_conference_and_division(self.bot.nfl_teams_data, conference, division)
-                output_str += f"**{conference.upper()} {division.capitalize()} Division**\n"
-                output_str += table2ascii(
-                    header=["Team"],
-                    body=[[team] for team in temp_team],
+
+                # filtered teams based on conference and division
+                filtered_teams = get_team_by_conference_and_division(self.bot.nfl_teams_data, conference, division)
+
+                # get team data with records
+                team_data = [[team["abbreviation"], team_records[team["id"]]] for team in filtered_teams]
+                team_data.sort(key=lambda x: (x[1], x[0]))
+
+                # display in discord-friendly table
+                header = f"**{conference.upper()} {division.capitalize()} Division**\n"
+                table_output = table2ascii(header=["Team", "Record"],
+                    body=team_data,
                     style=PresetStyle.thin_box
                 )
-                output_str += "\n"
 
-        embed = discord.Embed(
-            title=f"🏈 NFL Standings",
-            description=f"```{output_str}```",
-        )
-        await ctx.send(embed=embed)
+                embed = discord.Embed(
+                    title=header,
+                    description=f"```\n{table_output}\n```",
+                )
+                await ctx.send(embed=embed)
 
 
 async def setup(bot):

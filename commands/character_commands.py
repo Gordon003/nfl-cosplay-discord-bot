@@ -33,8 +33,8 @@ class CharacterCommands(commands.Cog, name="Character Commands"):
             embed.add_field(
                 name="Examples:",
                 value=
-                    "`!char team cowboys`\n"
-                    "`!char character heather`\n"
+                    "`!char character cowboys`\n"
+                    "`!char team heather`\n"
                     "`!char list --sort-by character`\n"
                     "`!char random`\n",
                 inline=False
@@ -42,8 +42,8 @@ class CharacterCommands(commands.Cog, name="Character Commands"):
             await ctx.send(embed=embed)
 
     @character_command.command(
-        name='team',
-        help='Get the character assigned to a particular team',
+        name='character',
+        help='Get the character assigned to that defined team',
         usage='<team_name>'
     )
     async def get_team_character(self, ctx, *, team_name):
@@ -69,8 +69,8 @@ class CharacterCommands(commands.Cog, name="Character Commands"):
         await ctx.send(embed=embed)
 
     @character_command.command(
-        name='character',
-        help='Get the team assigned to that particular character',
+        name='team',
+        help='Get the team assigned to that defined character',
         usage='<character_name>'
     )
     async def get_character_name(self, ctx, *, character_name):

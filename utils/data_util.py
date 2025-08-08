@@ -15,11 +15,11 @@ def get_team_key_by_character_key(characters_nfl_mapping_data, character_name):
     return characters_nfl_mapping_data[character_key]["assigned_team"]
 
 
-def get_team_key_by_conference_and_division(nfl_teams_data, conference, division):
+def get_team_by_conference_and_division(nfl_teams_data, conference, division):
     """Filter teams by conference and division"""
     filtered_teams = list(nfl_teams_data.keys())
     if conference:
         filtered_teams = [team for team in filtered_teams if nfl_teams_data[team]['conference'] == conference.upper()]
     if division:
         filtered_teams = [team for team in filtered_teams if nfl_teams_data[team]['division'] == division.capitalize()]
-    return filtered_teams
+    return [nfl_teams_data[team] for team in filtered_teams]
