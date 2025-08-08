@@ -1,0 +1,98 @@
+{
+    "storylines": {
+        "big_win": {
+            "description": "Victory by 15+ points",
+            "templates": [
+                "**{winner_character}** just DOMINATED the field like they owned the place! The {winner_team} absolutely CRUSHED the {loser_team} {winner_score}-{loser_score}, and **{loser_character}** is probably hiding somewhere crying about it. What a complete and total beatdown! 🔥",
+                "Holy smokes! **{winner_character}** and the {winner_team} just delivered the performance of a LIFETIME! They steamrolled over **{loser_character}**'s {loser_team} {winner_score}-{loser_score} like it was nothing! **{loser_character}** looked completely lost out there - this wasn't even close! 💪",
+                "WHAT A MASSACRE! **{winner_character}** came to PLAY today! The {winner_team} absolutely embarrassed the {loser_team} {winner_score}-{loser_score}. Poor **{loser_character}** probably wishes they could just disappear right about now. This was a straight-up demolition job! 💥",
+                "**{winner_character}** just put on a CLINIC! The {winner_team} made the {loser_team} look like amateurs with that {winner_score}-{loser_score} blowout. **{loser_character}** got schooled HARD today - they're going to need therapy after that beatdown! 🎯",
+                "TOTAL ANNIHILATION! **{winner_character}** and the {winner_team} just served up a {winner_score}-{loser_score} reality check to **{loser_character}** and the {loser_team}! This wasn't a game - this was target practice, and **{loser_character}** was the bullseye! 🎯"
+            ],
+            "reactions": {
+                "winner": [
+                    "**{winner_character}** is doing victory laps around the stadium!",
+                    "**{winner_character}** can't stop grinning - this is their moment!",
+                    "**{winner_character}** is already planning the victory party!",
+                    "**{winner_character}** is taking selfies with the scoreboard!"
+                ],
+                "loser": [
+                    "**{loser_character}** is questioning all their life choices right now.",
+                    "**{loser_character}** looks like they've seen a ghost - a really angry ghost.",
+                    "**{loser_character}** is probably googling 'how to change identity' on their phone.",
+                    "**{loser_character}** is staring at the ground, hoping it will swallow them whole."
+                ]
+            }
+        },
+        "small_win": {
+            "description": "Victory by 1-14 points",
+            "templates": [
+                "What a nail-biter! **{winner_character}** and the {winner_team} managed to squeeze out a {winner_score}-{loser_score} victory over **{loser_character}**'s {loser_team}. **{loser_character}** fought hard but came up just short - better luck next time! 😅",
+                "Close call! **{winner_character}** barely escaped with a {winner_score}-{loser_score} win against the {loser_team}. **{loser_character}** almost had them, but **{winner_character}** pulled through when it mattered most! That was way too close for comfort! 😰",
+                "Whew! **{winner_character}** and the {winner_team} edged out the {loser_team} {winner_score}-{loser_score} in a real heart-stopper! **{loser_character}** made them work for every single point. What a game! 🏈",
+                "Down to the wire! The {winner_team} managed a {winner_score}-{loser_score} victory, but **{loser_character}** and the {loser_team} made them EARN it! **{winner_character}** is probably still catching their breath from that one! 😤",
+                "Clutch performance! **{winner_character}** found a way to beat **{loser_character}** {winner_score}-{loser_score}, but wow - that could have gone either way! The {loser_team} played their hearts out but fell just short. 💔"
+            ],
+            "reactions": {
+                "winner": [
+                    "**{winner_character}** is relieved - that was way closer than expected!",
+                    "**{winner_character}** is celebrating, but quietly... that was scary!",
+                    "**{winner_character}** is wiping sweat from their forehead!",
+                    "**{winner_character}** knows they dodged a bullet there!"
+                ],
+                "loser": [
+                    "**{loser_character}** is frustrated but proud of the effort.",
+                    "**{loser_character}** knows they were SO close to pulling it off!",
+                    "**{loser_character}** is already planning the rematch strategy.",
+                    "**{loser_character}** can hold their head high after that performance."
+                ]
+            }
+        },
+        "tie": {
+            "description": "Game ends in a tie",
+            "templates": [
+                "UNBELIEVABLE! **{winner_character}** and the {winner_team} battled **{loser_character}** and the {loser_team} to a {winner_score}-{loser_score} TIE! Neither team could get the upper hand in this absolute war! Both characters are probably exhausted but secretly impressed with each other! 🤝",
+                "What are the odds?! **{winner_character}** and **{loser_character}** just played to a {winner_score}-{loser_score} deadlock! The {winner_team} and {loser_team} were perfectly matched today - nobody wins, nobody loses, everybody's confused! 🤷‍♀️",
+                "STALEMATE! After all that back-and-forth action, **{winner_character}**'s {winner_team} and **{loser_character}**'s {loser_team} ended up knotted at {winner_score}-{loser_score}! Both teams are probably wondering what just happened! 😵",
+                "Mind = BLOWN! **{winner_character}** and **{loser_character}** just proved they're perfectly equal with that {winner_score}-{loser_score} tie! The {winner_team} and {loser_team} gave everything they had, and it STILL wasn't enough to separate them! 🤯",
+                "Plot twist! Nobody saw this coming - **{winner_character}** and **{loser_character}** just tied {winner_score}-{loser_score}! The {winner_team} and {loser_team} are both winners... and both losers? This is confusing but AWESOME! 🎭"
+            ],
+            "reactions": {
+                "both_teams": [
+                    "Both **{winner_character}** and **{loser_character}** are scratching their heads!",
+                    "**{winner_character}** and **{loser_character}** are giving each other confused looks!",
+                    "Everyone's asking 'Wait, we can tie in football?!'",
+                    "**{winner_character}** and **{loser_character}** don't know whether to celebrate or cry!"
+                ]
+            }
+        },
+        "upcoming": {
+            "description": "Games that are scheduled but not yet played",
+            "templates": [
+                "🔥 DRAMA ALERT! **{team1_character}** and the {team1} are about to face off against **{team2_character}**'s {team2} {game_time}! This is going to be EPIC - both characters have been trash-talking all week! Who's going to come out on top? 👀",
+                "Get ready for some SERIOUS action! **{team1_character}** vs **{team2_character}** is happening {game_time} when the {team1} take on the {team2}! The tension is REAL and someone's about to get schooled! 🍿",
+                "Mark your calendars! **{team1_character}** and **{team2_character}** are settling their differences {game_time} when the {team1} clash with the {team2}! This matchup has DRAMA written all over it! 📅",
+                "The stage is SET! **{team1_character}**'s {team1} will battle **{team2_character}**'s {team2} {game_time} in what promises to be an absolutely WILD showdown! Both teams are ready to throw down! ⚡",
+                "UPCOMING CHAOS! **{team1_character}** and the {team1} are gearing up to face **{team2_character}** and the {team2} {game_time}! The pre-game smack talk is already getting HEATED! This one's going to be good! 🔥"
+            ],
+            "hype_builders": [
+                "Will **{team1_character}** finally put **{team2_character}** in their place?",
+                "Can **{team2_character}** handle the pressure against **{team1_character}**?",
+                "This rivalry has been brewing for WEEKS!",
+                "Both characters claim they're going to dominate!",
+                "The winner gets ultimate bragging rights!",
+                "Loser has to deal with the memes for a MONTH!",
+                "This could be the upset of the season!",
+                "Neither team wants to back down from this fight!"
+            ],
+            "predictions": [
+                "**{team1_character}** is talking BIG game, but can they deliver?",
+                "**{team2_character}** seems confident - maybe TOO confident?",
+                "Smart money is on **{team1_character}**, but **{team2_character}** loves proving people wrong!",
+                "This could go either way - both teams are fired up!",
+                "**{team1_character}** has the home field advantage, but **{team2_character}** thrives under pressure!",
+                "Vegas doesn't know what to do with this matchup - it's anyone's game!"
+            ]
+        }
+    }
+}

@@ -1,3 +1,4 @@
+import random
 from loguru import logger
 
 
@@ -23,3 +24,15 @@ def get_team_by_conference_and_division(nfl_teams_data, conference, division):
     if division:
         filtered_teams = [team for team in filtered_teams if nfl_teams_data[team]['division'] == division.capitalize()]
     return [nfl_teams_data[team] for team in filtered_teams]
+
+def get_big_win_template(storyline_data):
+    return random.choice(storyline_data["storylines"]["big_win"]["templates"])
+
+def get_small_win_template(storyline_data):
+    return random.choice(storyline_data["storylines"]["small_win"]["templates"])
+
+def get_tie_template(storyline_data):
+    return random.choice(storyline_data["storylines"]["tie"]["templates"])
+
+def get_upcoming_template(storyline_data):
+    return random.choice(storyline_data["storylines"]["upcoming"]["templates"])

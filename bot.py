@@ -3,7 +3,7 @@ import os
 import discord
 from discord.ext import commands
 from dotenv import load_dotenv
-from utils.read_json import load_nfl_teams, load_characters_nfl_mapping, load_characters
+from utils.read_json import load_nfl_teams, load_characters_nfl_mapping, load_characters, load_storyline
 import asyncio
 from utils.api_cache import APICache
 from utils.nfl_api_utils import cached_request
@@ -29,10 +29,13 @@ class MyBot(commands.Bot):
         self.characters_nfl_mapping_data = load_characters_nfl_mapping()
         self.characters_data = load_characters()
         logger.debug("✅ Loaded Character & NFL data")
+        self.storyline_data = load_storyline()
+        logger.debug("✅ Loaded NFL Teams, Characters, and Mappings")
 
         # load cache
         self.cache = APICache(cache_dir="./cache", expiration_hours=24)
         logger.debug("✅ Loaded API Cache")
+
 
     def cached_nfl_request(self, url, params=None):
 
@@ -75,9 +78,13 @@ class MyBot(commands.Bot):
             await self.load_extension('commands.character_commands')
             logger.info("✅ Loaded Character commands")
             
-            # Load NFL commands (when ready)
+            # Load NFL commands
             await self.load_extension('commands.nfl_commands')
             logger.info("✅ Loaded NFL commands")
+
+            # Load Story commands
+            await self.load_extension('commands.story_commands')
+            logger.info("✅ Loaded Story commands")
             
         except Exception as e:
             logger.error(f"❌ Failed to load cogs: {e}")
