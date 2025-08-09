@@ -109,7 +109,7 @@ class NFLCommands(commands.Cog, name="NFL Commands"):
 
         # get total drama character
         char_key = self.data_manager.get_character_key_by_team_key(team_name_lower)
-        char_name = self.bot.characters_data[char_key]["name"]
+        char_name = self.data_manager.get_character_info_by_character_key(char_key)["name"]
 
         # display to discord
         output = table2ascii(
@@ -163,8 +163,8 @@ class NFLCommands(commands.Cog, name="NFL Commands"):
         valid_conferences = ['nfc', 'afc']
         valid_divisions = ['north', 'east', 'south', 'west']
 
-        selected_conference = valid_conferences
-        selected_division = valid_divisions
+        selected_conference = [conference.upper() for conference in valid_conferences]
+        selected_division = [division.capitalize() for division in valid_divisions]
 
         # Clean and normalize the command
         if args:

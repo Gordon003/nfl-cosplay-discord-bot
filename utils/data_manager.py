@@ -1,3 +1,4 @@
+import random
 from loguru import logger
 from utils.api_cache import APICache
 from utils.read_json import load_characters, load_nfl_team_character_mapping, load_nfl_teams, load_storyline
@@ -43,3 +44,37 @@ class DataManager:
         if division:
             filtered_teams = [team for team in filtered_teams if self.nfl_teams_data[team]['division'] == division.capitalize()]
         return [self.nfl_teams_data[team] for team in filtered_teams]
+
+    def get_team_info_by_team_key(self, team_key):
+        """Get team info by team key"""
+        team_key_formatted = team_key.lower().replace(' ', '_')
+        return self.nfl_teams_data.get(team_key_formatted, None)
+    
+    def get_character_info_by_character_key(self, character_key):
+        """Get character info by character key"""
+        character_key_formatted = character_key.lower().replace(' ', '_')
+        return self.characters_data.get(character_key_formatted, None)
+    
+    def get_all_team_keys(self):
+        """Get all team keys"""
+        return list(self.nfl_teams_data.keys())
+
+    def get_all_character_keys(self):
+        """Get all character keys"""
+        return list(self.characters_data.keys())
+    
+    def get_storyline_random_big_win(self):
+        """Get a random big win storyline template"""
+        return random.choice(self.storyline_data["storylines"]["big_win"]["templates"])
+    
+    def get_storyline_random_small_win(self):
+        """Get a random small win storyline template"""
+        return random.choice(self.storyline_data["storylines"]["small_win"]["templates"])
+    
+    def get_storyline_random_tie(self):
+        """Get a random tie storyline template"""
+        return random.choice(self.storyline_data["storylines"]["tie"]["templates"])
+    
+    def get_storyline_random_upcoming(self):
+        """Get a random upcoming storyline template"""
+        return random.choice(self.storyline_data["storylines"]["upcoming"]["templates"])

@@ -25,18 +25,12 @@ class MyBot(commands.Bot):
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
-        # load data
-        self.nfl_teams_data = load_nfl_teams()
-        self.nfl_team_character_mapping_data = load_nfl_team_character_mapping()
-        self.characters_data = load_characters()
-        logger.debug("✅ Loaded Character & NFL data")
-        self.storyline_data = load_storyline()
-        logger.debug("✅ Loaded NFL Teams, Characters, and Mappings")
 
         # load cache
         self.cache = APICache(cache_dir="./cache", expiration_hours=24)
         logger.debug("✅ Loaded API Cache")
 
+        # load data manager
         self.data_manager = DataManager()
 
 

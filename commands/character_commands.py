@@ -50,20 +50,20 @@ class CharacterCommands(commands.Cog, name="Character Commands"):
 
         # get team info
         team_key = team_name.lower()
-        team_info = self.bot.nfl_teams_data[team_key]
+        team_info = self.data_manager.get_team_info_by_team_key(team_key)
 
         # get character info
-        character_key = self.data_manager.get_character_key_by_team_key(team_key)
-        character_info = self.bot.characters_data[character_key]
+        char_key = self.data_manager.get_character_key_by_team_key(team_key)
+        char_info = self.data_manager.get_character_info_by_character_key(char_key)
 
-        if character_key is None :
+        if char_key is None :
             await ctx.send(f"Team '{team_name}' not found!")
             return
 
         # display to Discord
         embed = discord.Embed(
             title=f"🏈 {team_info['name']}",
-            description=f"**Character:** {character_info['name']}",
+            description=f"**Character:** {char_info['name']}",
             color=0x00ff00
         )
         await ctx.send(embed=embed)
@@ -79,11 +79,11 @@ class CharacterCommands(commands.Cog, name="Character Commands"):
 
         # get character info
         char_key = character_name.lower()
-        char_info = self.bot.characters_data[char_key]
+        char_info = self.data_manager.get_character_info_by_character_key(char_key)
 
         # get team info
         team_key = self.data_manager.get_team_key_by_character_key(char_key)
-        team_info = self.bot.nfl_teams_data[team_key]
+        team_info = self.data_manager.get_team_info_by_team_key(team_key)
 
         if team_key is None :
             await ctx.send(f"Character '{character_name}' not been assigned to a team!")
@@ -129,10 +129,10 @@ class CharacterCommands(commands.Cog, name="Character Commands"):
 
         # get each character and team info
         character_team_map_list = []
-        for team_key in self.bot.nfl_team_character_mapping_data.keys():
-            char_key = self.bot.nfl_team_character_mapping_data[team_key]
-            char_name = self.bot.characters_data[char_key]["name"]
-            team_name = self.bot.nfl_teams_data[team_key]["abbreviation"]
+        for team_key in self.data_manager.get_all_team_keys():
+            char_key = self.data_manager.get_character_key_by_team_key(team_key)
+            char_name = self.data_manager.get_character_info_by_character_key(char_key)["name"]
+            team_name = self.data_manager.get_team_info_by_team_key(team_key)["abbreviation"]
             character_team_map_list.append([char_name, team_name])
 
         if sort_by == 'team_name':
@@ -156,16 +156,16 @@ class CharacterCommands(commands.Cog, name="Character Commands"):
         """Get all teams and characters assigned to them"""
 
         # Get random character and team key
-        rand_team_key = random.choice(list(self.bot.nfl_team_character_mapping_data.keys()))
-        rand_char_key = self.bot.nfl_team_character_mapping_data[rand_team_key] 
+        rand_team_key = random.choice(list(self.data_manager.get_all_team_keys()))
+        rand_char_key = self.data_manager.get_character_key_by_team_key(rand_team_key)
 
         # Get character and team info
-        character_name = self.bot.characters_data[rand_char_key]["name"]
-        team_name = self.bot.nfl_teams_data[rand_team_key]["name"]
+        char_name = self.data_manager.get_character_info_by_character_key(rand_char_key)["name"]
+        team_name = self.data_manager.get_team_info_by_team_key(rand_team_key)["name"]
 
         embed = discord.Embed(
             title=f"🏈 {team_name}",
-            description=f"**Character:** {character_name}",
+            description=f"**Character:** {char_name}",
             color=0x00ff00
         )
         await ctx.send(embed=embed)

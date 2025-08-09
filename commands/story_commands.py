@@ -2,12 +2,8 @@ import os
 import time
 import discord
 from discord.ext import commands
-from loguru import logger
-from table2ascii import table2ascii, PresetStyle
-from utils.nfl_schedule import get_next_scheduled_games_by_team_id, get_gameweek_by_offset
+from utils.nfl_schedule import  get_gameweek_by_offset
 from utils.date import convert_date
-from utils.data_util import get_big_win_template, get_small_win_template, get_tie_template, get_upcoming_template
-
 nfl_matches_params = {
     'league': 'NFL',
     'season': os.getenv('CURRENT_YEAR')
@@ -74,16 +70,16 @@ class StoryCommands(commands.Cog, name="Story Commands"):
         for game in games:
 
             home_team_key = game["homeTeam"]["name"].lower().replace(' ', '_')
-            home_team_info = self.bot.nfl_teams_data[home_team_key]
-            home_team_character_key = self.data_manager.get_character_key_by_team_key(home_team_key)
-            home_team_character_info = self.bot.characters_data[home_team_character_key]
+            home_team_info = self.data_manager.get_team_info_by_team_key(home_team_key)
+            home_team_char_key = self.data_manager.get_character_key_by_team_key(home_team_key)
+            home_team_char_info = self.data_manager.get_character_info_by_character_key(home_team_char_key)
 
             away_team_key = game["awayTeam"]["name"].lower().replace(' ', '_')
-            away_team_info = self.bot.nfl_teams_data[away_team_key]
-            away_team_character_key = self.data_managerget_character_key_by_team_key(away_team_key)
-            away_team_character_info = self.bot.characters_data[away_team_character_key]
+            away_team_info = self.data_manager.get_team_info_by_team_key(away_team_key)
+            away_team_char_key = self.data_manager.get_character_key_by_team_key(away_team_key)
+            away_team_char_info = self.data_manager.get_character_info_by_character_key(away_team_char_key)
 
-            await ctx.send(f"⚔️ **{home_team_character_info['name']}'s {game['homeTeam']['name']} vs {away_team_character_info['name']}'s {game['awayTeam']['name']}**")
+            await ctx.send(f"⚔️ **{home_team_char_info['name']}'s {game['homeTeam']['name']} vs {away_team_char_info['name']}'s {game['awayTeam']['name']}**")
             time.sleep(1)  # Simulate some delay for dramatic effect
 
             if game["state"]["description"] == "Finished":
@@ -97,19 +93,19 @@ class StoryCommands(commands.Cog, name="Story Commands"):
 
                 if score_margin > 0:
                     if score_margin >= 20:
-                        placeholder_text = get_big_win_template(self.bot.storyline_data)
+                        placeholder_text = self.data_manager.get_storyline_random_big_win()
                     else:
-                        placeholder_text = get_small_win_template(self.bot.storyline_data)
+                        placeholder_text = self.data_manager.get_storyline_random_small_win()
                     if int(home_score) > int(away_score):
-                        winner = [home_team_character_info['name'], home_team_info["name"], home_score]
-                        loser = [away_team_character_info['name'], away_team_info["name"], away_score]
+                        winner = [home_team_char_info['name'], home_team_info["name"], home_score]
+                        loser = [away_team_char_info['name'], away_team_info["name"], away_score]
                     else:
-                        winner = [away_team_character_info['name'], away_team_info["name"], away_score]
-                        loser = [home_team_character_info['name'], home_team_info["name"], home_score]
+                        winner = [away_team_char_info['name'], away_team_info["name"], away_score]
+                        loser = [home_team_char_info['name'], home_team_info["name"], home_score]
                 else:
-                    placeholder_text = get_tie_template(self.bot.storyline_data)
-                    winner = [home_team_character_info['name'], home_team_info["name"], home_score]
-                    loser = [away_team_character_info['name'], away_team_info["name"], away_score]
+                    placeholder_text = self.data_manager.get_storyline_random_tie()
+                    winner = [home_team_char_info['name'], home_team_info["name"], home_score]
+                    loser = [away_team_char_info['name'], away_team_info["name"], away_score]
 
                 story = placeholder_text.format(
                     winner_character=winner[0],
@@ -121,11 +117,11 @@ class StoryCommands(commands.Cog, name="Story Commands"):
                 )
                 await ctx.send(f"{story}")
             elif game["state"]["description"] == "Scheduled":
-                placeholder_text = get_upcoming_template(self.bot.storyline_data)
+                placeholder_text = self.data_manager.get_storyline_random_upcoming()
                 story = placeholder_text.format(
-                    team1_character=home_team_character_info['name'],
+                    team1_character=home_team_char_info['name'],
                     team1=home_team_info["name"],
-                    team2_character=away_team_character_info['name'],
+                    team2_character=away_team_char_info['name'],
                     team2=away_team_info["name"],
                     game_time=convert_date(game["date"])
                 )
