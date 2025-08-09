@@ -108,7 +108,7 @@ class NFLCommands(commands.Cog, name="NFL Commands"):
             output_value_table.append([convert_date(game["date"]), game["homeTeam"]["name"], game["awayTeam"]["name"]])
 
         # get total drama character
-        char_key = get_character_key_by_team_key(self.bot.characters_nfl_mapping_data ,team_name_lower)
+        char_key = get_character_key_by_team_key(self.bot.nfl_team_character_mapping_data ,team_name_lower)
         char_name = self.bot.characters_data[char_key]["name"]
 
         # display to discord

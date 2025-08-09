@@ -2,18 +2,18 @@ import random
 from loguru import logger
 
 
-def get_character_key_by_team_key(characters_nfl_mapping_data, team_name):
+def get_character_key_by_team_key(nfl_team_character_mapping_data, team_name):
     """Get character key assigned to a team"""
     team_key = team_name.lower().replace(' ', '_')
-    for name in characters_nfl_mapping_data.keys():
-        if characters_nfl_mapping_data[name]["assigned_team"] == team_key:
-            return name
-    return None
+    return nfl_team_character_mapping_data[team_key]
 
-def get_team_key_by_character_key(characters_nfl_mapping_data, character_name):
+def get_team_key_by_character_key(nfl_team_character_mapping_data, character_name):
     """Get team key assigned to a character"""
     character_key = character_name.lower().replace(' ', '_')
-    return characters_nfl_mapping_data[character_key]["assigned_team"]
+    for name in nfl_team_character_mapping_data.keys():
+        if nfl_team_character_mapping_data[name] == character_key:
+            return name
+    return None
 
 
 def get_team_by_conference_and_division(nfl_teams_data, conference, division):

@@ -74,12 +74,12 @@ class StoryCommands(commands.Cog, name="Story Commands"):
 
             home_team_key = game["homeTeam"]["name"].lower().replace(' ', '_')
             home_team_info = self.bot.nfl_teams_data[home_team_key]
-            home_team_character_key = get_character_key_by_team_key(self.bot.characters_nfl_mapping_data, home_team_key)
+            home_team_character_key = get_character_key_by_team_key(self.bot.nfl_team_character_mapping_data, home_team_key)
             home_team_character_info = self.bot.characters_data[home_team_character_key]
 
             away_team_key = game["awayTeam"]["name"].lower().replace(' ', '_')
             away_team_info = self.bot.nfl_teams_data[away_team_key]
-            away_team_character_key = get_character_key_by_team_key(self.bot.characters_nfl_mapping_data, away_team_key)
+            away_team_character_key = get_character_key_by_team_key(self.bot.nfl_team_character_mapping_data, away_team_key)
             away_team_character_info = self.bot.characters_data[away_team_character_key]
 
             await ctx.send(f"⚔️ **{home_team_character_info['name']}'s {game['homeTeam']['name']} vs {away_team_character_info['name']}'s {game['awayTeam']['name']}**")

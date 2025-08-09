@@ -21,7 +21,7 @@ def load_characters():
     """Load Characters from JSON file"""
     return load_json('data/characters.json')
     
-def load_characters_nfl_mapping():
+def load_nfl_team_character_mapping():
     """Load Characters x NFL Mapping from JSON file"""
     return load_json('data/character_nfl_mapping.json')
 

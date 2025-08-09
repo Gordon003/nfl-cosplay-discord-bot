@@ -3,7 +3,7 @@ import os
 import discord
 from discord.ext import commands
 from dotenv import load_dotenv
-from utils.read_json import load_nfl_teams, load_characters_nfl_mapping, load_characters, load_storyline
+from utils.read_json import load_nfl_teams, load_nfl_team_character_mapping, load_characters, load_storyline
 import asyncio
 from utils.api_cache import APICache
 from utils.nfl_api_utils import cached_request
@@ -26,7 +26,7 @@ class MyBot(commands.Bot):
         super().__init__(*args, **kwargs)
         # load data
         self.nfl_teams_data = load_nfl_teams()
-        self.characters_nfl_mapping_data = load_characters_nfl_mapping()
+        self.nfl_team_character_mapping_data = load_nfl_team_character_mapping()
         self.characters_data = load_characters()
         logger.debug("✅ Loaded Character & NFL data")
         self.storyline_data = load_storyline()

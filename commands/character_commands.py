@@ -53,7 +53,7 @@ class CharacterCommands(commands.Cog, name="Character Commands"):
         team_info = self.bot.nfl_teams_data[team_key]
 
         # get character info
-        character_key = get_character_key_by_team_key(self.bot.characters_nfl_mapping_data ,team_key)
+        character_key = get_character_key_by_team_key(self.bot.nfl_team_character_mapping_data ,team_key)
         character_info = self.bot.characters_data[character_key]
 
         if character_key is None :
@@ -82,7 +82,7 @@ class CharacterCommands(commands.Cog, name="Character Commands"):
         char_info = self.bot.characters_data[char_key]
 
         # get team info
-        team_key = get_team_key_by_character_key(self.bot.characters_nfl_mapping_data, char_key)
+        team_key = get_team_key_by_character_key(self.bot.nfl_team_character_mapping_data, char_key)
         team_info = self.bot.nfl_teams_data[team_key]
 
         if team_key is None :
@@ -129,11 +129,11 @@ class CharacterCommands(commands.Cog, name="Character Commands"):
 
         # get each character and team info
         character_team_map_list = []
-        for character_key in self.bot.characters_nfl_mapping_data.keys():
-            character_name = self.bot.characters_data[character_key]["name"]
-            team_key = self.bot.characters_nfl_mapping_data[character_key]["assigned_team"]
+        for team_key in self.bot.nfl_team_character_mapping_data.keys():
+            char_key = self.bot.nfl_team_character_mapping_data[team_key]
+            char_name = self.bot.characters_data[char_key]["name"]
             team_name = self.bot.nfl_teams_data[team_key]["abbreviation"]
-            character_team_map_list.append([character_name, team_name])
+            character_team_map_list.append([char_name, team_name])
 
         if sort_by == 'team_name':
             character_team_map_list.sort(key=lambda x: x[1])
@@ -156,8 +156,8 @@ class CharacterCommands(commands.Cog, name="Character Commands"):
         """Get all teams and characters assigned to them"""
 
         # Get random character and team key
-        rand_char_key = random.choice(list(self.bot.characters_nfl_mapping_data.keys()))
-        rand_team_key = self.bot.characters_nfl_mapping_data[rand_char_key]["assigned_team"] 
+        rand_team_key = random.choice(list(self.bot.nfl_team_character_mapping_data.keys()))
+        rand_char_key = self.bot.nfl_team_character_mapping_data[rand_team_key] 
 
         # Get character and team info
         character_name = self.bot.characters_data[rand_char_key]["name"]
