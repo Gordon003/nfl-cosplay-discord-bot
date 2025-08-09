@@ -3,6 +3,7 @@ import os
 import discord
 from discord.ext import commands
 from dotenv import load_dotenv
+from utils.data_manager import DataManager
 from utils.read_json import load_nfl_teams, load_nfl_team_character_mapping, load_characters, load_storyline
 import asyncio
 from utils.api_cache import APICache
@@ -35,6 +36,8 @@ class MyBot(commands.Bot):
         # load cache
         self.cache = APICache(cache_dir="./cache", expiration_hours=24)
         logger.debug("✅ Loaded API Cache")
+
+        self.data_manager = DataManager()
 
 
     def cached_nfl_request(self, url, params=None):

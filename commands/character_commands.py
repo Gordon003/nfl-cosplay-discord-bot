@@ -4,12 +4,12 @@ from discord.ext import commands
 from loguru import logger
 from table2ascii import table2ascii, PresetStyle
 from utils import parse_discord_arg
-from utils.data_util import get_character_key_by_team_key, get_team_key_by_character_key
 
 class CharacterCommands(commands.Cog, name="Character Commands"):
 
     def __init__(self, bot):
         self.bot = bot
+        self.data_manager = bot.data_manager
     
     @commands.group(name='char', invoke_without_command=True)
     async def character_command(self, ctx):
@@ -53,7 +53,7 @@ class CharacterCommands(commands.Cog, name="Character Commands"):
         team_info = self.bot.nfl_teams_data[team_key]
 
         # get character info
-        character_key = get_character_key_by_team_key(self.bot.nfl_team_character_mapping_data ,team_key)
+        character_key = self.data_manager.get_character_key_by_team_key(team_key)
         character_info = self.bot.characters_data[character_key]
 
         if character_key is None :
@@ -82,7 +82,7 @@ class CharacterCommands(commands.Cog, name="Character Commands"):
         char_info = self.bot.characters_data[char_key]
 
         # get team info
-        team_key = get_team_key_by_character_key(self.bot.nfl_team_character_mapping_data, char_key)
+        team_key = self.data_manager.get_team_key_by_character_key(char_key)
         team_info = self.bot.nfl_teams_data[team_key]
 
         if team_key is None :

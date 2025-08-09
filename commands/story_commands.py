@@ -6,7 +6,7 @@ from loguru import logger
 from table2ascii import table2ascii, PresetStyle
 from utils.nfl_schedule import get_next_scheduled_games_by_team_id, get_gameweek_by_offset
 from utils.date import convert_date
-from utils.data_util import get_big_win_template, get_character_key_by_team_key, get_small_win_template, get_team_by_conference_and_division, get_tie_template, get_upcoming_template
+from utils.data_util import get_big_win_template, get_small_win_template, get_tie_template, get_upcoming_template
 
 nfl_matches_params = {
     'league': 'NFL',
@@ -18,6 +18,7 @@ class StoryCommands(commands.Cog, name="Story Commands"):
     
     def __init__(self, bot):
         self.bot = bot
+        self.data_manager = bot.data_manager
 
     @commands.group(name='story', invoke_without_command=True)
     async def story(self, ctx):
@@ -74,12 +75,12 @@ class StoryCommands(commands.Cog, name="Story Commands"):
 
             home_team_key = game["homeTeam"]["name"].lower().replace(' ', '_')
             home_team_info = self.bot.nfl_teams_data[home_team_key]
-            home_team_character_key = get_character_key_by_team_key(self.bot.nfl_team_character_mapping_data, home_team_key)
+            home_team_character_key = self.data_manager.get_character_key_by_team_key(home_team_key)
             home_team_character_info = self.bot.characters_data[home_team_character_key]
 
             away_team_key = game["awayTeam"]["name"].lower().replace(' ', '_')
             away_team_info = self.bot.nfl_teams_data[away_team_key]
-            away_team_character_key = get_character_key_by_team_key(self.bot.nfl_team_character_mapping_data, away_team_key)
+            away_team_character_key = self.data_managerget_character_key_by_team_key(away_team_key)
             away_team_character_info = self.bot.characters_data[away_team_character_key]
 
             await ctx.send(f"⚔️ **{home_team_character_info['name']}'s {game['homeTeam']['name']} vs {away_team_character_info['name']}'s {game['awayTeam']['name']}**")

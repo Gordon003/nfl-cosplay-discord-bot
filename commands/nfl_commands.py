@@ -5,7 +5,6 @@ from loguru import logger
 from table2ascii import table2ascii, PresetStyle
 from utils.nfl_schedule import get_next_scheduled_games_by_team_id, get_gameweek_by_offset
 from utils.date import convert_date
-from utils.data_util import get_character_key_by_team_key, get_team_by_conference_and_division
 
 nfl_matches_params = {
     'league': 'NFL',
@@ -17,6 +16,7 @@ class NFLCommands(commands.Cog, name="NFL Commands"):
     
     def __init__(self, bot):
         self.bot = bot
+        self.data_manager = bot.data_manager
 
     @commands.group(name='nfl', invoke_without_command=True)
     async def nfl(self, ctx):
@@ -108,7 +108,7 @@ class NFLCommands(commands.Cog, name="NFL Commands"):
             output_value_table.append([convert_date(game["date"]), game["homeTeam"]["name"], game["awayTeam"]["name"]])
 
         # get total drama character
-        char_key = get_character_key_by_team_key(self.bot.nfl_team_character_mapping_data ,team_name_lower)
+        char_key = self.data_manager.get_character_key_by_team_key(team_name_lower)
         char_name = self.bot.characters_data[char_key]["name"]
 
         # display to discord
@@ -178,10 +178,10 @@ class NFLCommands(commands.Cog, name="NFL Commands"):
         # API Call to get standings
         total_standings = []
         try:
-            if 'nfc' in selected_conference:
+            if 'NFC' in selected_conference:
                 nfc_standings = self.bot.cached_nfl_request("/standings", {'year': 2025, 'leagueType': 'NFL', 'leagueName': 'National Football Conference'})
                 total_standings += nfc_standings["data"][0]["data"]
-            if 'afc' in selected_conference:
+            if 'AFC' in selected_conference:
                 afc_standings = self.bot.cached_nfl_request("/standings", {'year': 2025, 'leagueType': 'NFL', 'leagueName': 'American Football Conference'})
                 total_standings += afc_standings["data"][0]["data"]
         except Exception as e:
@@ -198,13 +198,13 @@ class NFLCommands(commands.Cog, name="NFL Commands"):
                 if statistic["displayName"] == "Division Record":
                     team_record = statistic["value"]
             team_records[team_id] = team_record
-        
+
         # separately display teams by conference and division
         for conference in selected_conference:
             for division in selected_division:
 
                 # filtered teams based on conference and division
-                filtered_teams = get_team_by_conference_and_division(self.bot.nfl_teams_data, conference, division)
+                filtered_teams = self.data_manager.get_teams_by_conference_and_division(conference, division)
 
                 # get team data with records
                 team_data = [[team["abbreviation"], team_records[team["id"]]] for team in filtered_teams]
