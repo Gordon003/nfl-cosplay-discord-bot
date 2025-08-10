@@ -68,6 +68,8 @@ class StoryCommands(commands.Cog, name="Story Commands"):
         # generate game story
         for game in games:
 
+            game_id = game["id"]
+
             home_team_key = game["homeTeam"]["name"].lower().replace(' ', '_')
             home_team_info = self.data_manager.get_team_info_by_team_key(home_team_key)
             home_team_char_key = self.data_manager.get_character_key_by_team_key(home_team_key)
@@ -78,7 +80,7 @@ class StoryCommands(commands.Cog, name="Story Commands"):
             away_team_char_key = self.data_manager.get_character_key_by_team_key(away_team_key)
             away_team_char_info = self.data_manager.get_character_info_by_character_key(away_team_char_key)
 
-            await ctx.send(f"⚔️ **{home_team_char_info['name']}'s {game['homeTeam']['name']} vs {away_team_char_info['name']}'s {game['awayTeam']['name']}**")
+            await ctx.send(f"⚔️ **{home_team_char_info['name']}'s {game['homeTeam']['name']} vs {away_team_char_info['name']}'s {game['awayTeam']['name']}** [Match ID: {game_id}]")
             time.sleep(1)  # Simulate some delay for dramatic effect
 
             if game["state"]["description"] == "Finished":
@@ -126,6 +128,8 @@ class StoryCommands(commands.Cog, name="Story Commands"):
                 )
                 await ctx.send(f"{story}")
 
+            separator = "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+            await ctx.send(separator)
 
             time.sleep(2)  # Simulate some delay for dramatic effect
 

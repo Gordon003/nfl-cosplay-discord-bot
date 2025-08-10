@@ -40,18 +40,4 @@ def cached_request(
     else:
         logger.error(f"Request failed: {response.status_code} - {response.text}")
         return None
-    
-def format_time(seconds):
-    """Format time in seconds to a human-readable string"""
-    if seconds < 1:
-        return "< 1 second"
-    elif seconds < 60:
-        return f"{seconds:.0f} seconds"
-    else:
-        minutes = int(seconds // 60)
-        sec = int(seconds % 60)
-        if sec == 0:
-            return f"~{minutes} minutes"
-        else:
-            return f"~{minutes}.{sec // 6} minutes"
 
