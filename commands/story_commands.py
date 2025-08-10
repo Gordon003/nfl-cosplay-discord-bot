@@ -2,6 +2,7 @@ import os
 import time
 import discord
 from discord.ext import commands
+from loguru import logger
 from utils.nfl_schedule import  get_gameweek_by_offset
 from utils.date import convert_date
 nfl_matches_params = {
@@ -132,6 +133,53 @@ class StoryCommands(commands.Cog, name="Story Commands"):
             await ctx.send(separator)
 
             time.sleep(2)  # Simulate some delay for dramatic effect
+    
+    @story.command(
+        name='game',
+        help='Generate a story for a specific match by match ID',
+    )
+    async def story_game(self, ctx, match_id: str):
+
+        # validate match ID
+        if not match_id.isdigit():
+            await ctx.send("Invalid match ID. Please provide a numeric match ID.")
+            return
+        
+        # get latest scores from NFL API
+        try:
+            response = await self.bot.cached_nfl_request(f"/matches/{match_id}")
+        except:
+            await ctx.send(nfl_api_matches_error)
+            return
+        
+        game_response = response[0]
+        
+        home_team_key = game_response["homeTeam"]["name"].lower().replace(' ', '_')
+        home_team_info = self.data_manager.get_team_info_by_team_key(home_team_key)
+        home_team_char_key = self.data_manager.get_character_key_by_team_key(home_team_key)
+        home_team_char_info = self.data_manager.get_character_info_by_character_key(home_team_char_key)
+
+        away_team_key = game_response["awayTeam"]["name"].lower().replace(' ', '_')
+        away_team_info = self.data_manager.get_team_info_by_team_key(away_team_key)
+        away_team_char_key = self.data_manager.get_character_key_by_team_key(away_team_key)
+        away_team_char_info = self.data_manager.get_character_info_by_character_key(away_team_char_key)
+
+        await ctx.send(f"⚔️ **{home_team_char_info['name']}'s {game_response['homeTeam']['name']} vs {away_team_char_info['name']}'s {game_response['awayTeam']['name']}** [Match ID: {match_id}]")
+
+        home_team_id = game_response["homeTeam"]["id"]
+        home_score = 0
+        away_team_id = game_response["awayTeam"]["id"]
+        away_score = 0
+
+        game_state = game_response["state"]
+        game_period_key = ["firstPeriod", "secondPeriod", "thirdPeriod", "fourthPeriod"]
+        for period in game_period_key:
+            period_score = game_state['score'][period]
+            home_period_score, away_period_score = [int(x.strip()) for x in period_score.split('-')]
+            home_score += home_period_score
+            away_score += away_period_score
+            await ctx.send(f"**{period}** {home_score} - {away_score}")
+
 
 async def setup(bot):
     await bot.add_cog(StoryCommands(bot))

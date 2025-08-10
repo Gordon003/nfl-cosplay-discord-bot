@@ -1,7 +1,7 @@
 import requests
 from loguru import logger
 
-def cached_request(
+async def cached_request(
     cache, method, url, headers=None, params=None, json=None, use_cache=True, api_timeout=30
 ):
     """Make a request with caching for GET requests"""

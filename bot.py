@@ -34,7 +34,7 @@ class MyBot(commands.Bot):
         self.data_manager = DataManager()
 
 
-    def cached_nfl_request(self, url, params=None):
+    async def cached_nfl_request(self, url, params=None):
 
         full_url = f" https://{NFL_API_HOST}{url}"
         header = {
@@ -43,7 +43,7 @@ class MyBot(commands.Bot):
         }
 
         try:
-            return cached_request(self.cache, "get", full_url, headers=header, params=params)
+            return await cached_request(self.cache, "get", full_url, headers=header, params=params)
         except Exception as e:
             logger.error(f"Error: {e}")
             raise Exception(f"Error: {e}")
