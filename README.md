@@ -1,13 +1,13 @@
 # NFL Cosplay Discord Bot
 
-A Discord bot designed for NFL cosplay communities. This bot provides features such as team info, cosplay event reminders, and interactive commands to enhance your Discord server experience.
+A Discord bot designed for NFL x Character integration. This bot provides the ability to merge both NFL and character in a funny and interestign way.
 
 ## Features
 
-- NFL team information lookup
-- Cosplay event reminders and scheduling
-- Fun interactive commands for fans
-- Customizable settings for your server
+- NFL Team & Character information lookup
+- Customisable NFL x Character mapping
+- Ability to generate story from each gameweek
+- API Cache to meet under NFL API Daily Limit (100 API Calls per day)
 
 ## Setup
 
@@ -19,10 +19,6 @@ A Discord bot designed for NFL cosplay communities. This bot provides features s
 
 2. **Install dependencies:**
    ```sh
-   npm install
-   ```
-   or, if using Python:
-   ```sh
    pip install -r requirements.txt
    ```
 
@@ -31,19 +27,16 @@ A Discord bot designed for NFL cosplay communities. This bot provides features s
 
 4. **Run the bot:**
    ```sh
-   npm start
-   ```
-   or, for Python:
-   ```sh
    python bot.py
    ```
 
 ## Usage
 
 Invite the bot to your Discord server and use commands such as:
-- `/teaminfo [team]` — Get info about an NFL team
-- `/schedule [event]` — Schedule a cosplay event
-- `/help` — List all available commands
+- `!nfl gameweek [previous|current|next]` — Get info about particular NFL gameweek
+- `!char team [char_name]` — Find which character is assigned to a NFL team
+- `!story gameweek [previous|current|next]` - Generate storyline from each gameweek 
+- `!help` — List all available commands
 
 ## Contributing
 
