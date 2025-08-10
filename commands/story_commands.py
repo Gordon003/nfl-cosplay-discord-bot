@@ -28,15 +28,14 @@ class StoryCommands(commands.Cog, name="Story Commands"):
             embed.add_field(
                 name="Commands:",
                 value=
-                    "`!nfl gameweek <previous|current|next>` - Get gameweek schedule\n"
-                    "`!nfl schedule <team_name>` - Get team upcoming schedule\n",
+                    "`!story gameweek <previous|current|next>` - Generate Story week\n",
                 inline=False
             )
             embed.add_field(
                 name="Examples:",
                 value=
-                    "`!nfl gameweek previous`\n"
-                    "`!nfl gameweek current`\n"
+                    "`!story gameweek previous`\n"
+                    "`!story gameweek current`\n"
                     "`!nfl schedule cowboys`\n",
                 inline=False
             )
