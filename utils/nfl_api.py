@@ -8,9 +8,14 @@ import requests
 from utils.api_cache import APICache
 class NFLAPIManager:
 
-    def __init__(self, cache_dir="./cache", expiration_hours=24):
+    def __init__(self, cache_dir="./cache", match_cache_dir="./match_cache", expiration_hours=24):
 
         self.apiCache = APICache(cache_dir, expiration_hours)
+
+        # Set up cache directory for match data
+        self.match_cache_dir = match_cache_dir
+        if not os.path.exists(match_cache_dir):
+            os.makedirs(match_cache_dir)    
 
         self.current_year = os.getenv('CURRENT_YEAR')
         self.league = 'NFL'
@@ -79,14 +84,34 @@ class NFLAPIManager:
         
     async def get_nfl_specific_match(self, matchid):
         """Get a specific NFL match by ID"""
+
+        # check if matchid exist in cache
         
         full_url = f"https://{os.getenv('NFL_API_HOST')}/matches/{matchid}"
 
+        # check if matchid is already cached
+        cache_file = os.path.join(self.match_cache_dir, f"{matchid}")
+        if os.path.exists(cache_file):
+            with open(cache_file, "rb") as f:
+                cached_data = pickle.load(f)
+            logger.debug(f"Match {matchid} loaded from cache.")
+            return cached_data
+
+        # make request to API
         try:
-            return self._cached_request("get", full_url)
+            response = self._cached_request("get", full_url)
         except Exception as e:
             logger.error(f"Failed to get NFL match {matchid}: {e}")
             raise Exception(f"Failed to get NFL match {matchid}")
+        
+        # Save finished match data to cache
+        if response[0]["state"]["report"] == "Final":
+            cache_file = os.path.join(self.match_cache_dir, f"{matchid}")
+            with open(cache_file, "wb") as f:
+                pickle.dump(response, f)
+            logger.debug(f"Match {matchid} cached successfully.")
+
+        return response
         
     async def get_nfl_standings(self, conference=None):
         """Get NFL Standings by conference"""

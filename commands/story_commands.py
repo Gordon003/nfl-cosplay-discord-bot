@@ -129,10 +129,10 @@ class StoryCommands(commands.Cog, name="Story Commands"):
             time.sleep(2)  # Simulate some delay for dramatic effect
     
     @story.command(
-        name='game',
+        name='match',
         help='Generate a story for a specific match by match ID',
     )
-    async def story_game(self, ctx, match_id: str):
+    async def story_match(self, ctx, match_id: str):
 
         # validate match ID
         if not match_id.isdigit():

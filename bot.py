@@ -5,17 +5,13 @@ from discord.ext import commands
 from dotenv import load_dotenv
 from utils.data_manager import DataManager
 import asyncio
-from utils.api_cache import APICache
 from utils.nfl_api import NFLAPIManager
-from utils.nfl_api_utils import cached_request
 from loguru import logger
 
 # Load env
 load_dotenv()
 TOKEN = os.getenv('DISCORD_TOKEN')
 GUILD = os.getenv('DISCORD_GUILD')
-NFL_API_KEY = os.getenv('NFL_API_KEY')
-NFL_API_HOST = os.getenv('NFL_API_HOST')
 
 # Bot setup
 intents = discord.Intents.default()
