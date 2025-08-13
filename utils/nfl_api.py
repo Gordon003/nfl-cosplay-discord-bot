@@ -20,15 +20,14 @@ class NFLAPIManager:
         self.current_year = os.getenv('CURRENT_YEAR')
         self.league = 'NFL'
 
-        self.headers = {
-            "x-rapidapi-key": os.getenv('NFL_API_KEY'),
-            "x-rapidapi-host": os.getenv('NFL_API_HOST')
+        self.nfl_ncca_api_headers = {
+            "x-rapidapi-key": os.getenv('NFL_NCAA_HIGHLIGHT_API_KEY'),
+            "x-rapidapi-host": os.getenv('NFL_NCAA_HIGHLIGHT_API_HOST')
         }
-
-        self.base_url = f"https://{os.getenv('NFL_API_HOST')}"
+        self.base_nfl_ncca_api_url = f"https://{os.getenv('NFL_NCAA_HIGHLIGHT_API_HOST')}"
         
 
-    def _cached_request(self, method, url, params=None, json=None, use_cache=True, api_timeout=30):
+    def _cached_request(self, method, url, headers=None, params=None, json=None, use_cache=True, api_timeout=30):
         """Make a request with caching for GET requests"""
         logger.debug(f"Making request: {url}")
         if method.lower() == "get" and use_cache:
@@ -41,9 +40,9 @@ class NFLAPIManager:
         # Make request - raise exception if timed out
         try:
             if method.lower() == "get":
-                response = requests.get(url, headers=self.headers, params=params, timeout=api_timeout)
+                response = requests.get(url, headers=headers, params=params, timeout=api_timeout)
             elif method.lower() == "post":
-                response = requests.post(url, headers=self.headers, params=params, json=json, timeout=api_timeout)
+                response = requests.post(url, headers=headers, params=params, json=json, timeout=api_timeout)
         except Exception as e:
             raise Exception(f"Request failed with error: {e}")
         # Cache successful GET responses
@@ -69,7 +68,7 @@ class NFLAPIManager:
     async def get_nfl_matches(self):
         """Get NFL matches from the API"""
 
-        full_url = f"https://{os.getenv('NFL_API_HOST')}/matches"
+        full_url = f"{self.base_nfl_ncca_api_url}/matches"
 
         params = {
             'league': self.league,
@@ -77,17 +76,13 @@ class NFLAPIManager:
         }
 
         try:
-            return self._cached_request("get", full_url, params=params)
+            return self._cached_request("get", full_url, headers=self.nfl_ncca_api_headers, params=params)
         except Exception as e:
             logger.error(f"Failed to get NFL matches: {e}")
             raise Exception("Failed to get NFL matches")
         
     async def get_nfl_specific_match(self, matchid):
         """Get a specific NFL match by ID"""
-
-        # check if matchid exist in cache
-        
-        full_url = f"https://{os.getenv('NFL_API_HOST')}/matches/{matchid}"
 
         # check if matchid is already cached
         cache_file = os.path.join(self.match_cache_dir, f"{matchid}")
@@ -98,8 +93,9 @@ class NFLAPIManager:
             return cached_data
 
         # make request to API
+        full_url = f"{self.base_nfl_ncca_api_url}/matches/{matchid}"
         try:
-            response = self._cached_request("get", full_url)
+            response = self._cached_request("get", full_url, headers=self.nfl_ncca_api_headers)
         except Exception as e:
             logger.error(f"Failed to get NFL match {matchid}: {e}")
             raise Exception(f"Failed to get NFL match {matchid}")
@@ -127,9 +123,8 @@ class NFLAPIManager:
         else:
             logger.error("Invalid conference specified")
             return None
-                
-        full_url = f"https://{os.getenv('NFL_API_HOST')}/standings"
 
+        full_url = f"{self.base_nfl_ncca_api_url}/standings"
         params = {
             'leagueName': league_type,
             'leagueType': self.league,
@@ -137,7 +132,7 @@ class NFLAPIManager:
         }
 
         try:
-            return self._cached_request("get", full_url, params=params)
+            return self._cached_request("get", full_url, headers=self.nfl_ncca_api_headers, params=params)
         except Exception as e:
             logger.error(f"Failed to get NFL Standings {conference}: {e}")
             raise Exception(f"Failed to get NFL Standings {conference}")
