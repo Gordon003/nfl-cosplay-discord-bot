@@ -1,21 +1,15 @@
-import os
 import time
 import discord
 from discord.ext import commands
-from loguru import logger
 from utils.nfl_schedule import  get_gameweek_by_offset
 from utils.date import convert_date
-nfl_matches_params = {
-    'league': 'NFL',
-    'season': os.getenv('CURRENT_YEAR')
-}
-nfl_api_matches_error = 'Failed to get matches'
 
 class StoryCommands(commands.Cog, name="Story Commands"):
     
     def __init__(self, bot):
         self.bot = bot
         self.data_manager = bot.data_manager
+        self.nfl_api_manager = bot.nfl_api_manager
 
     @commands.group(name='story', invoke_without_command=True)
     async def story(self, ctx):
@@ -49,9 +43,9 @@ class StoryCommands(commands.Cog, name="Story Commands"):
     async def story_gameweek(self, ctx, period: str='current'):
         # get latest scores from NFL API
         try:
-            response = self.bot.cached_nfl_request("/matches", nfl_matches_params)
-        except:
-            await ctx.send(nfl_api_matches_error)
+            response = await self.bot.nfl_api_manager.get_nfl_matches()
+        except Exception as e:
+            await ctx.send(f"Failed to get matches: {e}")
             return
 
         # get gameweek selection
@@ -147,9 +141,9 @@ class StoryCommands(commands.Cog, name="Story Commands"):
         
         # get latest scores from NFL API
         try:
-            response = await self.bot.cached_nfl_request(f"/matches/{match_id}")
-        except:
-            await ctx.send(nfl_api_matches_error)
+            response = await self.bot.nfl_api_manager.get_nfl_specific_match(match_id)
+        except Exception as e:
+            await ctx.send(f"Failed to get match {match_id}: {e}")
             return
         
         game_response = response[0]

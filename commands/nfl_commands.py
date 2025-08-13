@@ -17,6 +17,7 @@ class NFLCommands(commands.Cog, name="NFL Commands"):
     def __init__(self, bot):
         self.bot = bot
         self.data_manager = bot.data_manager
+        self.nfl_api_manager = bot.nfl_api_manager
 
     @commands.group(name='nfl', invoke_without_command=True)
     async def nfl(self, ctx):
@@ -51,7 +52,7 @@ class NFLCommands(commands.Cog, name="NFL Commands"):
     async def get_gameweek(self, ctx, period: str='current'):
         # get latest scores from NFL API
         try:
-            response = self.bot.cached_nfl_request("/matches", nfl_matches_params)
+            response = await self.bot.nfl_api_manager.get_nfl_matches()
         except:
             await ctx.send(nfl_api_matches_error)
             return
@@ -91,14 +92,14 @@ class NFLCommands(commands.Cog, name="NFL Commands"):
     async def get_team_schedule(self, ctx, *, team_name):
         # get team ids from name
         team_name_lower = team_name.lower().replace(' ', '_')
-        team_data = self.bot.nfl_teams_data[team_name_lower]
+        team_data = self.data_manager.get_team_info_by_team_key(team_name_lower)
         team_id = team_data["id"]
 
         # call nfl api
         try:
-            response = self.bot.cached_nfl_request("/matches", nfl_matches_params)
+            response = await self.bot.nfl_api_manager.get_nfl_matches()
         except Exception as e:
-            await ctx.send(nfl_api_matches_error)
+            await ctx.send(f"Failed to get matches: {e}")
             return
 
         games = get_next_scheduled_games_by_team_id(response["data"], team_id)
@@ -130,7 +131,7 @@ class NFLCommands(commands.Cog, name="NFL Commands"):
     async def get_upcoming_week_games(self, ctx):
         """ Get latest scores from previous week"""
         try:
-            response = self.bot.cached_nfl_request("/matches", nfl_matches_params)
+            response = await self.bot.nfl_api_manager.get_nfl_matches()
         except:
             await ctx.send(nfl_api_matches_error)
             return
@@ -179,10 +180,10 @@ class NFLCommands(commands.Cog, name="NFL Commands"):
         total_standings = []
         try:
             if 'NFC' in selected_conference:
-                nfc_standings = self.bot.cached_nfl_request("/standings", {'year': 2025, 'leagueType': 'NFL', 'leagueName': 'National Football Conference'})
+                nfc_standings = await self.nfl_api_manager.get_nfl_standings('nfc')
                 total_standings += nfc_standings["data"][0]["data"]
             if 'AFC' in selected_conference:
-                afc_standings = self.bot.cached_nfl_request("/standings", {'year': 2025, 'leagueType': 'NFL', 'leagueName': 'American Football Conference'})
+                afc_standings = await self.nfl_api_manager.get_nfl_standings('afc')
                 total_standings += afc_standings["data"][0]["data"]
         except Exception as e:
             logger.error(f"Error fetching standings: {e}")

@@ -4,9 +4,9 @@ import discord
 from discord.ext import commands
 from dotenv import load_dotenv
 from utils.data_manager import DataManager
-from utils.read_json import load_nfl_teams, load_nfl_team_character_mapping, load_characters, load_storyline
 import asyncio
 from utils.api_cache import APICache
+from utils.nfl_api import NFLAPIManager
 from utils.nfl_api_utils import cached_request
 from loguru import logger
 
@@ -26,27 +26,11 @@ class MyBot(commands.Bot):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
 
-        # load cache
-        self.cache = APICache(cache_dir="./cache", expiration_hours=24)
-        logger.debug("✅ Loaded API Cache")
-
         # load data manager
         self.data_manager = DataManager()
 
-
-    async def cached_nfl_request(self, url, params=None):
-
-        full_url = f" https://{NFL_API_HOST}{url}"
-        header = {
-            "x-rapidapi-key": NFL_API_KEY,
-            "x-rapidapi-host": NFL_API_HOST
-        }
-
-        try:
-            return await cached_request(self.cache, "get", full_url, headers=header, params=params)
-        except Exception as e:
-            logger.error(f"Error: {e}")
-            raise Exception(f"Error: {e}")
+        # load NFL API manager
+        self.nfl_api_manager = NFLAPIManager(cache_dir="./cache")
 
     async def on_ready(self):
         logger.info(f'{self.user} has connected to Discord!')

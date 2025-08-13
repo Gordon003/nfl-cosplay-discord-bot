@@ -1,0 +1,118 @@
+import hashlib
+import os
+import pickle
+from datetime import datetime, timedelta
+from loguru import logger
+import requests
+
+from utils.api_cache import APICache
+class NFLAPIManager:
+
+    def __init__(self, cache_dir="./cache", expiration_hours=24):
+
+        self.apiCache = APICache(cache_dir, expiration_hours)
+
+        self.current_year = os.getenv('CURRENT_YEAR')
+        self.league = 'NFL'
+
+        self.headers = {
+            "x-rapidapi-key": os.getenv('NFL_API_KEY'),
+            "x-rapidapi-host": os.getenv('NFL_API_HOST')
+        }
+
+        self.base_url = f"https://{os.getenv('NFL_API_HOST')}"
+        
+
+    def _cached_request(self, method, url, params=None, json=None, use_cache=True, api_timeout=30):
+        """Make a request with caching for GET requests"""
+        logger.debug(f"Making request: {url}")
+        if method.lower() == "get" and use_cache:
+            # Try to get from cache first
+            cached_response = self.apiCache.get(url, params)
+            if cached_response is not None:
+                logger.debug(f"CACHE HIT: {url}")
+                return cached_response
+            logger.debug(f"CACHE MISS: {url}")
+        # Make request - raise exception if timed out
+        try:
+            if method.lower() == "get":
+                response = requests.get(url, headers=self.headers, params=params, timeout=api_timeout)
+            elif method.lower() == "post":
+                response = requests.post(url, headers=self.headers, params=params, json=json, timeout=api_timeout)
+        except Exception as e:
+            raise Exception(f"Request failed with error: {e}")
+        # Cache successful GET responses
+        if method.lower() == "get" and response.status_code == 200 and use_cache:
+            try:
+                result = response.json()
+                self.apiCache.set(url, result, params)
+                logger.debug(f"CACHE SAVED: {url}")
+                return result
+            except Exception as e:
+                logger.error(f"Error parsing JSON or caching: {str(e)}")
+                return None
+        elif response.status_code == 200:
+            try:
+                return response.json()
+            except Exception as e:
+                logger.error(f"Error parsing JSON: {str(e)}")
+                return None
+        else:
+            logger.error(f"Request failed: {response.status_code} - {response.text}")
+            return None
+        
+    async def get_nfl_matches(self):
+        """Get NFL matches from the API"""
+
+        full_url = f"https://{os.getenv('NFL_API_HOST')}/matches"
+
+        params = {
+            'league': self.league,
+            'season': self.current_year
+        }
+
+        try:
+            return self._cached_request("get", full_url, params=params)
+        except Exception as e:
+            logger.error(f"Failed to get NFL matches: {e}")
+            raise Exception("Failed to get NFL matches")
+        
+    async def get_nfl_specific_match(self, matchid):
+        """Get a specific NFL match by ID"""
+        
+        full_url = f"https://{os.getenv('NFL_API_HOST')}/matches/{matchid}"
+
+        try:
+            return self._cached_request("get", full_url)
+        except Exception as e:
+            logger.error(f"Failed to get NFL match {matchid}: {e}")
+            raise Exception(f"Failed to get NFL match {matchid}")
+        
+    async def get_nfl_standings(self, conference=None):
+        """Get NFL Standings by conference"""
+
+        league_type = ''
+        if conference is None:
+            logger.error("Conference must be specified")
+            return None
+        elif conference == 'afc':
+            league_type = 'American Football Conference'
+        elif conference == 'nfc':
+            league_type = 'National Football Conference'
+        else:
+            logger.error("Invalid conference specified")
+            return None
+                
+        full_url = f"https://{os.getenv('NFL_API_HOST')}/standings"
+
+        params = {
+            'leagueName': league_type,
+            'leagueType': self.league,
+            'year': self.current_year
+        }
+
+        try:
+            return self._cached_request("get", full_url, params=params)
+        except Exception as e:
+            logger.error(f"Failed to get NFL Standings {conference}: {e}")
+            raise Exception(f"Failed to get NFL Standings {conference}")
