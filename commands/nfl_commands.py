@@ -224,6 +224,36 @@ class NFLCommands(commands.Cog, name="NFL Commands"):
                 )
                 await ctx.send(embed=embed)
 
+    @nfl.command(
+        name='injuries',
+        help='Get injuries for a team',
+        usage='<team_name>'
+    )
+    async def get_nfl_team_injuries(self, ctx, *, team_name):
+        try:
+            team_info = self.data_manager.get_team_info_by_team_key(team_name.lower())
+            injuries = await self.nfl_api_manager.get_nfl_team_injuries(team_info["nflApiId"])
+        except Exception as e:
+            logger.error(f"Failed to get injuries for {team_name}: {e}")
+            await ctx.send(f"❌ Failed to get injuries for {team_name}. Please try again later.")
+            return
+
+        output_value_table = []
+        for injury in injuries["injuries"]:
+            output_value_table.append([injury["shortComment"]])
+
+        # display to discord
+        output = table2ascii(
+            header=["Players Injuries"],
+            body=output_value_table,
+            style=PresetStyle.thin_box
+        )
+        embed = discord.Embed(
+            title=f"🏈 Injuries for {team_info['name']}",
+            description=f"```\n{output}\n```",
+        )
+        await ctx.send(embed=embed)
+
 
 async def setup(bot):
     await bot.add_cog(NFLCommands(bot))

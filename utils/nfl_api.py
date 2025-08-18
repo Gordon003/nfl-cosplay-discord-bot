@@ -25,7 +25,12 @@ class NFLAPIManager:
             "x-rapidapi-host": os.getenv('NFL_NCAA_HIGHLIGHT_API_HOST')
         }
         self.base_nfl_ncca_api_url = f"https://{os.getenv('NFL_NCAA_HIGHLIGHT_API_HOST')}"
-        
+
+        self.nfl_api_headers = {
+            "x-rapidapi-key": os.getenv('NFL_API_KEY'),
+            "x-rapidapi-host": os.getenv('NFL_API_HOST')
+        }
+        self.base_nfl_api_url = f"https://{os.getenv('NFL_API_HOST')}"
 
     def _cached_request(self, method, url, headers=None, params=None, json=None, use_cache=True, api_timeout=30):
         """Make a request with caching for GET requests"""
@@ -136,3 +141,17 @@ class NFLAPIManager:
         except Exception as e:
             logger.error(f"Failed to get NFL Standings {conference}: {e}")
             raise Exception(f"Failed to get NFL Standings {conference}")
+        
+    async def get_nfl_team_injuries(self, team_id):
+        """Get NFL team injuries by team id"""
+
+        full_url = f"{self.base_nfl_api_url}/nfl-team-injuries"
+        params = {
+            'id': str(team_id)
+        }
+        logger.info(f"full_url: {full_url}")
+        try:
+            return self._cached_request("get", full_url, headers=self.nfl_api_headers, params=params)
+        except Exception as e:
+            logger.error(f"Failed to get NFL injuries for {team_id}: {e}")
+            raise Exception(f"Failed to get NFL injuries for {team_id}")
