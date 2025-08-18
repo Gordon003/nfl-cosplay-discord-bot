@@ -1,6 +1,7 @@
 {
   "cardinals": {
     "name": "Arizona Cardinals",
+    "nickname": "Cardinals",
     "abbreviation": "ARI",
     "conference": "NFC",
     "division": "West",
@@ -10,6 +11,7 @@
   },
   "falcons": {
     "name": "Atlanta Falcons",
+    "nickname": "Falcons",
     "abbreviation": "ATL",
     "conference": "NFC",
     "division": "South",
@@ -19,6 +21,7 @@
   },
   "ravens": {
     "name": "Baltimore Ravens",
+    "nickname": "Ravens",
     "abbreviation": "BAL",
     "conference": "AFC",
     "division": "North",
@@ -28,6 +31,7 @@
   },
   "bills": {
     "name": "Buffalo Bills",
+    "nickname": "Bills",
     "abbreviation": "BUF",
     "conference": "AFC",
     "division": "East",
@@ -37,6 +41,7 @@
   },
   "panthers": {
     "name": "Carolina Panthers",
+    "nickname": "Panthers",
     "abbreviation": "CAR",
     "conference": "NFC",
     "division": "South",
@@ -46,6 +51,7 @@
   },
   "bears": {
     "name": "Chicago Bears",
+    "nickname": "Bears",
     "abbreviation": "CHI",
     "conference": "NFC",
     "division": "North",
@@ -55,6 +61,7 @@
   },
   "bengals": {
     "name": "Cincinnati Bengals",
+    "nickname": "Bengals",
     "abbreviation": "CIN",
     "conference": "AFC",
     "division": "North",
@@ -64,6 +71,7 @@
   },
   "browns": {
     "name": "Cleveland Browns",
+    "nickname": "Browns",
     "abbreviation": "CLE",
     "conference": "AFC",
     "division": "North",
@@ -73,6 +81,7 @@
   },
   "cowboys": {
     "name": "Dallas Cowboys",
+    "nickname": "Cowboys",
     "abbreviation": "DAL",
     "conference": "NFC",
     "division": "East",
@@ -82,6 +91,7 @@
   },
   "broncos": {
     "name": "Denver Broncos",
+    "nickname": "Broncos",
     "abbreviation": "DEN",
     "conference": "AFC",
     "division": "West",
@@ -91,6 +101,7 @@
   },
   "lions": {
     "name": "Detroit Lions",
+    "nickname": "Lions",
     "abbreviation": "DET",
     "conference": "NFC",
     "division": "North",
@@ -100,6 +111,7 @@
   },
   "packers": {
     "name": "Green Bay Packers",
+    "nickname": "Packers",
     "abbreviation": "GB",
     "conference": "NFC",
     "division": "North",
@@ -109,6 +121,7 @@
   },
   "texans": {
     "name": "Houston Texans",
+    "nickname": "Texans",
     "abbreviation": "HOU",
     "conference": "AFC",
     "division": "South",
@@ -118,6 +131,7 @@
   },
   "colts": {
     "name": "Indianapolis Colts",
+    "nickname": "Colts",
     "abbreviation": "IND",
     "conference": "AFC",
     "division": "South",
@@ -127,6 +141,7 @@
   },
   "jaguars": {
     "name": "Jacksonville Jaguars",
+    "nickname": "Jaguars",
     "abbreviation": "JAX",
     "conference": "AFC",
     "division": "South",
@@ -136,6 +151,7 @@
   },
   "chiefs": {
     "name": "Kansas City Chiefs",
+    "nickname": "Chiefs",
     "abbreviation": "KC",
     "conference": "AFC",
     "division": "West",
@@ -145,6 +161,7 @@
   },
   "raiders": {
     "name": "Las Vegas Raiders",
+    "nickname": "Raiders",
     "abbreviation": "LV",
     "conference": "AFC",
     "division": "West",
@@ -154,6 +171,7 @@
   },
   "chargers": {
     "name": "Los Angeles Chargers",
+    "nickname": "Chargers",
     "abbreviation": "LAC",
     "conference": "AFC",
     "division": "West",
@@ -163,6 +181,7 @@
   },
   "rams": {
     "name": "Los Angeles Rams",
+    "nickname": "Rams",
     "abbreviation": "LAR",
     "conference": "NFC",
     "division": "West",
@@ -172,6 +191,7 @@
   },
   "dolphins": {
     "name": "Miami Dolphins",
+    "nickname": "Dolphins",
     "abbreviation": "MIA",
     "conference": "AFC",
     "division": "East",
@@ -181,6 +201,7 @@
   },
   "vikings": {
     "name": "Minnesota Vikings",
+    "nickname": "Vikings",
     "abbreviation": "MIN",
     "conference": "NFC",
     "division": "North",
@@ -190,6 +211,7 @@
   },
   "patriots": {
     "name": "New England Patriots",
+    "nickname": "Patriots",
     "abbreviation": "NE",
     "conference": "AFC",
     "division": "East",
@@ -199,6 +221,7 @@
   },
   "saints": {
     "name": "New Orleans Saints",
+    "nickname": "Saints",
     "abbreviation": "NO",
     "conference": "NFC",
     "division": "South",
@@ -208,6 +231,7 @@
   },
   "giants": {
     "name": "New York Giants",
+    "nickname": "Giants",
     "abbreviation": "NYG",
     "conference": "NFC",
     "division": "East",
@@ -217,6 +241,7 @@
   },
   "jets": {
     "name": "New York Jets",
+    "nickname": "Jets",
     "abbreviation": "NYJ",
     "conference": "AFC",
     "division": "East",
@@ -226,6 +251,7 @@
   },
   "eagles": {
     "name": "Philadelphia Eagles",
+    "nickname": "Eagles",
     "abbreviation": "PHI",
     "conference": "NFC",
     "division": "East",
@@ -235,6 +261,7 @@
   },
   "steelers": {
     "name": "Pittsburgh Steelers",
+    "nickname": "Steelers",
     "abbreviation": "PIT",
     "conference": "AFC",
     "division": "North",
@@ -244,6 +271,7 @@
   },
   "49ers": {
     "name": "San Francisco 49ers",
+    "nickname": "49ers",
     "abbreviation": "SF",
     "conference": "NFC",
     "division": "West",
@@ -253,6 +281,7 @@
   },
   "seahawks": {
     "name": "Seattle Seahawks",
+    "nickname": "Seahawks",
     "abbreviation": "SEA",
     "conference": "NFC",
     "division": "West",
@@ -262,6 +291,7 @@
   },
   "buccaneers": {
     "name": "Tampa Bay Buccaneers",
+    "nickname": "Buccaneers",
     "abbreviation": "TB",
     "conference": "NFC",
     "division": "South",
@@ -271,6 +301,7 @@
   },
   "titans": {
     "name": "Tennessee Titans",
+    "nickname": "Titans",
     "abbreviation": "TEN",
     "conference": "AFC",
     "division": "South",
@@ -280,6 +311,7 @@
   },
   "commanders": {
     "name": "Washington Commanders",
+    "nickname": "Commanders",
     "abbreviation": "WAS",
     "conference": "NFC",
     "division": "East",

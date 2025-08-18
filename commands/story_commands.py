@@ -1,6 +1,7 @@
 import time
 import discord
 from discord.ext import commands
+from loguru import logger
 from utils.nfl_schedule import  get_gameweek_by_offset
 from utils.date import convert_date
 
@@ -150,29 +151,99 @@ class StoryCommands(commands.Cog, name="Story Commands"):
         
         home_team_key = game_response["homeTeam"]["name"].lower().replace(' ', '_')
         home_team_info = self.data_manager.get_team_info_by_team_key(home_team_key)
+        home_team_id = game_response["homeTeam"]["id"]
         home_team_char_key = self.data_manager.get_character_key_by_team_key(home_team_key)
         home_team_char_info = self.data_manager.get_character_info_by_character_key(home_team_char_key)
 
         away_team_key = game_response["awayTeam"]["name"].lower().replace(' ', '_')
         away_team_info = self.data_manager.get_team_info_by_team_key(away_team_key)
+        away_team_id = game_response["awayTeam"]["id"]
         away_team_char_key = self.data_manager.get_character_key_by_team_key(away_team_key)
         away_team_char_info = self.data_manager.get_character_info_by_character_key(away_team_char_key)
 
         await ctx.send(f"⚔️ **{home_team_char_info['name']}'s {game_response['homeTeam']['name']} vs {away_team_char_info['name']}'s {game_response['awayTeam']['name']}** [Match ID: {match_id}]")
+        time.sleep(2)
 
-        home_team_id = game_response["homeTeam"]["id"]
+        # stadium & forecast
+        venue = game_response["venue"]
+        forecast = game_response["forecast"]
+        await ctx.send(f"🎤 Welcome to {venue['city']} as the forecast is {forecast['status']} at the temperature of {forecast['temperature']}")
+        time.sleep(2)
+
         home_score = 0
-        away_team_id = game_response["awayTeam"]["id"]
         away_score = 0
 
-        game_state = game_response["state"]
         game_period_key = ["firstPeriod", "secondPeriod", "thirdPeriod", "fourthPeriod"]
-        for period in game_period_key:
-            period_score = game_state['score'][period]
-            home_period_score, away_period_score = [int(x.strip()) for x in period_score.split('-')]
-            home_score += home_period_score
-            away_score += away_period_score
-            await ctx.send(f"**{period}** {home_score} - {away_score}")
+        game_period_text = ["1st Quarter", "2nd Quarter", "3rd Quarter", "4th Quarter"]
+
+        game_state = game_response["state"]
+        game_events = game_response["events"]
+
+        START = True
+        period_index = 0
+        for event in game_events:
+
+            # get current team
+            offensive_team = None
+            offensive_char = None
+            defensive_team = None
+            defensive_char = None
+            if event["team"]["id"] == home_team_id:
+                offensive_team = home_team_info
+                offensive_char = home_team_char_info
+                defensive_team = away_team_info
+                defensive_char = away_team_char_info
+            elif event["team"]["id"] == away_team_id:
+                offensive_team = away_team_info
+                offensive_char = away_team_char_info
+                defensive_team = home_team_info
+                defensive_char = home_team_char_info
+
+            if START == True:
+                await ctx.send(f"**{game_period_text[period_index]}**: {offensive_char['name']}'s {offensive_team['name']} starts with the ball!")
+                time.sleep(2)
+                START = False
+
+            result = event["result"]
+            placeholder_text = None
+            if result == "Touchdown":
+                placeholder_text = self.data_manager.get_game_event_random_touchdown()
+            elif result == "Field Goal":
+                placeholder_text = self.data_manager.get_game_event_random_field_goal()
+            elif result == "Interception":
+                placeholder_text = self.data_manager.get_game_event_random_interception()
+
+            if placeholder_text is not None:
+                story = placeholder_text.format(
+                    offensive_character=offensive_char['name'],
+                    offensive_team=offensive_team["nickname"],
+                    defensiv_character=defensive_char['name'],
+                    defensive_team=defensive_team["nickname"],
+                )
+                await ctx.send(f"{story}") 
+                time.sleep(2)
+
+            end = event["end"]
+            logger.info(f"Event end: {end['period']}, clock: {game_period_text[period_index]}")
+            if end["clock"] is None or end["period"] != game_period_text[period_index]:
+                await ctx.send(f"That's the end of the {game_period_text[period_index]}")
+                period_score = game_state['score'][game_period_key[period_index]]
+                home_period_score, away_period_score = [int(x.strip()) for x in period_score.split('-')]
+                home_score += home_period_score
+                away_score += away_period_score
+                await ctx.send(f"**{game_period_text[period_index]}** {home_score} - {away_score}")
+                time.sleep(2)
+                period_index += 1
+
+
+        # game_state = game_response["state"]
+        # game_period_key = ["firstPeriod", "secondPeriod", "thirdPeriod", "fourthPeriod"]
+        # for period in game_period_key:
+        #     period_score = game_state['score'][period]
+        #     home_period_score, away_period_score = [int(x.strip()) for x in period_score.split('-')]
+        #     home_score += home_period_score
+        #     away_score += away_period_score
+        #     await ctx.send(f"**{period}** {home_score} - {away_score}")
 
 
 async def setup(bot):
