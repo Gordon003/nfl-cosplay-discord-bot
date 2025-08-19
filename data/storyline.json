@@ -179,159 +179,93 @@
     "game_events": {
         "touchdown": {
             "templates": [
-                "ELIMINATION CEREMONY COMPLETE! {offensive_character} just SCORED and the {offensive_team} are celebrating like they won immunity!",
-                "CHALLENGE DOMINATION! {offensive_character} crossed that goal line like they're racing for the million dollars! The {offensive_team} are UNSTOPPABLE!",
-                "CONFESSIONAL MOMENT: {offensive_character} just pulled off the PERFECT touchdown play! The {offensive_team} are playing with Total Drama intensity!",
-                "TEAM REWARD EARNED! {offensive_character} scored that touchdown like they're claiming the luxury camping trip! The {offensive_team} deserve to celebrate!",
-                "MERGE TRIBE POWER! {offensive_character} just united their team with that touchdown! The {offensive_team} are working together like a WINNING alliance!",
-                "CHEF'S APPROVAL! {offensive_character} cooked up that touchdown play PERFECTLY! Even Chef Hatchet would be proud of the {offensive_team}!",
-                "IMMUNITY IDOL ACTIVATED! {offensive_character} used that touchdown to PROTECT their team! The {offensive_team} are safe from elimination... I mean defeat!",
-                "DOCK OF SHAME AVOIDED! {offensive_character} scored to keep the {offensive_team} in the game! No boat ride home for them!",
-                "CAMPFIRE CEREMONY SUCCESS! {offensive_character} earned their marshmallow with that touchdown! The {offensive_team} live to fight another down!",
-                "TOTAL DRAMA GOLD! {offensive_character} just delivered a MILLION DOLLAR touchdown! The {offensive_team} are playing like their lives depend on it!"
+                "🏆 ELIMINATION CEREMONY COMPLETE! **{offensive_character}** just SCORED and the **{offensive_team}** are celebrating like they won immunity!",
+                "🏃‍♂️ CHALLENGE DOMINATION! **{offensive_character}** crossed that goal line like they're racing for the million dollars! The **{offensive_team}** are UNSTOPPABLE!",
+                "💭 CONFESSIONAL MOMENT: **{offensive_character}** just pulled off the PERFECT touchdown play! The **{offensive_team}** are playing with Total Drama intensity!",
+                "🎁 TEAM REWARD EARNED! **{offensive_character}** scored that touchdown like they're claiming the luxury camping trip! The **{offensive_team}** deserve to celebrate!",
+                "🤝 MERGE TRIBE POWER! **{offensive_character}** just united their team with that touchdown! The **{offensive_team}** are working together like a WINNING alliance!",
+                "👨‍🍳 CHEF'S APPROVAL! **{offensive_character}** cooked up that touchdown play PERFECTLY! Even Chef Hatchet would be proud of the **{offensive_team}**!",
+                "🛡️ IMMUNITY IDOL ACTIVATED! **{offensive_character}** used that touchdown to PROTECT their team! The **{offensive_team}** are safe from elimination... I mean defeat!",
+                "⛵ DOCK OF SHAME AVOIDED! **{offensive_character}** scored to keep the **{offensive_team}** in the game! No boat ride home for them!",
+                "🔥 CAMPFIRE CEREMONY SUCCESS! **{offensive_character}** earned their marshmallow with that touchdown! The **{offensive_team}** live to fight another down!",
+                "💰 TOTAL DRAMA GOLD! **{offensive_character}** just delivered a MILLION DOLLAR touchdown! The **{offensive_team}** are playing like their lives depend on it!"
             ]
         },
         "field_goal": {
             "templates": [
-                "PRECISION CHALLENGE COMPLETE! {offensive_character} kicked that field goal with SURGICAL accuracy! The {offensive_team} are masters of strategy!",
-                "ARTS AND CRAFTS SUCCESS! {offensive_character} crafted that field goal like they're building a raft! The {offensive_team} show their skills pay off!",
-                "BAKING CHALLENGE PERFECTION! {offensive_character} served up that field goal with THREE POINTS of deliciousness! The {offensive_team} are cooking with gas!",
-                "TALENT SHOW WINNER! {offensive_character} displayed their kicking talent for all to see! The {offensive_team} deserve a standing ovation!",
-                "SCAVENGER HUNT SUCCESS! {offensive_character} found those 3 points hiding in the uprights! The {offensive_team} are excellent treasure hunters!",
-                "FEAR FACTOR CONQUERED! {offensive_character} overcame the pressure and nailed that kick! The {offensive_team} don't back down from challenges!",
-                "OBSTACLE COURSE MASTERY! {offensive_character} navigated through the defense and scored! The {offensive_team} are athletic champions!",
-                "TRIVIA NIGHT BONUS! {offensive_character} answered the call with that field goal! The {offensive_team} are smart AND skilled!",
-                "SURVIVAL SKILLS ACTIVATED! {offensive_character} used their instincts to score those crucial points! The {offensive_team} know how to SURVIVE!",
-                "ALLIANCE STRATEGY! {offensive_character} executed the PERFECT game plan with that kick! The {offensive_team} are playing chess while others play checkers!"
+                "🎯 PRECISION CHALLENGE COMPLETE! **{offensive_character}** kicked that field goal with SURGICAL accuracy! The **{offensive_team}** are masters of strategy!",
+                "🎨 ARTS AND CRAFTS SUCCESS! **{offensive_character}** crafted that field goal like they're building a raft! The **{offensive_team}** show their skills pay off!",
+                "🧁 BAKING CHALLENGE PERFECTION! **{offensive_character}** served up that field goal with THREE POINTS of deliciousness! The **{offensive_team}** are cooking with gas!",
+                "🎭 TALENT SHOW WINNER! **{offensive_character}** displayed their kicking talent for all to see! The **{offensive_team}** deserve a standing ovation!",
+                "🗺️ SCAVENGER HUNT SUCCESS! **{offensive_character}** found those 3 points hiding in the uprights! The **{offensive_team}** are excellent treasure hunters!",
+                "😨 FEAR FACTOR CONQUERED! **{offensive_character}** overcame the pressure and nailed that kick! The **{offensive_team}** don't back down from challenges!",
+                "🏃‍♂️ OBSTACLE COURSE MASTERY! **{offensive_character}** navigated through the defense and scored! The **{offensive_team}** are athletic champions!",
+                "🧠 TRIVIA NIGHT BONUS! **{offensive_character}** answered the call with that field goal! The **{offensive_team}** are smart AND skilled!",
+                "🏕️ SURVIVAL SKILLS ACTIVATED! **{offensive_character}** used their instincts to score those crucial points! The **{offensive_team}** know how to SURVIVE!",
+                "♟️ ALLIANCE STRATEGY! **{offensive_character}** executed the PERFECT game plan with that kick! The **{offensive_team}** are playing chess while others play checkers!"
             ]
         },
         "turnover": {
             "templates": [
-                "SABOTAGE SUCCESSFUL! {defensive_character} just STOLE the ball like they're raiding another team's camp! The {defensive_team} are playing DIRTY... and it's WORKING!",
-                "BLINDSIDE ELIMINATION! {defensive_character} caught them completely OFF GUARD with that turnover! The {defensive_team} just executed the PERFECT betrayal!",
-                "CONFESSIONAL REVENGE! {defensive_character} has been plotting this turnover ALL GAME! The {defensive_team} just got their sweet, sweet VENGEANCE!",
-                "IMMUNITY CHALLENGE STEAL! {defensive_character} snatched that ball like they're stealing immunity from under their noses! The {defensive_team} are RUTHLESS!",
-                "ALLIANCE BACKSTAB! {defensive_character} just turned on their former allies with that turnover! The {defensive_team} are playing the game HARD!",
-                "CHEF'S SPECIAL DELIVERY! {defensive_character} served up that turnover like it's mystery meat! The {defensive_team} kitchen is now OPEN for business!",
-                "OUTWIT, OUTPLAY, OUTLAST! {defensive_character} just OUTSMARTED their opponents with that steal! The {defensive_team} are master strategists!",
-                "TREASURE HUNT JACKPOT! {defensive_character} found the ball like they discovered buried gold! The {defensive_team} just struck it RICH!",
-                "VOTING BLOC POWER! {defensive_character} convinced the ball to switch sides! The {defensive_team} have the numbers now!",
-                "MERGE TRIBE DOMINANCE! {defensive_character} united their defense to force that turnover! The {defensive_team} are a UNIFIED threat!"
+                "🏴‍☠️ SABOTAGE SUCCESSFUL! **{defensive_character}** just STOLE the ball like they're raiding another team's camp! The **{defensive_team}** are playing DIRTY... and it's WORKING!",
+                "⚡ BLINDSIDE ELIMINATION! **{defensive_character}** caught them completely OFF GUARD with that turnover! The **{defensive_team}** just executed the PERFECT betrayal!",
+                "💭 CONFESSIONAL REVENGE! **{defensive_character}** has been plotting this turnover ALL GAME! The **{defensive_team}** just got their sweet, sweet VENGEANCE!",
+                "🛡️ IMMUNITY CHALLENGE STEAL! **{defensive_character}** snatched that ball like they're stealing immunity from under their noses! The **{defensive_team}** are RUTHLESS!",
+                "🗡️ ALLIANCE BACKSTAB! **{defensive_character}** just turned on their former allies with that turnover! The **{defensive_team}** are playing the game HARD!",
+                "👨‍🍳 CHEF'S SPECIAL DELIVERY! **{defensive_character}** served up that turnover like it's mystery meat! The **{defensive_team}** kitchen is now OPEN for business!",
+                "🧠 OUTWIT, OUTPLAY, OUTLAST! **{defensive_character}** just OUTSMARTED their opponents with that steal! The **{defensive_team}** are master strategists!",
+                "💰 TREASURE HUNT JACKPOT! **{defensive_character}** found the ball like they discovered buried gold! The **{defensive_team}** just struck it RICH!",
+                "🗳️ VOTING BLOC POWER! **{defensive_character}** convinced the ball to switch sides! The **{defensive_team}** have the numbers now!",
+                "🤝 MERGE TRIBE DOMINANCE! **{defensive_character}** united their defense to force that turnover! The **{defensive_team}** are a UNIFIED threat!"
             ]
         },
         "sack": {
             "templates": [
-                "TOTAL DRAMA TAKEDOWN! {defensive_character} just DEMOLISHED the quarterback like they're in a wrestling challenge! The {defensive_team} defense brought the PAIN!",
-                "ELIMINATION CEREMONY COMPLETE! {defensive_character} sent that QB to the Dock of Shame! The {defensive_team} defense is VOTING people out of the pocket!",
-                "FOOD FIGHT CHAOS! {defensive_character} tackled that quarterback like they're throwing mashed potatoes! The {defensive_team} defense is making a MESS!",
-                "TRUST FALL FAILURE! {defensive_character} made sure that QB didn't have anyone to catch him! The {defensive_team} defense broke ALL trust!",
-                "BEAR WRESTLING VICTORY! {defensive_character} took down that quarterback like they're fighting a grizzly! The {defensive_team} defense is WILD!",
-                "OBSTACLE COURSE DESTRUCTION! {defensive_character} turned that QB into a human obstacle! The {defensive_team} defense cleared the path to victory!",
-                "CONFESSIONAL CONFESSION: {defensive_character} admits they DESTROYED that quarterback on PURPOSE! The {defensive_team} defense has NO mercy!",
-                "TALENT SHOW SUBMISSION! {defensive_character} displayed their tackling talent for all the world to see! The {defensive_team} defense deserves a STANDING OVATION!",
-                "FEAR FACTOR NIGHTMARE! {defensive_character} became that QB's worst fear with that sack! The {defensive_team} defense is absolutely TERRIFYING!",
-                "ALLIANCE ASSASSINATION! {defensive_character} betrayed that quarterback's trust with a BRUTAL sack! The {defensive_team} defense plays for KEEPS!",
-                "CAMP COUNSELOR DISCIPLINE! {defensive_character} taught that QB a lesson they'll NEVER forget! The {defensive_team} defense is running a tight ship!"
+                "💥 TOTAL DRAMA TAKEDOWN! **{defensive_character}** just DEMOLISHED the quarterback like they're in a wrestling challenge! The **{defensive_team}** defense brought the PAIN!",
+                "⛵ ELIMINATION CEREMONY COMPLETE! **{defensive_character}** sent that QB to the Dock of Shame! The **{defensive_team}** defense is VOTING people out of the pocket!",
+                "🍅 FOOD FIGHT CHAOS! **{defensive_character}** tackled that quarterback like they're throwing mashed potatoes! The **{defensive_team}** defense is making a MESS!",
+                "💔 TRUST FALL FAILURE! **{defensive_character}** made sure that QB didn't have anyone to catch him! The **{defensive_team}** defense broke ALL trust!",
+                "🐻 BEAR WRESTLING VICTORY! **{defensive_character}** took down that quarterback like they're fighting a grizzly! The **{defensive_team}** defense is WILD!",
+                "🏃‍♂️ OBSTACLE COURSE DESTRUCTION! **{defensive_character}** turned that QB into a human obstacle! The **{defensive_team}** defense cleared the path to victory!",
+                "💭 CONFESSIONAL CONFESSION: **{defensive_character}** admits they DESTROYED that quarterback on PURPOSE! The **{defensive_team}** defense has NO mercy!",
+                "🎭 TALENT SHOW SUBMISSION! **{defensive_character}** displayed their tackling talent for all the world to see! The **{defensive_team}** defense deserves a STANDING OVATION!",
+                "😰 FEAR FACTOR NIGHTMARE! **{defensive_character}** became that QB's worst fear with that sack! The **{defensive_team}** defense is absolutely TERRIFYING!",
+                "🗡️ ALLIANCE ASSASSINATION! **{defensive_character}** betrayed that quarterback's trust with a BRUTAL sack! The **{defensive_team}** defense plays for KEEPS!",
+                "👨‍🏫 CAMP COUNSELOR DISCIPLINE! **{defensive_character}** taught that QB a lesson they'll NEVER forget! The **{defensive_team}** defense is running a tight ship!"
             ]
         },
         "interception": {
             "templates": [
-                "TREASURE THEFT! {defensive_character} just HIJACKED that pass like they're stealing someone's immunity idol! The {defensive_team} defense are master criminals!",
-                "CONFESSIONAL BETRAYAL! {defensive_character} intercepted that ball AND their trust! The {defensive_team} defense just broke the ultimate alliance!",
-                "SCAVENGER HUNT JACKPOT! {defensive_character} found that football floating in the air like a hidden immunity clue! The {defensive_team} defense struck GOLD!",
-                "VOTING MANIPULATION! {defensive_character} convinced that ball to vote with THEM instead! The {defensive_team} defense are master strategists!",
-                "CHALLENGE COMPLETION! {defensive_character} caught that ball like they're winning a catching challenge! The {defensive_team} defense have AMAZING reflexes!",
-                "TALENT SHOW THEFT! {defensive_character} stole the show AND the football! The {defensive_team} defense are natural born entertainers!",
-                "MERGE TRIBE HOSTILITY! {defensive_character} intercepted that pass like they're declaring WAR! The {defensive_team} defense are playing for blood!",
-                "CAMP RAID SUCCESS! {defensive_character} invaded enemy territory and STOLE their supplies! The {defensive_team} defense are tactical geniuses!",
-                "FOOD FIGHT INTERCEPTION! {defensive_character} caught that ball like they're dodging flying cafeteria food! The {defensive_team} defense have cat-like reflexes!",
-                "TRUST EXERCISE VIOLATION! {defensive_character} broke every rule by snatching that pass! The {defensive_team} defense don't believe in trust falls!",
-                "IMMUNITY CHALLENGE DOMINATION! {defensive_character} secured safety for their team with that interception! The {defensive_team} defense earned their marshmallow!",
-                "SABOTAGE MASTERPIECE! {defensive_character} executed the PERFECT plan to steal that football! The {defensive_team} defense are criminal masterminds!",
-                "ALLIANCE DOUBLE-CROSS! {defensive_character} turned on their former quarterback friends! The {defensive_team} defense are master BETRAYERS!",
-                "CHEF'S RECIPE FOR DISASTER! {defensive_character} cooked up that interception like mystery meat! The {defensive_team} defense are serving CHAOS!"
+                "🏴‍☠️ TREASURE THEFT! **{defensive_character}** just HIJACKED that pass like they're stealing someone's immunity idol! The **{defensive_team}** defense are master criminals!",
+                "💭 CONFESSIONAL BETRAYAL! **{defensive_character}** intercepted that ball AND their trust! The **{defensive_team}** defense just broke the ultimate alliance!",
+                "🗺️ SCAVENGER HUNT JACKPOT! **{defensive_character}** found that football floating in the air like a hidden immunity clue! The **{defensive_team}** defense struck GOLD!",
+                "🗳️ VOTING MANIPULATION! **{defensive_character}** convinced that ball to vote with THEM instead! The **{defensive_team}** defense are master strategists!",
+                "🏆 CHALLENGE COMPLETION! **{defensive_character}** caught that ball like they're winning a catching challenge! The **{defensive_team}** defense have AMAZING reflexes!",
+                "🎭 TALENT SHOW THEFT! **{defensive_character}** stole the show AND the football! The **{defensive_team}** defense are natural born entertainers!",
+                "⚔️ MERGE TRIBE HOSTILITY! **{defensive_character}** intercepted that pass like they're declaring WAR! The **{defensive_team}** defense are playing for blood!",
+                "🏕️ CAMP RAID SUCCESS! **{defensive_character}** invaded enemy territory and STOLE their supplies! The **{defensive_team}** defense are tactical geniuses!",
+                "🍅 FOOD FIGHT INTERCEPTION! **{defensive_character}** caught that ball like they're dodging flying cafeteria food! The **{defensive_team}** defense have cat-like reflexes!",
+                "💔 TRUST EXERCISE VIOLATION! **{defensive_character}** broke every rule by snatching that pass! The **{defensive_team}** defense don't believe in trust falls!",
+                "🛡️ IMMUNITY CHALLENGE DOMINATION! **{defensive_character}** secured safety for their team with that interception! The **{defensive_team}** defense earned their marshmallow!",
+                "🏴‍☠️ SABOTAGE MASTERPIECE! **{defensive_character}** executed the PERFECT plan to steal that football! The **{defensive_team}** defense are criminal masterminds!",
+                "🗡️ ALLIANCE DOUBLE-CROSS! **{defensive_character}** turned on their former quarterback friends! The **{defensive_team}** defense are master BETRAYERS!",
+                "👨‍🍳 CHEF'S RECIPE FOR DISASTER! **{defensive_character}** cooked up that interception like mystery meat! The **{defensive_team}** defense are serving CHAOS!"
             ]
         },
         "fumble": {
             "templates": [
-                "{offensive_character} fumbles the ball! The {offensive_team} offense just DROPPED the ball!",
-                "{defensive_character} forces the fumble! The {defensive_team} defense knocked it loose!",
-                "ELIMINATION DISASTER! {offensive_character} just DROPPED the ball like they're getting voted off the island! The {offensive_team} offense is having a MELTDOWN!",
-                "CONFESSIONAL CATASTROPHE! {offensive_character} admits they CHOKED under pressure! The {offensive_team} offense just had their worst nightmare come true!",
-                "CHALLENGE FAILURE! {offensive_character} dropped that ball like it's a scorching hot potato from Chef's kitchen! The {offensive_team} offense got BURNED!",
-                "TRUST FALL DISASTER! {offensive_character} couldn't hold onto the ball OR their dignity! The {offensive_team} offense just face-planted in front of everyone!",
-                "TALENT SHOW EMBARRASSMENT! {offensive_character} fumbled worse than a failed juggling act! The {offensive_team} offense deserve to be BOOED off stage!",
-                "FOOD POISONING EFFECT! {offensive_character} lost control of that ball like they ate Chef's mystery meat! The {offensive_team} offense are feeling SICK!",
-                "OBSTACLE COURSE WIPEOUT! {offensive_character} tripped over their own feet AND the football! The {offensive_team} offense just became a blooper reel!",
-                "ALLIANCE BREAKDOWN! {offensive_character} couldn't count on their teammates to protect the ball! The {offensive_team} offense trust has been SHATTERED!",
-                "FEAR FACTOR FAILURE! {offensive_character} was too scared to hold onto that football! The {offensive_team} offense are showing their true COWARDLY colors!",
-                "CAMP COUNSELOR DISAPPOINTMENT! {offensive_character} let down the entire team with that fumble! The {offensive_team} offense are getting a STERN talking to!",
-                "VOTING CONSEQUENCE! {offensive_character} fumbled so bad they should vote THEMSELVES off! The {offensive_team} offense are elimination candidates!",
-                "TREASURE HUNT DISASTER! {offensive_character} found the ball but couldn't KEEP it! The {offensive_team} offense are terrible treasure hunters!"
-            ]
-        },
-        "safety": {
-            "templates": [
-                "ELIMINATION CHAMBER! {offensive_character} just got trapped in the end zone like they're stuck in the confession booth! The {offensive_team} offense is in SERIOUS trouble!",
-                "CAMP VIOLATION! {offensive_character} broke the ultimate rule by getting tackled in their own house! The {offensive_team} offense are getting punished by Chef himself!",
-                "TRUST FALL INTO THE PIT! {offensive_character} fell backwards into their own end zone! The {offensive_team} offense just learned you can't trust ANYONE!",
-                "OBSTACLE COURSE TRAP! {offensive_character} got caught in the most EMBARRASSING way possible! The {offensive_team} offense just triggered every trap at once!",
-                "CONFESSIONAL CONFESSION: {offensive_character} admits they got DEMOLISHED in their own backyard! The {offensive_team} offense are having an identity crisis!",
-                "FOOD FIGHT BACKFIRE! {offensive_character} threw the food but it exploded in their own FACE! The {offensive_team} offense just made a MESS of everything!",
-                "TALENT SHOW DISASTER! {offensive_character} performed so badly they got booed off their OWN stage! The {offensive_team} offense are a complete EMBARRASSMENT!",
-                "SURVIVAL CHALLENGE FAILURE! {offensive_character} couldn't even survive in their own CAMP! The {offensive_team} offense lack basic survival instincts!",
-                "ALLIANCE BETRAYAL BACKFIRE! {offensive_character} got backstabbed so hard they ended up in their own end zone! The {offensive_team} offense trusted the WRONG people!",
-                "IMMUNITY CHALLENGE FORFEIT! {offensive_character} gave up safety and paid the ultimate price! The {offensive_team} offense just SURRENDERED their dignity!",
-                "CAMP COUNSELOR PUNISHMENT! {offensive_character} broke so many rules they got sent to the corner of shame! The {offensive_team} offense are in DETENTION!",
-                "VOTING BLOC DISASTER! {offensive_character} got voted into their own end zone by UNANIMOUS decision! The {offensive_team} offense have NO allies left!"
-            ]
-        },
-        "penalty": {
-            "templates": [
-                "RULE VIOLATION! {offensive_character} just got caught breaking camp rules! The {offensive_team} are getting disciplined by the counselors!",
-                "CONFESSIONAL PUNISHMENT! {defensive_character} admits they CHEATED and now they're paying the price! The {defensive_team} are facing Total Drama justice!",
-                "CHEF'S KITCHEN VIOLATION! {offensive_character} got caught stealing extra food! The {offensive_team} are getting the mystery meat treatment!",
-                "TRUST EXERCISE FAILURE! {defensive_character} broke the sacred bond of trust! The {defensive_team} are getting sent to the Dock of Shame!",
-                "CAMP CURFEW BROKEN! {offensive_character} stayed up past lights out! The {offensive_team} are getting extra chores as punishment!",
-                "ALLIANCE BETRAYAL EXPOSED! {defensive_character} got caught plotting behind everyone's back! The {defensive_team} are facing tribal council consequences!",
-                "TALENT SHOW SABOTAGE! {offensive_character} got caught rigging the competition! The {offensive_team} are getting disqualified from ALL challenges!",
-                "FOOD FIGHT INSTIGATOR! {defensive_character} started the cafeteria chaos! The {defensive_team} are getting kitchen cleanup duty for a WEEK!",
-                "OBSTACLE COURSE CHEATING! {offensive_character} took an illegal shortcut! The {offensive_team} are getting sent back to the starting line!",
-                "VOTING MANIPULATION! {defensive_character} got caught stuffing the ballot box! The {defensive_team} are facing SERIOUS electoral consequences!",
-                "IMMUNITY IDOL FRAUD! {offensive_character} tried to use a FAKE immunity idol! The {offensive_team} are getting their real idol confiscated!",
-                "CAMP COUNSELOR DISRESPECT! {defensive_character} talked back to the authority figures! The {defensive_team} are getting the FULL disciplinary treatment!"
-            ]
-        },
-        "touchdown_return": {
-            "templates": [
-                "ELIMINATION REVENGE! {defensive_character} took that ball and RAN FOR THEIR LIFE! The {defensive_team} just turned elimination into DOMINATION!",
-                "CONFESSIONAL COMEBACK! {defensive_character} planned this return in the confession booth and EXECUTED perfectly! The {defensive_team} are strategic masterminds!",
-                "TREASURE HUNT TO THE END ZONE! {defensive_character} found that ball and followed the map to VICTORY! The {defensive_team} just discovered the ultimate prize!",
-                "OBSTACLE COURSE MASTERY! {defensive_character} weaved through defenders like they're dodging Total Drama traps! The {defensive_team} have AMAZING agility!",
-                "IMMUNITY CHALLENGE SPRINT! {defensive_character} ran for safety like they're racing for immunity! The {defensive_team} just earned their marshmallow the HARD way!",
-                "CAMP RAID ESCAPE! {defensive_character} stole the enemy's supplies and made it back to base! The {defensive_team} are master thieves AND runners!",
-                "TALENT SHOW FINALE! {defensive_character} displayed their running talent for the ULTIMATE finale! The {defensive_team} deserve a STANDING ovation!",
-                "TRUST FALL INTO THE END ZONE! {defensive_character} took a leap of faith and it paid off BIG TIME! The {defensive_team} believe in taking RISKS!",
-                "FOOD FIGHT ESCAPE ARTIST! {defensive_character} dodged every defender like they're avoiding flying mashed potatoes! The {defensive_team} have reflexes of a CAT!",
-                "ALLIANCE PROTECTION DETAIL! {defensive_character} had their whole team blocking for that return! The {defensive_team} know the power of TEAMWORK!",
-                "SURVIVAL INSTINCT ACTIVATED! {defensive_character} ran like their life depended on it! The {defensive_team} have the heart of a SURVIVOR!",
-                "VOTING BLOC MOBILIZATION! {defensive_character} convinced the entire field to help them score! The {defensive_team} are master POLITICIANS!"
-            ]
-        },
-        "blocked_kick": {
-            "templates": [
-                "CHALLENGE SABOTAGE! {defensive_character} just DESTROYED their opponent's strategy! The {defensive_team} defense are master SABOTEURS!",
-                "CONFESSIONAL REVENGE! {defensive_character} planned this block in the confession booth! The {defensive_team} defense are getting their sweet VENGEANCE!",
-                "TRUST FALL BETRAYAL! {defensive_character} didn't let that kick fall through! The {defensive_team} defense broke the kicker's TRUST!",
-                "TALENT SHOW DISRUPTION! {defensive_character} stole the spotlight from the kicker! The {defensive_team} defense are scene STEALERS!",
-                "FOOD FIGHT DEFENSE! {defensive_character} blocked that kick like they're deflecting flying food! The {defensive_team} defense have AMAZING reflexes!",
-                "OBSTACLE COURSE MASTERY! {defensive_character} jumped over the line like they're conquering Total Drama obstacles! The {defensive_team} defense are ATHLETIC champions!",
-                "IMMUNITY CHALLENGE DENIAL! {defensive_character} prevented their opponents from earning safety! The {defensive_team} defense are elimination ENFORCERS!",
-                "CAMP COUNSELOR INTERVENTION! {defensive_character} stepped in to stop the madness! The {defensive_team} defense are maintaining ORDER!",
-                "ALLIANCE COORDINATION! {defensive_character} had perfect timing with their teammates! The {defensive_team} defense work like a well-oiled MACHINE!",
-                "VOTING BLOC VETO! {defensive_character} said NO to their opponent's scoring attempt! The {defensive_team} defense have VETO power!",
-                "SURVIVAL INSTINCT! {defensive_character} protected their territory like a wild animal! The {defensive_team} defense are FIERCE competitors!",
-                "TREASURE HUNT INTERFERENCE! {defensive_character} prevented their opponents from finding the scoring treasure! The {defensive_team} defense are protective of their GOLD!"
+                "💀 ELIMINATION DISASTER! **{offensive_character}** just DROPPED the ball like they're getting voted off the island! The **{offensive_team}** offense is having a MELTDOWN!",
+                "😰 CONFESSIONAL CATASTROPHE! **{offensive_character}** admits they CHOKED under pressure! The **{offensive_team}** offense just had their worst nightmare come true!",
+                "🔥 CHALLENGE FAILURE! **{offensive_character}** dropped that ball like it's a scorching hot potato from Chef's kitchen! The **{offensive_team}** offense got BURNED!",
+                "💔 TRUST FALL DISASTER! **{offensive_character}** couldn't hold onto the ball OR their dignity! The **{offensive_team}** offense just face-planted in front of everyone!",
+                "🎭 TALENT SHOW EMBARRASSMENT! **{offensive_character}** fumbled worse than a failed juggling act! The **{offensive_team}** offense deserve to be BOOED off stage!",
+                "🤢 FOOD POISONING EFFECT! **{offensive_character}** lost control of that ball like they ate Chef's mystery meat! The **{offensive_team}** offense are feeling SICK!",
+                "🏃‍♂️ OBSTACLE COURSE WIPEOUT! **{offensive_character}** tripped over their own feet AND the football! The **{offensive_team}** offense just became a blooper reel!",
+                "💔 ALLIANCE BREAKDOWN! **{offensive_character}** couldn't count on their teammates to protect the ball! The **{offensive_team}** offense trust has been SHATTERED!",
+                "😨 FEAR FACTOR FAILURE! **{offensive_character}** was too scared to hold onto that football! The **{offensive_team}** offense are showing their true COWARDLY colors!",
+                "👨‍🏫 CAMP COUNSELOR DISAPPOINTMENT! **{offensive_character}** let down the entire team with that fumble! The **{offensive_team}** offense are getting a STERN talking to!",
+                "🗳️ VOTING CONSEQUENCE! **{offensive_character}** fumbled so bad they should vote THEMSELVES off! The **{offensive_team}** offense are elimination candidates!",
+                "🗺️ TREASURE HUNT DISASTER! **{offensive_character}** found the ball but couldn't KEEP it! The **{offensive_team}** offense are terrible treasure hunters!"
             ]
         }
     }

@@ -4,7 +4,7 @@ from discord.ext import commands
 from loguru import logger
 from table2ascii import table2ascii, PresetStyle
 from utils.nfl_schedule import get_next_scheduled_games_by_team_id, get_gameweek_by_offset
-from utils.date import convert_date
+from utils.date import convert_date, convert_short_date
 
 nfl_matches_params = {
     'league': 'NFL',
@@ -70,7 +70,27 @@ class NFLCommands(commands.Cog, name="NFL Commands"):
         # get particular field of each game
         output_value_table = []
         for game in games:
-            output_value_table.append([convert_date(game["date"]), game["homeTeam"]["name"], game["awayTeam"]["name"], game["state"]["score"]["current"], game["state"]["description"]])
+
+            # game status emoji
+            game_status_emoji = ""
+            if game["state"]["description"] == "Scheduled":
+                game_status_emoji = "⏳"
+            elif game["state"]["description"] == "Finished":
+                game_status_emoji = "✅"
+            elif game["state"]["description"] == "In Progress":
+                game_status_emoji = "🏈"
+            else:
+                game_status_emoji = "❓"
+
+            output_value_table.append(
+                [
+                    convert_short_date(game["date"]),
+                    game["homeTeam"]["abbreviation"],
+                    game["awayTeam"]["abbreviation"],
+                    game["state"]["score"]["current"],
+                    game_status_emoji
+                ]
+            )
 
         # display to discord
         output = table2ascii(
@@ -140,7 +160,7 @@ class NFLCommands(commands.Cog, name="NFL Commands"):
         
         output_value_table = []
         for game in games:
-            output_value_table.append([convert_date(game["date"]), game["homeTeam"]["name"], game["awayTeam"]["name"]])
+            output_value_table.append([convert_short_date(game["date"]), game["homeTeam"]["name"], game["awayTeam"]["name"]])
 
         # display to discord
         output = table2ascii(

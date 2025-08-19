@@ -128,6 +128,9 @@ class StoryCommands(commands.Cog, name="Story Commands"):
             await ctx.send(separator)
 
             time.sleep(2)  # Simulate some delay for dramatic effect
+
+        # Final message after all games
+        await ctx.send(f"And that's it for this gameweek. Stay tuned for the next one. 🏈")
     
     @story.command(
         name='match',
@@ -183,28 +186,44 @@ class StoryCommands(commands.Cog, name="Story Commands"):
         period_index = 0
         for event in game_events:
 
+            result = event["result"]
+            end = event["end"]
+            team = event["team"]
+
             # get current team
             offensive_team = None
             offensive_char = None
             defensive_team = None
             defensive_char = None
-            if event["team"]["id"] == home_team_id:
+            if team["id"] == home_team_id:
                 offensive_team = home_team_info
                 offensive_char = home_team_char_info
                 defensive_team = away_team_info
                 defensive_char = away_team_char_info
-            elif event["team"]["id"] == away_team_id:
+            elif team["id"] == away_team_id:
                 offensive_team = away_team_info
                 offensive_char = away_team_char_info
                 defensive_team = home_team_info
                 defensive_char = home_team_char_info
 
+            # start of the game
             if START == True:
-                await ctx.send(f"**{game_period_text[period_index]}**: {offensive_char['name']}'s {offensive_team['name']} starts with the ball!")
+                await ctx.send(f"**{game_period_text[period_index]}**: {offensive_char['name']}'s {offensive_team['nickname']} starts with the ball!")
                 time.sleep(2)
                 START = False
 
-            result = event["result"]
+            # if play finished in the next period
+            if end["period"] != game_period_text[period_index]:
+                await ctx.send(f"💣 And that's the end of the {game_period_text[period_index]}")
+                time.sleep(1)
+                period_score = game_state['score'][game_period_key[period_index]]
+                home_period_score, away_period_score = [int(x.strip()) for x in period_score.split('-')]
+                home_score += home_period_score
+                away_score += away_period_score
+                await ctx.send(f"**At the end of {game_period_text[period_index]}:** it's {home_team_char_info['name']} {home_score} - {away_score} {away_team_char_info['name']}")
+                time.sleep(1)
+                period_index += 1
+
             placeholder_text = None
             if result == "Touchdown":
                 placeholder_text = self.data_manager.get_game_event_random_touchdown()
@@ -223,17 +242,38 @@ class StoryCommands(commands.Cog, name="Story Commands"):
                 await ctx.send(f"{story}") 
                 time.sleep(2)
 
-            end = event["end"]
-            logger.info(f"Event end: {end['period']}, clock: {game_period_text[period_index]}")
+            # Game finished at the end of the current period or next period
             if end["clock"] is None or end["period"] != game_period_text[period_index]:
-                await ctx.send(f"That's the end of the {game_period_text[period_index]}")
+                await ctx.send(f"💣 That's the end of the {game_period_text[period_index]}")
+                time.sleep(1)
                 period_score = game_state['score'][game_period_key[period_index]]
                 home_period_score, away_period_score = [int(x.strip()) for x in period_score.split('-')]
                 home_score += home_period_score
                 away_score += away_period_score
-                await ctx.send(f"**{game_period_text[period_index]}** {home_score} - {away_score}")
-                time.sleep(2)
+                await ctx.send(f"**At the end of {game_period_text[period_index]}:** it's {home_team_char_info['name']} {home_score} - {away_score} {away_team_char_info['name']}")
+                time.sleep(1)
                 period_index += 1
+
+        # Show the winner of the game
+        winner = None
+        loser = None
+        winner_score = 0
+        loser_score = 0
+        if home_score > away_score:
+            winner = home_team_char_info['name']
+            loser = away_team_char_info['name']
+            winner_score = home_score
+            loser_score = away_score
+        elif away_score > home_score:
+            winner = away_team_char_info['name']
+            loser = home_team_char_info['name']
+            winner_score = away_score
+            loser_score = home_score
+
+        if winner is not None and loser is not None:
+            await ctx.send(f"🏆 **{winner}** wins against **{loser}** with the score of {winner_score} - {loser_score}!")
+        else:
+            await ctx.send(f"🏆 It's a tie! Both teams scored {home_score} - {away_score}!")
 
 
         # game_state = game_response["state"]
