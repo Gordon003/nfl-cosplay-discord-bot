@@ -231,6 +231,12 @@ class StoryCommands(commands.Cog, name="Story Commands"):
                 placeholder_text = self.data_manager.get_game_event_random_field_goal()
             elif result == "Interception":
                 placeholder_text = self.data_manager.get_game_event_random_interception()
+            elif result == "Missed FG":
+                placeholder_text = self.data_manager.get_game_event_random_missed_field_goal()
+            elif result == "Fumble":
+                placeholder_text = self.data_manager.get_game_event_random_fumble()
+            elif result == "Turnover on Downs":
+                placeholder_text = self.data_manager.get_game_event_random_downs()
 
             if placeholder_text is not None:
                 story = placeholder_text.format(

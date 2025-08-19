@@ -90,3 +90,15 @@ class DataManager:
     def get_game_event_random_field_goal(self):
         """Get a random field goal storyline template"""
         return random.choice(self.storyline_data["game_events"]["field_goal"]["templates"])
+    
+    def get_game_event_random_missed_field_goal(self):
+        """Get a random missed field goal storyline template"""
+        return random.choice(self.storyline_data["game_events"]["missed_field_goal"]["templates"])
+    
+    def get_game_event_random_fumble(self):
+        """Get a random fumble storyline template"""
+        return random.choice(self.storyline_data["game_events"]["fumble"]["templates"])
+    
+    def get_game_event_random_downs(self):
+        """Get a random downs storyline template"""
+        return random.choice(self.storyline_data["game_events"]["turnover_on_downs"]["templates"])

@@ -267,6 +267,38 @@
                 "🗳️ VOTING CONSEQUENCE! **{offensive_character}** fumbled so bad they should vote THEMSELVES off! The **{offensive_team}** offense are elimination candidates!",
                 "🗺️ TREASURE HUNT DISASTER! **{offensive_character}** found the ball but couldn't KEEP it! The **{offensive_team}** offense are terrible treasure hunters!"
             ]
+        },
+        "missed_field_goal": {
+            "templates": [
+                "💥 CHALLENGE FAILURE! **{offensive_character}** missed that field goal like they're failing a precision challenge! The **{offensive_team}** offense couldn't deliver under pressure!",
+                "🎯 TARGET PRACTICE DISASTER! **{offensive_character}** aimed for the uprights but hit everything EXCEPT them! The **{offensive_team}** need to go back to kicking school!",
+                "💔 TRUST FALL FAILURE! **{offensive_character}** couldn't trust their own foot! The **{offensive_team}** offense just lost crucial points!",
+                "🎭 TALENT SHOW EMBARRASSMENT! **{offensive_character}** displayed their LACK of kicking talent for all to see! The **{offensive_team}** deserve to be booed off stage!",
+                "🗺️ TREASURE HUNT FAILURE! **{offensive_character}** couldn't find those 3 points even with a map! The **{offensive_team}** are terrible treasure hunters!",
+                "😰 FEAR FACTOR CHOKE! **{offensive_character}** crumbled under the pressure like they're facing their worst nightmare! The **{offensive_team}** showed their true colors!",
+                "🏃‍♂️ OBSTACLE COURSE MISS! **{offensive_character}** navigated through the defense but couldn't clear the final hurdle! The **{offensive_team}** almost had it!",
+                "🧠 TRIVIA NIGHT WRONG ANSWER! **{offensive_character}** got the question wrong when it mattered most! The **{offensive_team}** need to study harder!",
+                "💭 CONFESSIONAL CONFESSION: **{offensive_character}** admits they CHOKED when their team needed them most! The **{offensive_team}** are questioning their kicker!",
+                "🎨 ARTS AND CRAFTS DISASTER! **{offensive_character}** tried to craft 3 points but created a MESS instead! The **{offensive_team}** project failed miserably!",
+                "👨‍🍳 CHEF'S DISAPPOINTMENT! **{offensive_character}** served up a recipe for disaster with that miss! Even Chef Hatchet is shaking his head at the **{offensive_team}**!",
+                "🗳️ VOTING CONSEQUENCE! **{offensive_character}** missed so badly they should vote themselves off the team! The **{offensive_team}** are reconsidering their alliance!"
+            ]
+        },
+        "turnover_on_downs": {
+            "templates": [
+                "💀 ELIMINATION CHALLENGE FAILED! **{offensive_character}** couldn't complete the challenge in time! The **{offensive_team}** are getting sent to the Dock of Shame!",
+                "⏰ TIME'S UP! **{offensive_character}** ran out of chances like they're failing a timed challenge! The **{offensive_team}** offense couldn't deliver when it mattered!",
+                "🏃‍♂️ OBSTACLE COURSE DEFEAT! **{offensive_character}** couldn't clear the final hurdle! The **{offensive_team}** are handing over possession to their rivals!",
+                "💔 TRUST FALL INTO THE ABYSS! **{offensive_character}** couldn't trust their team to convert! The **{offensive_team}** offense just face-planted spectacularly!",
+                "🎯 PRECISION CHALLENGE DISASTER! **{offensive_character}** had four shots but couldn't hit the target! The **{offensive_team}** are precision FAILURES!",
+                "🗳️ VOTING YOURSELF OFF! **{offensive_character}** basically voted themselves out of possession! The **{offensive_team}** just eliminated themselves from scoring!",
+                "👨‍🏫 CAMP COUNSELOR TIMEOUT! **{offensive_character}** broke too many rules and lost their turn! The **{offensive_team}** are getting disciplined!",
+                "🧠 TRIVIA NIGHT STRIKEOUT! **{offensive_character}** got four questions wrong in a row! The **{offensive_team}** need to hit the books harder!",
+                "💭 CONFESSIONAL MELTDOWN: **{offensive_character}** admits they CHOKED under pressure four times! The **{offensive_team}** are having an identity crisis!",
+                "🏕️ SURVIVAL CHALLENGE FORFEIT! **{offensive_character}** couldn't survive the wilderness of fourth down! The **{offensive_team}** are giving up their camp!",
+                "🎭 TALENT SHOW FOUR-PEAT FAILURE! **{offensive_character}** bombed four performances in a row! The **{offensive_team}** deserve to be booed off stage!",
+                "🗡️ ALLIANCE ABANDONMENT! **{offensive_character}** couldn't count on their alliance for four crucial plays! The **{offensive_team}** trust has completely SHATTERED!"
+            ]
         }
     }
 }

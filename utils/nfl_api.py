@@ -1,9 +1,8 @@
-import hashlib
 import os
 import pickle
-from datetime import datetime, timedelta
 from loguru import logger
 import requests
+import json
 
 from utils.api_cache import APICache
 class NFLAPIManager:
@@ -90,10 +89,10 @@ class NFLAPIManager:
         """Get a specific NFL match by ID"""
 
         # check if matchid is already cached
-        cache_file = os.path.join(self.match_cache_dir, f"{matchid}")
+        cache_file = os.path.join(self.match_cache_dir, f"{matchid}.json")
         if os.path.exists(cache_file):
-            with open(cache_file, "rb") as f:
-                cached_data = pickle.load(f)
+            with open(cache_file, "r", encoding='utf-8') as f:
+                cached_data = json.load(f)
             logger.debug(f"Match {matchid} loaded from cache.")
             return cached_data
 
@@ -107,9 +106,9 @@ class NFLAPIManager:
         
         # Save finished match data to cache
         if response[0]["state"]["report"] == "Final":
-            cache_file = os.path.join(self.match_cache_dir, f"{matchid}")
-            with open(cache_file, "wb") as f:
-                pickle.dump(response, f)
+            cache_file = os.path.join(self.match_cache_dir, f"{matchid}.json")
+            with open(cache_file, "w", encoding='utf-8') as f:
+                json.dump(response, f, indent=2, ensure_ascii=False)
             logger.debug(f"Match {matchid} cached successfully.")
 
         return response
