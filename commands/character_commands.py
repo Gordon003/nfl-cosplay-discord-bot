@@ -27,6 +27,7 @@ class CharacterCommands(commands.Cog, name="Character Commands"):
                     "`!char character <character_name>` - Get team for that character\n"
                     "`!char list` - Get all NFL teams with their assigned character\n"
                     "`!char random` - Get a random pairing of character and team\n"
+                    "`!char info <character_name>` - Get information about a specific character"
                       ,
                 inline=False
             )
@@ -36,7 +37,8 @@ class CharacterCommands(commands.Cog, name="Character Commands"):
                     "`!char character cowboys`\n"
                     "`!char team heather`\n"
                     "`!char list --sort-by character`\n"
-                    "`!char random`\n",
+                    "`!char random`\n"
+                    "`!char info header`\n",
                 inline=False
             )
             await ctx.send(embed=embed)
@@ -169,6 +171,35 @@ class CharacterCommands(commands.Cog, name="Character Commands"):
             color=0x00ff00
         )
         await ctx.send(embed=embed)
+
+    @character_command.command(
+        name='info',
+        help='Get information about a specific character',
+    )
+    async def get_character_info(self, ctx, *, character_name):
+
+        # get character info
+        char_key = character_name.lower()
+        char_info = self.data_manager.get_character_info_by_character_key(char_key)
+
+        
+
+        # get team info
+        team_key = self.data_manager.get_team_key_by_character_key(char_key)
+        team_info = self.data_manager.get_team_info_by_team_key(team_key)
+
+        if team_key is None :
+            await ctx.send(f"Character '{character_name}' not been assigned to a team!")
+            return
+
+        # display to discord
+        line1 = f"Here are the details for **{char_info['name']}**:"
+        line2 = f"**Nickname**: {char_info['nickname']}"
+        line3 = f"**Cartoon Series**: {char_info['cartoon_series']}"
+        line4 = f"**Description**: {char_info['description']}"
+        line5 = f"**War Cry**: {char_info['war_cry']}"
+        line6 = f"**Team**: {team_info['name']}"
+        await ctx.send(f"{line1}\n{line2}\n{line3}\n{line4}\n{line5}\n{line6}")
     
 async def setup(bot):
     await bot.add_cog(CharacterCommands(bot))

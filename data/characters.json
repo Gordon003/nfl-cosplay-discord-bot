@@ -2,236 +2,377 @@
     "alejandro": {
         "name": "Alejandro",
         "nickname": "Al",
-        "gender": "Male"
+        "gender": "Male",
+        "cartoon_series": "Total Drama",
+        "description": "A charming and manipulative Spanish contestant who uses his good looks and smooth talking to eliminate other players",
+        "war_cry": "¡Excelente!"
     },
     "anne_maria": {
         "name": "Anne Maria",
         "nickname": "Jersey Girl",
-        "gender": "Female"
+        "gender": "Female",
+        "cartoon_series": "Total Drama",
+        "description": "A tan, hair-spray obsessed girl from New Jersey with a tough attitude and distinctive accent",
+        "war_cry": "Whatever!"
     },
     "beth": {
         "name": "Beth",
         "nickname": "The Wannabe",
-        "gender": "Female"
+        "gender": "Female",
+        "cartoon_series": "Total Drama",
+        "description": "An eager-to-please farm girl with braces who desperately wants to be popular and accepted",
+        "war_cry": "This is so exciting!"
     },
     "brick": {
         "name": "Brick",
         "nickname": "The Cadet",
-        "gender": "Male"
+        "gender": "Male",
+        "cartoon_series": "Total Drama",
+        "description": "A military-obsessed cadet with a strong sense of honor but afraid of the dark",
+        "war_cry": "Sir, yes sir!"
     },
     "bridgette": {
         "name": "Bridgette",
         "nickname": "The Surfer Girl",
-        "gender": "Female"
+        "gender": "Female",
+        "cartoon_series": "Total Drama",
+        "description": "A kind-hearted blonde surfer who is extremely clumsy and accident-prone",
+        "war_cry": "Totally awesome!"
     },
     "cameron": {
         "name": "Cameron",
         "nickname": "The Bubble Boy",
-        "gender": "Male"
+        "gender": "Male",
+        "cartoon_series": "Total Drama",
+        "description": "A weak, sickly genius who lived in a bubble his whole life but has extensive book knowledge",
+        "war_cry": "According to my calculations..."
     },
     "carrie": {
         "name": "Carrie",
         "nickname": "The Racer",
-        "gender": "Female"
+        "gender": "Female",
+        "cartoon_series": "Total Drama",
+        "description": "A competitive best friend who has unrequited feelings for her racing partner Devin",
+        "war_cry": "Let's do this!"
     },
     "chef": {
         "name": "Chef Hatchet",
         "nickname": "Chef",
-        "gender": "Male"
+        "gender": "Male",
+        "cartoon_series": "Total Drama",
+        "description": "Chris McLean's intimidating assistant and cook who serves disgusting food and helps run challenges",
+        "war_cry": "You maggots better eat up!"
     },
     "courtney": {
         "name": "Courtney",
         "nickname": "The Type A",
-        "gender": "Female"
+        "gender": "Female",
+        "cartoon_series": "Total Drama",
+        "description": "An uptight overachiever and former CIT who is obsessed with rules and winning at any cost",
+        "war_cry": "I'm going to sue!"
     },
     "crimson": {
         "name": "Crimson",
         "nickname": "The Goth",
-        "gender": "Female"
+        "gender": "Female",
+        "cartoon_series": "Total Drama",
+        "description": "A stoic goth girl who rarely speaks and shows little emotion, paired with Ennui",
+        "war_cry": "Whatever."
     },
     "dakota": {
         "name": "Dakota",
         "nickname": "The Fame-Monger",
-        "gender": "Female"
+        "gender": "Female",
+        "cartoon_series": "Total Drama",
+        "description": "A spoiled rich girl obsessed with fame and social media who transforms into a monster",
+        "war_cry": "Daddy's gonna hear about this!"
     },
     "dawn": {
         "name": "Dawn",
         "nickname": "The Moonchild",
-        "gender": "Female"
+        "gender": "Female",
+        "cartoon_series": "Total Drama",
+        "description": "A mystical nature-lover who can communicate with animals and read people's auras",
+        "war_cry": "The spirits are not pleased"
     },
     "duncan": {
         "name": "Duncan",
         "nickname": "The Delinquent",
-        "gender": "Male"
+        "gender": "Male",
+        "cartoon_series": "Total Drama",
+        "description": "A punk juvenile delinquent with green mohawk who acts tough but has a soft side",
+        "war_cry": "No way I'm doing that!"
     },
     "ella": {
         "name": "Ella",
         "nickname": "The Fairytale Princess",
-        "gender": "Female"
+        "gender": "Female",
+        "cartoon_series": "Total Drama",
+        "description": "A Disney princess-like contestant who constantly sings and talks to animals",
+        "war_cry": "Oh my, how wonderful!"
     },
     "geoff": {
         "name": "Geoff",
         "nickname": "The Party Guy",
-        "gender": "Male"
+        "gender": "Male",
+        "cartoon_series": "Total Drama",
+        "description": "A laid-back surfer dude who loves to party and is Bridgette's boyfriend",
+        "war_cry": "Dude, that's awesome!"
     },
     "gwen": {
         "name": "Gwen",
         "nickname": "The Loner",
-        "gender": "Female"
+        "gender": "Female",
+        "cartoon_series": "Total Drama",
+        "description": "A sarcastic goth girl who prefers books to people and has artistic talents",
+        "war_cry": "This is so stupid"
     },
     "harold": {
         "name": "Harold",
         "nickname": "The Dork",
-        "gender": "Male"
+        "gender": "Male",
+        "cartoon_series": "Total Drama",
+        "description": "A nerdy red-haired boy with many unexpected skills and a crush on Leshawna",
+        "war_cry": "Sweet skills!"
     },
     "heather": {
         "name": "Heather",
         "nickname": "The Queen Bee",
-        "gender": "Female"
+        "gender": "Female",
+        "cartoon_series": "Total Drama",
+        "description": "A manipulative mean girl who will do anything to win and eliminate her competition",
+        "war_cry": "I'm going to win this!"
     },
     "izzy": {
         "name": "Izzy",
         "nickname": "The Psycho Hose Beast",
-        "gender": "Female"
+        "gender": "Female",
+        "cartoon_series": "Total Drama",
+        "description": "A wild, unpredictable redhead who is completely insane but surprisingly resourceful",
+        "war_cry": "That's crazy-fun!"
     },
     "jasmine": {
         "name": "Jasmine",
         "nickname": "The Outback Survivalist",
-        "gender": "Female"
+        "gender": "Female",
+        "cartoon_series": "Total Drama",
+        "description": "A tall Australian survivalist who is extremely capable in outdoor challenges",
+        "war_cry": "Too right, mate!"
     },
     "jen": {
         "name": "Jen",
         "nickname": "The Fashionista Twin",
-        "gender": "Female"
+        "gender": "Female",
+        "cartoon_series": "Total Drama",
+        "description": "One of the fashion-obsessed twins who constantly bickers with her sister over style choices",
+        "war_cry": "That is so not fashionable!"
     },
     "jo": {
         "name": "Jo",
         "nickname": "The Take-No-Prisoners Jockette",
-        "gender": "Female"
+        "gender": "Female",
+        "cartoon_series": "Total Drama",
+        "description": "An aggressive tomboy athlete who is extremely competitive and masculine",
+        "war_cry": "I came here to win!"
     },
     "josee": {
         "name": "Josee",
         "nickname": "The Ice Dancer",
-        "gender": "Female"
+        "gender": "Female",
+        "cartoon_series": "Total Drama",
+        "description": "A perfectionist ice dancer who becomes violently angry when things don't go her way",
+        "war_cry": "This is unacceptable!"
     },
     "julia": {
         "name": "Julia",
         "nickname": "The Influencer",
-        "gender": "Female"
+        "gender": "Female",
+        "cartoon_series": "Total Drama",
+        "description": "A social media influencer who maintains a fake nice persona while being manipulative",
+        "war_cry": "This is going to get so many likes!"
     },
     "kitty": {
         "name": "Kitty",
         "nickname": "The Optimist",
-        "gender": "Female"
+        "gender": "Female",
+        "cartoon_series": "Total Drama",
+        "description": "An upbeat and cheerful sister who always sees the bright side of every situation",
+        "war_cry": "This is going to be great!"
     },
     "leonard": {
         "name": "Leonard",
         "nickname": "The LARPer",
-        "gender": "Male"
+        "gender": "Male",
+        "cartoon_series": "Total Drama",
+        "description": "A delusional medieval fantasy enthusiast who believes he has actual magical powers",
+        "war_cry": "By the power of magic!"
     },
     "leshawna": {
         "name": "Leshawna",
         "nickname": "The Sister with 'Tude",
-        "gender": "Female"
+        "gender": "Female",
+        "cartoon_series": "Total Drama",
+        "description": "A sassy, confident girl who stands up for herself and others with attitude",
+        "war_cry": "Oh no you didn't!"
     },
     "lightning": {
         "name": "Lightning",
         "nickname": "The Athlete",
-        "gender": "Male"
+        "gender": "Male",
+        "cartoon_series": "Total Drama",
+        "description": "A narcissistic jock who refers to himself in third person and thinks he's the best at everything",
+        "war_cry": "Lightning is the best!"
     },
     "lindsay": {
         "name": "Lindsay",
         "nickname": "The Dumb Princess",
-        "gender": "Female"
+        "gender": "Female",
+        "cartoon_series": "Total Drama",
+        "description": "A sweet but incredibly ditzy blonde girl who is kind-hearted but not very bright",
+        "war_cry": "That's like, so confusing!"
     },
     "max": {
         "name": "Max",
         "nickname": "The Evil Mastermind",
-        "gender": "Male"
+        "gender": "Male",
+        "cartoon_series": "Total Drama",
+        "description": "A short wannabe supervillain who dramatically plots evil schemes but is largely ineffective",
+        "war_cry": "Evil! Pure evil!"
     },
     "mike": {
         "name": "Mike",
         "nickname": "The Multiple Personality Disorder",
-        "gender": "Male"
+        "gender": "Male",
+        "cartoon_series": "Total Drama",
+        "description": "A nice guy with multiple personalities including Svetlana, Vito, Chester, and Manitoba Smith",
+        "war_cry": "Sorry about that!"
     },
     "mk": {
         "name": "MK",
         "nickname": "The Hacker",
-        "gender": "Female"
+        "gender": "Female",
+        "cartoon_series": "Total Drama",
+        "description": "A tech-savvy troublemaker who uses her hacking skills to gain advantages in challenges",
+        "war_cry": "I'm in!"
     },
     "noah": {
         "name": "Noah",
         "nickname": "The Schemer",
-        "gender": "Male"
+        "gender": "Male",
+        "cartoon_series": "Total Drama",
+        "description": "A sarcastic bookworm who prefers using his intelligence over physical ability",
+        "war_cry": "I'm too smart for this"
     },
     "owen": {
         "name": "Owen",
         "nickname": "The Party Guy",
-        "gender": "Male"
+        "gender": "Male",
+        "cartoon_series": "Total Drama",
+        "description": "A lovable, overweight guy who loves food and making friends with everyone",
+        "war_cry": "Awesome-sauce!"
     },
     "priya": {
         "name": "Priya",
         "nickname": "The Overachiever",
-        "gender": "Female"
+        "gender": "Female",
+        "cartoon_series": "Total Drama",
+        "description": "A determined perfectionist who was trained by her parents to win Total Drama",
+        "war_cry": "I've trained for this!"
     },
     "rodney": {
         "name": "Rodney",
         "nickname": "The Gentle Giant",
-        "gender": "Male"
+        "gender": "Male",
+        "cartoon_series": "Total Drama",
+        "description": "A large, sweet farm boy who constantly falls in love with female contestants",
+        "war_cry": "Aw, shucks!"
     },
     "sam": {
         "name": "Sam",
         "nickname": "The Nice-Guy Gamer",
-        "gender": "Male"
+        "gender": "Male",
+        "cartoon_series": "Total Drama",
+        "description": "A friendly video game addict who speaks in gaming terminology and loves junk food",
+        "war_cry": "Game on!"
     },
     "samey": {
         "name": "Samey",
         "nickname": "The Cheerful Twin",
-        "gender": "Female"
+        "gender": "Female",
+        "cartoon_series": "Total Drama",
+        "description": "The nicer twin sister who is constantly bullied and put down by her sister Amy",
+        "war_cry": "I can do this!"
     },
     "scarlett": {
         "name": "Scarlett",
         "nickname": "The Quiet Genius",
-        "gender": "Female"
+        "gender": "Female",
+        "cartoon_series": "Total Drama",
+        "description": "A brilliant but secretly evil genius who hides her true villainous nature behind a meek facade",
+        "war_cry": "Fascinating"
     },
     "scott": {
         "name": "Scott",
         "nickname": "The Devious",
-        "gender": "Male"
+        "gender": "Male",
+        "cartoon_series": "Total Drama",
+        "description": "A scheming farm boy who deliberately sabotages his own team to eliminate strong players",
+        "war_cry": "That's what I'm talking about!"
     },
     "shawn": {
         "name": "Shawn",
         "nickname": "The Conspiracy Nut",
-        "gender": "Male"
+        "gender": "Male",
+        "cartoon_series": "Total Drama",
+        "description": "A paranoid survivalist who is obsessed with preparing for a zombie apocalypse",
+        "war_cry": "The zombies are coming!"
     },
     "sky": {
         "name": "Sky",
         "nickname": "The Olympian-in-Training",
-        "gender": "Female"
+        "gender": "Female",
+        "cartoon_series": "Total Drama",
+        "description": "An athletic gymnast who is focused on winning to pay for her Olympic training",
+        "war_cry": "Gold medal, here I come!"
     },
     "sugar": {
         "name": "Sugar",
         "nickname": "The Pageant Queen",
-        "gender": "Female"
+        "gender": "Female",
+        "cartoon_series": "Total Drama",
+        "description": "A rude, gross beauty pageant contestant who thinks she's prettier than she actually is",
+        "war_cry": "I'm prettier than all y'all!"
     },
     "topher": {
         "name": "Topher",
         "nickname": "The Chris Wannabe",
-        "gender": "Male"
+        "gender": "Male",
+        "cartoon_series": "Total Drama",
+        "description": "A wannabe TV host who idolizes Chris McLean and wants to steal his job",
+        "war_cry": "This is my moment!"
     },
     "trent": {
         "name": "Trent",
         "nickname": "The Cool Guy",
-        "gender": "Male"
+        "gender": "Male",
+        "cartoon_series": "Total Drama",
+        "description": "A laid-back musician who plays guitar and tends to be obsessed with the number nine",
+        "war_cry": "That's cool, man"
     },
     "tyler": {
         "name": "Tyler",
         "nickname": "The Jock",
-        "gender": "Male"
+        "gender": "Male",
+        "cartoon_series": "Total Drama",
+        "description": "An enthusiastic athlete who thinks he's great at sports but is actually quite clumsy",
+        "war_cry": "I'm totally gonna nail this!"
     },
     "zoey": {
         "name": "Zoey",
         "nickname": "The Indie Chick",
-        "gender": "Female"
+        "gender": "Female",
+        "cartoon_series": "Total Drama",
+        "description": "A kind-hearted redhead who sees the good in everyone and loves Mike despite his personalities",
+        "war_cry": "We can do this together!"
     }
 }
