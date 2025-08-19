@@ -1,0 +1,4837 @@
+[
+  {
+    "id": 253941,
+    "league": "NFL",
+    "season": 2025,
+    "state": {
+      "clock": 0,
+      "score": {
+        "current": "19 - 23",
+        "firstPeriod": "0 - 0",
+        "thirdPeriod": "3 - 7",
+        "fourthPeriod": "3 - 13",
+        "secondPeriod": "13 - 3",
+        "firstOvertimePeriod": null,
+        "secondOvertimePeriod": null
+      },
+      "period": 4,
+      "report": "Final",
+      "description": "Finished"
+    },
+    "homeTeam": {
+      "id": 92731,
+      "displayName": "Indianapolis Colts",
+      "name": "Colts",
+      "logo": "https://highlightly.net/american-football/images/teams/92731.png",
+      "abbreviation": "IND"
+    },
+    "awayTeam": {
+      "id": 92742,
+      "displayName": "Green Bay Packers",
+      "name": "Packers",
+      "logo": "https://highlightly.net/american-football/images/teams/92742.png",
+      "abbreviation": "GB"
+    },
+    "date": "2025-08-16T17:00:00.000Z",
+    "round": "preseason",
+    "venue": {
+      "city": "Indianapolis",
+      "name": "Lucas Oil Stadium",
+      "state": "IN"
+    },
+    "forecast": {
+      "status": "clear day",
+      "temperature": "32.05°C"
+    },
+    "overallStatistics": [
+      {
+        "data": [
+          {
+            "value": "24",
+            "displayName": "1st Downs"
+          },
+          {
+            "value": "10",
+            "displayName": "Passing 1st downs"
+          },
+          {
+            "value": "9",
+            "displayName": "Rushing 1st downs"
+          },
+          {
+            "value": "5",
+            "displayName": "1st downs from penalties"
+          },
+          {
+            "value": "8-16",
+            "displayName": "3rd down efficiency"
+          },
+          {
+            "value": "4-4",
+            "displayName": "4th down efficiency"
+          },
+          {
+            "value": "70",
+            "displayName": "Total Plays"
+          },
+          {
+            "value": "356",
+            "displayName": "Total Yards"
+          },
+          {
+            "value": "5.1",
+            "displayName": "Yards per Play"
+          },
+          {
+            "value": "10",
+            "displayName": "Total Drives"
+          },
+          {
+            "value": "197",
+            "displayName": "Passing"
+          },
+          {
+            "value": "14/29",
+            "displayName": "Comp/Att"
+          },
+          {
+            "value": "6.6",
+            "displayName": "Yards per pass"
+          },
+          {
+            "value": "0",
+            "displayName": "Interceptions thrown"
+          },
+          {
+            "value": "1-6",
+            "displayName": "Sacks-Yards Lost"
+          },
+          {
+            "value": "159",
+            "displayName": "Rushing"
+          },
+          {
+            "value": "40",
+            "displayName": "Rushing Attempts"
+          },
+          {
+            "value": "4.0",
+            "displayName": "Yards per rush"
+          },
+          {
+            "value": "3-3",
+            "displayName": "Red Zone (Made-Att)"
+          },
+          {
+            "value": "12-95",
+            "displayName": "Penalties"
+          },
+          {
+            "value": "1",
+            "displayName": "Turnovers"
+          },
+          {
+            "value": "1",
+            "displayName": "Fumbles lost"
+          },
+          {
+            "value": "0",
+            "displayName": "Interceptions thrown"
+          },
+          {
+            "value": "0",
+            "displayName": "Defensive / Special Teams TDs"
+          },
+          {
+            "value": "32:18",
+            "displayName": "Possession"
+          }
+        ],
+        "team": {
+          "id": 92742,
+          "logo": "https://highlightly.net/american-football/images/teams/92742.png",
+          "name": "Packers",
+          "league": "NFL",
+          "displayName": "Green Bay Packers",
+          "abbreviation": "GB"
+        }
+      },
+      {
+        "data": [
+          {
+            "value": "22",
+            "displayName": "1st Downs"
+          },
+          {
+            "value": "13",
+            "displayName": "Passing 1st downs"
+          },
+          {
+            "value": "7",
+            "displayName": "Rushing 1st downs"
+          },
+          {
+            "value": "2",
+            "displayName": "1st downs from penalties"
+          },
+          {
+            "value": "3-11",
+            "displayName": "3rd down efficiency"
+          },
+          {
+            "value": "0-1",
+            "displayName": "4th down efficiency"
+          },
+          {
+            "value": "62",
+            "displayName": "Total Plays"
+          },
+          {
+            "value": "360",
+            "displayName": "Total Yards"
+          },
+          {
+            "value": "5.8",
+            "displayName": "Yards per Play"
+          },
+          {
+            "value": "9",
+            "displayName": "Total Drives"
+          },
+          {
+            "value": "267",
+            "displayName": "Passing"
+          },
+          {
+            "value": "23/41",
+            "displayName": "Comp/Att"
+          },
+          {
+            "value": "6.4",
+            "displayName": "Yards per pass"
+          },
+          {
+            "value": "0",
+            "displayName": "Interceptions thrown"
+          },
+          {
+            "value": "1-8",
+            "displayName": "Sacks-Yards Lost"
+          },
+          {
+            "value": "93",
+            "displayName": "Rushing"
+          },
+          {
+            "value": "20",
+            "displayName": "Rushing Attempts"
+          },
+          {
+            "value": "4.7",
+            "displayName": "Yards per rush"
+          },
+          {
+            "value": "1-4",
+            "displayName": "Red Zone (Made-Att)"
+          },
+          {
+            "value": "11-103",
+            "displayName": "Penalties"
+          },
+          {
+            "value": "0",
+            "displayName": "Turnovers"
+          },
+          {
+            "value": "0",
+            "displayName": "Fumbles lost"
+          },
+          {
+            "value": "0",
+            "displayName": "Interceptions thrown"
+          },
+          {
+            "value": "0",
+            "displayName": "Defensive / Special Teams TDs"
+          },
+          {
+            "value": "27:42",
+            "displayName": "Possession"
+          }
+        ],
+        "team": {
+          "id": 92731,
+          "logo": "https://highlightly.net/american-football/images/teams/92731.png",
+          "name": "Colts",
+          "league": "NFL",
+          "displayName": "Indianapolis Colts",
+          "abbreviation": "IND"
+        }
+      }
+    ],
+    "injuries": [
+      {
+        "data": [
+          {
+            "player": {
+              "name": "Johnathan Edwards",
+              "jersey": 35,
+              "position": "Cornerback"
+            },
+            "status": "Questionable"
+          },
+          {
+            "player": {
+              "name": "Blake Freeland",
+              "jersey": 73,
+              "position": "Offensive Tackle"
+            },
+            "status": "Questionable"
+          },
+          {
+            "player": {
+              "name": "Tyler Goodson",
+              "jersey": 31,
+              "position": "Running Back"
+            },
+            "status": "Questionable"
+          },
+          {
+            "player": {
+              "name": "Braden Smith",
+              "jersey": 72,
+              "position": "Offensive Tackle"
+            },
+            "status": "Questionable"
+          },
+          {
+            "player": {
+              "name": "Hunter Wohler",
+              "jersey": 30,
+              "position": "Safety"
+            },
+            "status": "Questionable"
+          }
+        ],
+        "team": {
+          "id": 92731,
+          "logo": "https://highlightly.net/american-football/images/teams/92731.png",
+          "name": "Colts",
+          "league": "NFL",
+          "displayName": "Indianapolis Colts",
+          "abbreviation": "IND"
+        }
+      },
+      {
+        "data": [
+          {
+            "player": {
+              "name": "Omar Brown",
+              "jersey": 40,
+              "position": "Safety"
+            },
+            "status": "Questionable"
+          },
+          {
+            "player": {
+              "name": "Barryn Sorrell",
+              "jersey": 99,
+              "position": "Defensive End"
+            },
+            "status": "Questionable"
+          },
+          {
+            "player": {
+              "name": "Jordan Love",
+              "jersey": 10,
+              "position": "Quarterback"
+            },
+            "status": "Questionable"
+          },
+          {
+            "player": {
+              "name": "Jayden Reed",
+              "jersey": 11,
+              "position": "Wide Receiver"
+            },
+            "status": "Questionable"
+          },
+          {
+            "player": {
+              "name": "Romeo Doubs",
+              "jersey": 87,
+              "position": "Wide Receiver"
+            },
+            "status": "Questionable"
+          }
+        ],
+        "team": {
+          "id": 92742,
+          "logo": "https://highlightly.net/american-football/images/teams/92742.png",
+          "name": "Packers",
+          "league": "NFL",
+          "displayName": "Green Bay Packers",
+          "abbreviation": "GB"
+        }
+      }
+    ],
+    "events": [
+      {
+        "end": {
+          "clock": "9:47",
+          "period": "1st Quarter",
+          "yardLine": 21
+        },
+        "team": {
+          "id": 92742,
+          "logo": "https://highlightly.net/american-football/images/teams/92742.png",
+          "name": "Packers",
+          "league": "NFL",
+          "displayName": "Green Bay Packers",
+          "abbreviation": "GB"
+        },
+        "plays": [
+          "S.Shrader kicks 51 yards from IND 35 to GB 14. C.Ballentine to GB 36 for 22 yards (H.Wohler; J.Bachie).",
+          "M.Lloyd left tackle to GB 36 for no gain (G.Stewart; J.Bachie).",
+          "(Shotgun) M.Willis pass incomplete short middle to M.Lloyd.",
+          "(Shotgun) M.Willis pass short left to M.Heath to GB 45 for 9 yards (J.Edwards).",
+          "C.Brooks up the middle to GB 49 for 4 yards (A.Adebawore; J.Edwards).",
+          "M.Lloyd up the middle to IND 48 for 3 yards (J.Edwards; J.Bachie).",
+          "M.Lloyd left end to IND 46 for 2 yards (L.Latu).",
+          "(Shotgun) M.Willis pass incomplete deep left to M.Heath.",
+          "(Shotgun) M.Willis pass short middle to J.FitzPatrick to IND 37 for 9 yards (H.Wohler).",
+          "(Shotgun) C.Brooks right guard to IND 36 for 1 yard (C.McGrone).\nPENALTY on IND-A.Adebawore, Face Mask, 15 yards, enforced at IND 36.",
+          "(Shotgun) M.Willis pass incomplete short left to M.Lloyd [J.Bachie].",
+          "(Shotgun) M.Willis pass incomplete deep right to M.Lloyd.",
+          "(Shotgun) M.Willis pass incomplete deep left to M.Hardman (C.Lammons).",
+          "M.McNamee 39 yard field goal is No Good, Wide Left, Center-M.Orzech, Holder-D.Whelan.",
+          "Official Timeout at 09:47."
+        ],
+        "start": {
+          "clock": "15:00",
+          "period": "1st Quarter",
+          "yardLine": 64
+        },
+        "result": "Missed FG",
+        "description": "13 plays, 43 yards, 5:13",
+        "isScoringPlay": false
+      },
+      {
+        "end": {
+          "clock": "8:14",
+          "period": "1st Quarter",
+          "yardLine": 45
+        },
+        "team": {
+          "id": 92731,
+          "logo": "https://highlightly.net/american-football/images/teams/92731.png",
+          "name": "Colts",
+          "league": "NFL",
+          "displayName": "Indianapolis Colts",
+          "abbreviation": "IND"
+        },
+        "plays": [
+          "(Shotgun) D.Jones pass short right to M.Alie-Cox to IND 48 for 19 yards (K.Oladapo).",
+          "(Shotgun) D.Jones pass incomplete short left to M.Pittman (K.Brooks).",
+          "D.Jones FUMBLES (Aborted) at IND 48, and recovers at IND 45.",
+          "(Shotgun) D.Jones pass incomplete deep right to T.Warren.",
+          "R.Sanchez punts 45 yards to GB 10, Center-L.Rhodes, fair catch by M.Hardman.",
+          "Official Timeout at 08:14."
+        ],
+        "start": {
+          "clock": "9:47",
+          "period": "1st Quarter",
+          "yardLine": 29
+        },
+        "result": "Punt",
+        "description": "4 plays, 16 yards, 1:33",
+        "isScoringPlay": false
+      },
+      {
+        "end": {
+          "clock": "5:07",
+          "period": "1st Quarter",
+          "yardLine": 69
+        },
+        "team": {
+          "id": 92742,
+          "logo": "https://highlightly.net/american-football/images/teams/92742.png",
+          "name": "Packers",
+          "league": "NFL",
+          "displayName": "Green Bay Packers",
+          "abbreviation": "GB"
+        },
+        "plays": [
+          "M.Lloyd up the middle to GB 14 for 4 yards (D.Shelley).",
+          "M.Willis pass incomplete short left to M.Heath [L.Latu].",
+          "(Shotgun) M.Willis pass deep right to M.Hardman pushed ob at GB 35 for 21 yards (C.Lammons).\nPenalty on IND-D.Shelley, Defensive Holding, declined.",
+          "M.Lloyd right tackle to GB 39 for 4 yards (D.Scott).",
+          "M.Lloyd right end to GB 41 for 2 yards (E.Johnson; L.Latu).",
+          "(Shotgun) M.Willis pass deep right to J.Hicks ran ob at IND 28 for 31 yards.\nPENALTY on GB-D.Jennings, Offensive Holding, 10 yards, enforced at GB 41 - No Play.",
+          "(Shotgun) M.Willis pass incomplete deep right to M.Hardman.",
+          "D.Whelan punts 49 yards to IND 20, Center-M.Orzech. A.Gould MUFFS catch, and recovers at IND 19. A.Gould to IND 16 for -3 yards (B.Sorrell; M.Orzech).",
+          "Official Timeout at 05:07."
+        ],
+        "start": {
+          "clock": "8:14",
+          "period": "1st Quarter",
+          "yardLine": 90
+        },
+        "result": "Punt",
+        "description": "6 plays, 21 yards, 3:07",
+        "isScoringPlay": false
+      },
+      {
+        "end": {
+          "clock": "14:46",
+          "period": "2nd Quarter",
+          "yardLine": 93
+        },
+        "team": {
+          "id": 92731,
+          "logo": "https://highlightly.net/american-football/images/teams/92731.png",
+          "name": "Colts",
+          "league": "NFL",
+          "displayName": "Indianapolis Colts",
+          "abbreviation": "IND"
+        },
+        "plays": [
+          "(Shotgun) D.Jones pass short left to A.Gould to IND 39 for 23 yards (T.Hopper).\nPENALTY on IND-A.Mitchell, Offensive Holding, 10 yards, enforced at IND 28.",
+          "(Shotgun) D.Jones pass short left to M.Pittman to IND 27 for 9 yards (K.Hadden; I.Simmons).",
+          "(Shotgun) D.Jones pass incomplete short right to T.Warren (K.Oladapo).",
+          "(Shotgun) D.Jones pass deep left to M.Pittman to IND 49 for 22 yards (I.Simmons; K.Hadden).",
+          "(No Huddle, Shotgun) D.Jones pass short left to M.Alie-Cox to GB 45 for 6 yards (K.Hadden).",
+          "(Shotgun) J.Taylor left tackle pushed ob at GB 36 for 9 yards (K.Hadden).",
+          "(Shotgun) D.Jones pass deep left to T.Warren pushed ob at GB 11 for 25 yards (K.Hadden).",
+          "(Shotgun) D.Giddens left guard to GB 5 for 6 yards (A.Mosby; O.Brown).",
+          "D.Giddens left end pushed ob at GB 1 for 4 yards (I.Simmons).\nPENALTY on IND-J.Travis, Offensive Holding, 10 yards, enforced at GB 5 - No Play.",
+          "(Shotgun) D.Jones pass short right to A.Mitchell to GB 7 for 8 yards (B.Melton).",
+          "END QUARTER 1",
+          "(Shotgun) D.Jones pass incomplete short left.",
+          "S.Shrader 25 yard field goal is GOOD, Center-L.Rhodes, Holder-R.Sanchez.",
+          "Official Timeout at 14:46."
+        ],
+        "start": {
+          "clock": "5:07",
+          "period": "1st Quarter",
+          "yardLine": 16
+        },
+        "result": "Field Goal",
+        "description": "11 plays, 77 yards, 5:21",
+        "isScoringPlay": true
+      },
+      {
+        "end": {
+          "clock": "11:22",
+          "period": "2nd Quarter",
+          "yardLine": 49
+        },
+        "team": {
+          "id": 92742,
+          "logo": "https://highlightly.net/american-football/images/teams/92742.png",
+          "name": "Packers",
+          "league": "NFL",
+          "displayName": "Green Bay Packers",
+          "abbreviation": "GB"
+        },
+        "plays": [
+          "S.Shrader kicks 59 yards from IND 35 to GB 6. I.Abanikanda to GB 28 for 22 yards (C.McGrone; A.Adebawore).\nPENALTY on GB-K.Hadden, Offensive Holding, 10 yards, enforced at GB 28.",
+          "PENALTY on GB-A.Belton, False Start, 5 yards, enforced at GB 18 - No Play.",
+          "(Shotgun) E.Wilson left tackle to GB 17 for 4 yards (A.Ajiake; S.Olubi).",
+          "(Shotgun) M.Willis pass short middle to M.Hardman to GB 23 for 6 yards (A.Ajiake).",
+          "(Shotgun) M.Willis pass deep right to M.Lloyd to IND 44 for 33 yards (R.Thomas; A.Ajiake).",
+          "M.Willis pass incomplete deep left to J.FitzPatrick (C.Lammons).",
+          "(Shotgun) E.Wilson right end pushed ob at IND 39 for 5 yards (A.Ajiake).\nPENALTY on GB-A.Belton, Unnecessary Roughness, 15 yards, enforced at IND 39.",
+          "(Shotgun) M.Willis pass short left to B.Sims to IND 49 for 5 yards (C.Lammons; D.Shelley).",
+          "D.Whelan punts 39 yards to IND 10, Center-M.Orzech, fair catch by A.Gould.",
+          "Official Timeout at 11:22."
+        ],
+        "start": {
+          "clock": "14:46",
+          "period": "2nd Quarter",
+          "yardLine": 82
+        },
+        "result": "Punt",
+        "description": "6 plays, 33 yards, 3:24",
+        "isScoringPlay": false
+      },
+      {
+        "end": {
+          "clock": "5:00",
+          "period": "2nd Quarter",
+          "yardLine": 100
+        },
+        "team": {
+          "id": 92731,
+          "logo": "https://highlightly.net/american-football/images/teams/92731.png",
+          "name": "Colts",
+          "league": "NFL",
+          "displayName": "Indianapolis Colts",
+          "abbreviation": "IND"
+        },
+        "plays": [
+          "(Shotgun) A.Richardson pass short left to A.Gould pushed ob at IND 19 for 9 yards (B.Melton).",
+          "(Shotgun) A.Richardson pass incomplete short middle to A.Dulin (B.Melton).",
+          "D.Giddens up the middle to IND 20 for 1 yard (K.Enagbare). IND-B.Freeland was injured during the play.",
+          "Official Timeout at 10:27.",
+          "A.Richardson pass short left to A.Gould pushed ob at IND 29 for 9 yards (I.Simmons).",
+          "D.Giddens right guard to IND 31 for 2 yards (N.Stackhouse).",
+          "(Shotgun) A.Richardson pass incomplete deep right to A.Mitchell [W.Brinson].\nPENALTY on GB-K.Hadden, Defensive Holding, 5 yards, enforced at IND 31 - No Play.",
+          "(Shotgun) A.Richardson pass deep right to A.Ogletree to GB 43 for 21 yards (J.Baldwin; K.Hadden).",
+          "(No Huddle, Shotgun) A.Richardson pass short right to A.Dulin pushed ob at GB 25 for 18 yards (K.Hadden).",
+          "D.Giddens left end to GB 26 for -1 yards (T.Hopper).",
+          "(Shotgun) A.Richardson pass short middle to A.Ogletree to GB 19 for 7 yards (I.Simmons).",
+          "(Shotgun) A.Richardson pass short left to A.Dulin pushed ob at GB 9 for 10 yards (K.King).\nPENALTY on IND-T.Bortolini, Ineligible Downfield Pass, 5 yards, enforced at GB 19 - No Play.",
+          "(Shotgun) A.Richardson scrambles up the middle to GB 15 for 9 yards (I.Simmons).\nPENALTY on GB-J.Baldwin, Defensive Holding, 5 yards, enforced at GB 15.",
+          "(Shotgun) T.Goodson left tackle to GB 3 for 7 yards (I.Simmons).",
+          "(No Huddle, Shotgun) T.Goodson right tackle for 3 yards, TOUCHDOWN. S.Shrader extra point is GOOD, Center-L.Rhodes, Holder-R.Sanchez.",
+          "Official Timeout at 05:00."
+        ],
+        "start": {
+          "clock": "11:22",
+          "period": "2nd Quarter",
+          "yardLine": 10
+        },
+        "result": "Touchdown",
+        "description": "12 plays, 90 yards, 6:22",
+        "isScoringPlay": true
+      },
+      {
+        "end": {
+          "clock": "4:10",
+          "period": "2nd Quarter",
+          "yardLine": 67
+        },
+        "team": {
+          "id": 92742,
+          "logo": "https://highlightly.net/american-football/images/teams/92742.png",
+          "name": "Packers",
+          "league": "NFL",
+          "displayName": "Green Bay Packers",
+          "abbreviation": "GB"
+        },
+        "plays": [
+          "S.Shrader kicks 62 yards from IND 35 to GB 3. I.Abanikanda MUFFS catch, and recovers at GB 4. I.Abanikanda to GB 24 for 20 yards (A.Adebawore; T.Goodson).",
+          "19-T.Elgersma in at QB. E.Wilson up the middle to GB 33 for 9 yards (A.Ajiake; J.Edwards).",
+          "E.Wilson right tackle to GB 38 for 5 yards (T.Smith; C.Lammons). FUMBLES (T.Smith), RECOVERED by IND-A.Ajiake at GB 37.\nPENALTY on GB-A.Belton, Face Mask, 15 yards, enforced at GB 37."
+        ],
+        "start": {
+          "clock": "5:00",
+          "period": "2nd Quarter",
+          "yardLine": 76
+        },
+        "result": "Fumble",
+        "description": "2 plays, 13 yards, 0:50",
+        "isScoringPlay": false
+      },
+      {
+        "end": {
+          "clock": "2:14",
+          "period": "2nd Quarter",
+          "yardLine": 89
+        },
+        "team": {
+          "id": 92731,
+          "logo": "https://highlightly.net/american-football/images/teams/92731.png",
+          "name": "Colts",
+          "league": "NFL",
+          "displayName": "Indianapolis Colts",
+          "abbreviation": "IND"
+        },
+        "plays": [
+          "(Shotgun) A.Richardson pass incomplete short middle to D.Giddens.",
+          "(Shotgun) D.Giddens right guard to GB 10 for 12 yards (J.Baldwin).",
+          "(Shotgun) D.Giddens right end to GB 11 for -1 yards (K.Hadden).\nPENALTY on IND-A.Ogletree, Offensive Holding, 10 yards, enforced at GB 10 - No Play.",
+          "(Shotgun) A.Richardson pass incomplete short right to D.Giddens.",
+          "(Shotgun) A.Richardson pass incomplete deep right to W.Mallory.",
+          "(Shotgun) A.Richardson pass short right to D.Giddens to GB 11 for 9 yards (J.Baldwin; I.Simmons).",
+          "S.Shrader 29 yard field goal is GOOD, Center-L.Rhodes, Holder-R.Sanchez."
+        ],
+        "start": {
+          "clock": "4:10",
+          "period": "2nd Quarter",
+          "yardLine": 78
+        },
+        "result": "Field Goal",
+        "description": "6 plays, 11 yards, 1:56",
+        "isScoringPlay": true
+      },
+      {
+        "end": {
+          "clock": "1:38",
+          "period": "2nd Quarter",
+          "yardLine": 67
+        },
+        "team": {
+          "id": 92742,
+          "logo": "https://highlightly.net/american-football/images/teams/92742.png",
+          "name": "Packers",
+          "league": "NFL",
+          "displayName": "Green Bay Packers",
+          "abbreviation": "GB"
+        },
+        "plays": [
+          "S.Shrader kicks 62 yards from IND 35 to GB 3. I.Abanikanda to GB 33 for 30 yards (S.Olubi; A.Ogletree). IND-S.Olubi was injured during the play.",
+          "(Shotgun) PENALTY on GB-K.Telfort, False Start, 5 yards, enforced at GB 33 - No Play.",
+          "(Shotgun) T.Elgersma sacked at GB 22 for -6 yards (C.Lammons). ** Injury Update: IND-S.Olubi has returned to the game.",
+          "Two-Minute Warning",
+          "(Shotgun) T.Elgersma pass incomplete short middle to C.Johnson [T.Smith].",
+          "(Shotgun) E.Wilson up the middle to GB 33 for 11 yards (S.Olubi).",
+          "Timeout #1 by IND at 01:49.",
+          "D.Whelan punts 59 yards to IND 8, Center-M.Orzech, downed by GB-O.Brown."
+        ],
+        "start": {
+          "clock": "2:14",
+          "period": "2nd Quarter",
+          "yardLine": 67
+        },
+        "result": "Punt",
+        "description": "3 plays, 0 yards, 0:36",
+        "isScoringPlay": false
+      },
+      {
+        "end": {
+          "clock": "0:47",
+          "period": "2nd Quarter",
+          "yardLine": 3
+        },
+        "team": {
+          "id": 92731,
+          "logo": "https://highlightly.net/american-football/images/teams/92731.png",
+          "name": "Colts",
+          "league": "NFL",
+          "displayName": "Indianapolis Colts",
+          "abbreviation": "IND"
+        },
+        "plays": [
+          "(Shotgun) D.Giddens right guard to IND 16 for 8 yards (A.Mosby; I.Simmons).",
+          "(No Huddle, Shotgun) A.Richardson pass incomplete short left to A.Dulin (K.Randolph).",
+          "(Shotgun) A.Richardson pass deep right to A.Gould to GB 46 for 38 yards (K.King).\nPENALTY on IND-A.Mitchell, Offensive Offside, 5 yards, enforced at IND 16 - No Play.",
+          "(Shotgun) A.Richardson sacked at IND 3 for -8 yards (D.Alexandre).",
+          "Timeout #1 by GB at 00:59.",
+          "R.Sanchez punts 54 yards to GB 43, Center-L.Rhodes. M.Hardman to IND 47 for 10 yards (L.Treadwell)."
+        ],
+        "start": {
+          "clock": "1:38",
+          "period": "2nd Quarter",
+          "yardLine": 8
+        },
+        "result": "Punt",
+        "description": "3 plays, -5 yards, 0:51",
+        "isScoringPlay": false
+      },
+      {
+        "end": {
+          "clock": null,
+          "period": "2nd Quarter",
+          "yardLine": 25
+        },
+        "team": {
+          "id": 92742,
+          "logo": "https://highlightly.net/american-football/images/teams/92742.png",
+          "name": "Packers",
+          "league": "NFL",
+          "displayName": "Green Bay Packers",
+          "abbreviation": "GB"
+        },
+        "plays": [
+          "(Shotgun) T.Elgersma pass incomplete deep left to J.Hicks (C.Lammons).",
+          "(Shotgun) T.Elgersma pass short middle to J.Hicks to IND 33 for 14 yards (D.Shelley).\nPENALTY on GB-K.Telfort, Illegal Formation, 5 yards, enforced at IND 47 - No Play.",
+          "(Shotgun) T.Elgersma pass short right to E.Wilson pushed ob at IND 20 for 32 yards (S.Womack).",
+          "(Shotgun) T.Elgersma pass incomplete short middle to E.Wilson [D.Nchami].",
+          "(Shotgun) T.Elgersma pass deep middle to B.Sims for 20 yards, TOUCHDOWN NULLIFIED by Penalty.\nPENALTY on GB-A.Belton, Illegal Formation, 5 yards, enforced at IND 20 - No Play.",
+          "(Shotgun) I.Abanikanda left tackle to IND 20 for 5 yards (A.Ajiake).",
+          "Timeout #2 by GB at 00:09.",
+          "(Shotgun) T.Elgersma pass short right to W.Sheppard to IND 3 for 17 yards (S.Womack).\nPENALTY on GB-A.Belton, Illegal Formation, 5 yards, enforced at IND 20 - No Play.",
+          "M.McNamee 43 yard field goal is GOOD, Center-M.Orzech, Holder-D.Whelan.",
+          "END QUARTER 2"
+        ],
+        "start": {
+          "clock": "0:47",
+          "period": "2nd Quarter",
+          "yardLine": 47
+        },
+        "result": "Field Goal",
+        "description": "5 plays, 22 yards, 0:47",
+        "isScoringPlay": true
+      },
+      {
+        "end": {
+          "clock": "13:21",
+          "period": "3rd Quarter",
+          "yardLine": 42
+        },
+        "team": {
+          "id": 92731,
+          "logo": "https://highlightly.net/american-football/images/teams/92731.png",
+          "name": "Colts",
+          "league": "NFL",
+          "displayName": "Indianapolis Colts",
+          "abbreviation": "IND"
+        },
+        "plays": [
+          "M.McNamee kicks 58 yards from GB 35 to IND 7. D.Giddens to IND 34 for 27 yards (K.Welch; M.Robinson).",
+          "(Shotgun) R.Leonard pass incomplete short right to J.Woods.",
+          "(Shotgun) R.Leonard scrambles up the middle to IND 42 for 8 yards (B.Melton).",
+          "(Shotgun) U.Bentley right tackle to IND 42 for no gain (K.Welch).",
+          "R.Sanchez punts 58 yards to end zone, Center-L.Rhodes, Touchback."
+        ],
+        "start": {
+          "clock": "15:00",
+          "period": "3rd Quarter",
+          "yardLine": 34
+        },
+        "result": "Punt",
+        "description": "3 plays, 8 yards, 1:39",
+        "isScoringPlay": false
+      },
+      {
+        "end": {
+          "clock": "4:19",
+          "period": "3rd Quarter",
+          "yardLine": 0
+        },
+        "team": {
+          "id": 92742,
+          "logo": "https://highlightly.net/american-football/images/teams/92742.png",
+          "name": "Packers",
+          "league": "NFL",
+          "displayName": "Green Bay Packers",
+          "abbreviation": "GB"
+        },
+        "plays": [
+          "I.Abanikanda left guard to GB 22 for 2 yards (A.Ajiake; J.Tupou).",
+          "(Shotgun) I.Abanikanda up the middle to GB 25 for 3 yards (E.Johnson).",
+          "(Shotgun) T.Elgersma pass short right to C.Johnson to GB 37 for 12 yards (A.Johnson).",
+          "T.Elgersma pass short middle to J.Hicks to IND 49 for 14 yards (S.Womack).",
+          "I.Abanikanda left guard to IND 45 for 4 yards (J.Edwards; E.Johnson).",
+          "I.Abanikanda left tackle to IND 40 for 5 yards (J.Edwards). IND-J.Edwards was injured during the play.",
+          "(Shotgun) I.Abanikanda right guard to IND 37 for 3 yards (I.Land; E.Johnson).",
+          "(Shotgun) I.Abanikanda left end to IND 35 for 2 yards (D.Little; E.Johnson).",
+          "T.Elgersma scrambles right end to IND 29 for 6 yards (A.Johnson).\nPENALTY on GB, Offensive Holding, 10 yards, enforced at IND 35 - No Play.",
+          "T.Elgersma pass short left to A.Johnson to IND 34 for 11 yards (T.Smith).",
+          "(Shotgun) T.Elgersma pass short left INTERCEPTED by D.Scott at IND 24. D.Scott pushed ob at IND 39 for 15 yards (K.Telfort).\nPENALTY on IND-S.Womack, Face Mask, 15 yards, enforced at IND 34 - No Play.",
+          "I.Abanikanda up the middle to IND 14 for 5 yards (S.Womack). IND-J.Tuimoloau was injured during the play.",
+          "(Shotgun) I.Abanikanda up the middle to IND 6 for 8 yards (D.Nchami).",
+          "I.Abanikanda up the middle to IND 2 for 4 yards (T.Washington; A.Ajiake).",
+          "(Shotgun) I.Abanikanda left guard to IND 3 for -1 yards (E.Johnson, A.Ajiake).",
+          "I.Abanikanda left guard for 3 yards, TOUCHDOWN. M.McNamee extra point is GOOD, Center-M.Orzech, Holder-D.Whelan. ** Injury Update: IND-J.Tuimoloau has returned to the game.",
+          "Official Timeout at 04:19."
+        ],
+        "start": {
+          "clock": "13:21",
+          "period": "3rd Quarter",
+          "yardLine": 80
+        },
+        "result": "Touchdown",
+        "description": "14 plays, 80 yards, 9:02",
+        "isScoringPlay": true
+      },
+      {
+        "end": {
+          "clock": "1:12",
+          "period": "3rd Quarter",
+          "yardLine": 62
+        },
+        "team": {
+          "id": 92731,
+          "logo": "https://highlightly.net/american-football/images/teams/92731.png",
+          "name": "Colts",
+          "league": "NFL",
+          "displayName": "Indianapolis Colts",
+          "abbreviation": "IND"
+        },
+        "plays": [
+          "M.McNamee kicks 63 yards from GB 35 to IND 2. C.Owen to IND 35 for 33 yards (M.Robinson).",
+          "(Shotgun) R.Leonard pass short right to W.Mallory to IND 46 for 11 yards (J.Baldwin).",
+          "(Shotgun) U.Bentley left tackle to GB 47 for 7 yards (K.Welch).",
+          "U.Bentley up the middle to GB 43 for 4 yards (K.Welch).",
+          "(Shotgun) R.Leonard pass incomplete deep middle to L.Treadwell [W.Brinson].",
+          "(Shotgun) R.Leonard pass short left to U.Bentley pushed ob at GB 34 for 9 yards (I.Simmons).\nPENALTY on IND-W.Mallory, Offensive Holding, 10 yards, enforced at GB 35.",
+          "(Shotgun) R.Leonard pass incomplete short middle to W.Mallory (K.Randolph, K.Welch).",
+          "(Shotgun) U.Bentley right guard to GB 38 for 7 yards (N.Stackhouse; K.Welch).",
+          "S.Shrader 56 yard field goal is GOOD, Center-L.Rhodes, Holder-R.Sanchez.",
+          "Official Timeout at 01:12."
+        ],
+        "start": {
+          "clock": "4:19",
+          "period": "3rd Quarter",
+          "yardLine": 35
+        },
+        "result": "Field Goal",
+        "description": "8 plays, 27 yards, 3:07",
+        "isScoringPlay": true
+      },
+      {
+        "end": {
+          "clock": "12:07",
+          "period": "4th Quarter",
+          "yardLine": 0
+        },
+        "team": {
+          "id": 92742,
+          "logo": "https://highlightly.net/american-football/images/teams/92742.png",
+          "name": "Packers",
+          "league": "NFL",
+          "displayName": "Green Bay Packers",
+          "abbreviation": "GB"
+        },
+        "plays": [
+          "S.Shrader kicks 60 yards from IND 35 to GB 5. I.Abanikanda to GB 30 for 25 yards (C.Lammons).",
+          "A.Johnson up the middle to GB 33 for 3 yards (D.Davis; J.Tupou).",
+          "A.Johnson up the middle to GB 35 for 2 yards (S.Olubi).",
+          "END QUARTER 3",
+          "(Shotgun) T.Elgersma pass short middle to C.Johnson to GB 46 for 11 yards (A.Johnson).\nPenalty on IND-M.Haynes, Defensive Offside, declined.",
+          "T.Elgersma scrambles right end pushed ob at 50 for 4 yards (D.Scott).",
+          "(Shotgun) A.Johnson up the middle to IND 47 for 3 yards (J.Tupou; E.Johnson).",
+          "(Shotgun) T.Elgersma pass incomplete deep right to I.Neyor.",
+          "Timeout #1 by GB at 13:19.",
+          "(Shotgun) T.Elgersma pass short middle to C.Johnson to IND 29 for 18 yards (T.Washington; A.Johnson).",
+          "T.Elgersma pass short right to J.Lumpkin pushed ob at IND 18 for 11 yards (L.Tennison).\nPENALTY on IND-T.Smith, Face Mask, 9 yards, enforced at IND 18.",
+          "(Shotgun) A.Johnson right tackle for 9 yards, TOUCHDOWN. M.McNamee extra point is No Good, Wide Left, Center-M.Orzech, Holder-D.Whelan.",
+          "Official Timeout at 12:07."
+        ],
+        "start": {
+          "clock": "1:12",
+          "period": "3rd Quarter",
+          "yardLine": 70
+        },
+        "result": "Touchdown",
+        "description": "9 plays, 70 yards, 4:05",
+        "isScoringPlay": true
+      },
+      {
+        "end": {
+          "clock": "6:38",
+          "period": "4th Quarter",
+          "yardLine": 86
+        },
+        "team": {
+          "id": 92731,
+          "logo": "https://highlightly.net/american-football/images/teams/92731.png",
+          "name": "Colts",
+          "league": "NFL",
+          "displayName": "Indianapolis Colts",
+          "abbreviation": "IND"
+        },
+        "plays": [
+          "M.McNamee kicks 58 yards from GB 35 to IND 7. C.Owen to IND 30 for 23 yards (I.Abanikanda).",
+          "(Shotgun) U.Bentley right tackle to IND 33 for 3 yards (N.Stackhouse).",
+          "(Shotgun) R.Leonard pass incomplete short right to C.Owen (N.Stackhouse).",
+          "(Shotgun) R.Leonard pass short left to J.Woods to IND 44 for 11 yards (K.Welch).",
+          "(Shotgun) U.Bentley right guard to IND 48 for 4 yards (C.Ballentine).",
+          "(Shotgun) R.Leonard pass short right to A.Ajou to GB 43 for 9 yards (J.Johnson).",
+          "R.Leonard pass short left to J.Woods pushed ob at GB 32 for 11 yards (C.Ballentine).",
+          "(Shotgun) U.Bentley right tackle pushed ob at GB 30 for 2 yards (T.Herring).",
+          "(Shotgun) R.Leonard pass short left to C.Owen to GB 21 for 9 yards (M.Robinson).",
+          "(Shotgun) R.Leonard up the middle to GB 19 for 2 yards (A.Mosby).",
+          "(Shotgun) R.Leonard pass short left to U.Bentley pushed ob at GB 14 for 5 yards (K.Welch).",
+          "(Shotgun) R.Leonard pass incomplete short middle to A.Ajou.",
+          "S.Shrader 32 yard field goal is GOOD, Center-L.Rhodes, Holder-R.Sanchez.",
+          "Official Timeout at 06:38."
+        ],
+        "start": {
+          "clock": "12:07",
+          "period": "4th Quarter",
+          "yardLine": 30
+        },
+        "result": "Field Goal",
+        "description": "12 plays, 56 yards, 5:29",
+        "isScoringPlay": true
+      },
+      {
+        "end": {
+          "clock": "1:31",
+          "period": "4th Quarter",
+          "yardLine": 0
+        },
+        "team": {
+          "id": 92742,
+          "logo": "https://highlightly.net/american-football/images/teams/92742.png",
+          "name": "Packers",
+          "league": "NFL",
+          "displayName": "Green Bay Packers",
+          "abbreviation": "GB"
+        },
+        "plays": [
+          "S.Shrader kicks 56 yards from IND 35 to GB 9. I.Abanikanda to GB 32 for 23 yards (S.DeShields).",
+          "S.Clifford pass short left to J.Lumpkin to GB 43 for 11 yards (E.Johnson; A.Johnson).",
+          "T.Davis-Price right guard to GB 48 for 5 yards (S.DeShields; T.Washington).",
+          "S.Clifford pass incomplete short right to J.Lumpkin.",
+          "(Shotgun) T.Davis-Price right tackle to IND 45 for 7 yards (E.Johnson).",
+          "(Shotgun) T.Davis-Price left guard to IND 40 for 5 yards (E.Johnson; S.Olubi).",
+          "T.Davis-Price left tackle to IND 39 for 1 yard (B.Mayes).",
+          "A.Johnson right tackle to IND 35 for 4 yards (S.DeShields; S.Olubi).",
+          "Official Timeout at 02:42.",
+          "S.Clifford pass incomplete short middle to J.Hicks.\nPENALTY on IND-L.Tennison, Defensive Pass Interference, 9 yards, enforced at IND 35 - No Play.",
+          "A.Johnson right guard to IND 23 for 3 yards (I.Land).",
+          "Two-Minute Warning",
+          "S.Clifford pass incomplete short right to I.Neyor (I.Land).",
+          "(Shotgun) S.Clifford pass incomplete deep left to I.Neyor (L.Tennison).",
+          "(Shotgun) S.Clifford scrambles left end ran ob at IND 14 for 9 yards (T.Washington).\nPENALTY on IND-B.Mayes, Defensive Holding, 5 yards, enforced at IND 14.\nPenalty on IND-S.DeShields, Defensive Holding, declined.",
+          "(Shotgun) A.Johnson left end to IND 11 for -2 yards (I.Land).",
+          "Timeout #1 by IND at 01:37.",
+          "(Shotgun) S.Clifford scrambles left end for 11 yards, TOUCHDOWN. M.McNamee extra point is GOOD, Center-M.Orzech, Holder-D.Whelan."
+        ],
+        "start": {
+          "clock": "6:38",
+          "period": "4th Quarter",
+          "yardLine": 68
+        },
+        "result": "Touchdown",
+        "description": "13 plays, 68 yards, 5:07",
+        "isScoringPlay": true
+      },
+      {
+        "end": {
+          "clock": "0:07",
+          "period": "4th Quarter",
+          "yardLine": 69
+        },
+        "team": {
+          "id": 92731,
+          "logo": "https://highlightly.net/american-football/images/teams/92731.png",
+          "name": "Colts",
+          "league": "NFL",
+          "displayName": "Indianapolis Colts",
+          "abbreviation": "IND"
+        },
+        "plays": [
+          "M.McNamee kicks 63 yards from GB 35 to IND 2. C.Owen to IND 32 for 30 yards (D.Alexandre).",
+          "(Shotgun) J.Bean pass short right to C.Owen to IND 34 for 2 yards (J.Baldwin; K.Welch).",
+          "(No Huddle, Shotgun) J.Bean pass short right to C.Owen to IND 48 for 14 yards (J.Baldwin).",
+          "(No Huddle, Shotgun) J.Bean pass deep right to C.Owen to GB 31 for 21 yards (T.Herring).",
+          "Timeout #2 by IND at 00:31.",
+          "(Shotgun) J.Bean pass incomplete deep right to J.Woods.",
+          "(Shotgun) J.Bean pass incomplete deep right to J.Woods.",
+          "Timeout #2 by GB at 00:19.",
+          "(Shotgun) J.Bean pass incomplete short right to U.Bentley [J.Johnson].",
+          "(Shotgun) J.Bean pass deep right to J.Woods pushed ob at GB 1 for 30 yards (T.Herring).\nThe Replay Official reviewed the pass completion ruling, and the play was REVERSED.\n(Shotgun) J.Bean pass incomplete deep right to J.Woods (T.Herring)."
+        ],
+        "start": {
+          "clock": "1:31",
+          "period": "4th Quarter",
+          "yardLine": 32
+        },
+        "result": "Downs",
+        "description": "7 plays, 37 yards, 1:24",
+        "isScoringPlay": false
+      },
+      {
+        "end": {
+          "clock": null,
+          "period": "4th Quarter",
+          "yardLine": 69
+        },
+        "team": {
+          "id": 92742,
+          "logo": "https://highlightly.net/american-football/images/teams/92742.png",
+          "name": "Packers",
+          "league": "NFL",
+          "displayName": "Green Bay Packers",
+          "abbreviation": "GB"
+        },
+        "plays": [
+          "S.Clifford kneels to GB 30 for -1 yards.",
+          "END GAME"
+        ],
+        "start": {
+          "clock": "0:07",
+          "period": "4th Quarter",
+          "yardLine": 69
+        },
+        "result": "End of Game",
+        "description": "1 play, -1 yard, 0:07",
+        "isScoringPlay": false
+      }
+    ],
+    "predictions": {
+      "live": [
+        {
+          "type": "live",
+          "modelType": "two-way",
+          "description": "Colts is most likely to win the game against Packers.",
+          "generatedAt": "2025-08-16T17:10:17.492Z",
+          "probabilities": {
+            "away": "28.56%",
+            "home": "71.44%"
+          }
+        },
+        {
+          "type": "live",
+          "modelType": "two-way",
+          "description": "Colts is most likely to win the game against Packers.",
+          "generatedAt": "2025-08-16T17:20:19.414Z",
+          "probabilities": {
+            "away": "28.08%",
+            "home": "71.92%"
+          }
+        },
+        {
+          "type": "live",
+          "modelType": "two-way",
+          "description": "Colts is most likely to win the game against Packers.",
+          "generatedAt": "2025-08-16T17:30:18.436Z",
+          "probabilities": {
+            "away": "29.74%",
+            "home": "70.26%"
+          }
+        },
+        {
+          "type": "live",
+          "modelType": "two-way",
+          "description": "Colts is most likely to win the game against Packers.",
+          "generatedAt": "2025-08-16T17:40:20.323Z",
+          "probabilities": {
+            "away": "24.73%",
+            "home": "75.27%"
+          }
+        },
+        {
+          "type": "live",
+          "modelType": "two-way",
+          "description": "Colts is most likely to win the game against Packers.",
+          "generatedAt": "2025-08-16T17:50:18.502Z",
+          "probabilities": {
+            "away": "25.46%",
+            "home": "74.54%"
+          }
+        },
+        {
+          "type": "live",
+          "modelType": "two-way",
+          "description": "Colts is most likely to win the game against Packers.",
+          "generatedAt": "2025-08-16T18:00:20.025Z",
+          "probabilities": {
+            "away": "25.88%",
+            "home": "74.12%"
+          }
+        },
+        {
+          "type": "live",
+          "modelType": "two-way",
+          "description": "Colts is most likely to win the game against Packers.",
+          "generatedAt": "2025-08-16T18:10:17.396Z",
+          "probabilities": {
+            "away": "16.10%",
+            "home": "83.90%"
+          }
+        },
+        {
+          "type": "live",
+          "modelType": "two-way",
+          "description": "Colts is most likely to win the game against Packers.",
+          "generatedAt": "2025-08-16T18:20:20.653Z",
+          "probabilities": {
+            "away": "11.44%",
+            "home": "88.56%"
+          }
+        },
+        {
+          "type": "live",
+          "modelType": "two-way",
+          "description": "Colts is most likely to win the game against Packers.",
+          "generatedAt": "2025-08-16T18:30:18.051Z",
+          "probabilities": {
+            "away": "9.94%",
+            "home": "90.06%"
+          }
+        },
+        {
+          "type": "live",
+          "modelType": "two-way",
+          "description": "Colts is most likely to win the game against Packers.",
+          "generatedAt": "2025-08-16T18:40:20.004Z",
+          "probabilities": {
+            "away": "12.99%",
+            "home": "87.01%"
+          }
+        },
+        {
+          "type": "live",
+          "modelType": "two-way",
+          "description": "Colts is most likely to win the game against Packers.",
+          "generatedAt": "2025-08-16T18:50:17.418Z",
+          "probabilities": {
+            "away": "12.00%",
+            "home": "88.00%"
+          }
+        },
+        {
+          "type": "live",
+          "modelType": "two-way",
+          "description": "Colts is most likely to win the game against Packers.",
+          "generatedAt": "2025-08-16T19:00:21.584Z",
+          "probabilities": {
+            "away": "11.41%",
+            "home": "88.59%"
+          }
+        },
+        {
+          "type": "live",
+          "modelType": "two-way",
+          "description": "Colts is most likely to win the game against Packers.",
+          "generatedAt": "2025-08-16T19:10:17.491Z",
+          "probabilities": {
+            "away": "14.74%",
+            "home": "85.26%"
+          }
+        },
+        {
+          "type": "live",
+          "modelType": "two-way",
+          "description": "Colts is most likely to win the game against Packers.",
+          "generatedAt": "2025-08-16T19:20:27.356Z",
+          "probabilities": {
+            "away": "19.22%",
+            "home": "80.78%"
+          }
+        },
+        {
+          "type": "live",
+          "modelType": "two-way",
+          "description": "Colts is most likely to win the game against Packers.",
+          "generatedAt": "2025-08-16T19:30:18.324Z",
+          "probabilities": {
+            "away": "18.79%",
+            "home": "81.21%"
+          }
+        },
+        {
+          "type": "live",
+          "modelType": "two-way",
+          "description": "Colts is most likely to win the game against Packers.",
+          "generatedAt": "2025-08-16T19:40:31.712Z",
+          "probabilities": {
+            "away": "25.63%",
+            "home": "74.37%"
+          }
+        },
+        {
+          "type": "live",
+          "modelType": "two-way",
+          "description": "Colts is most likely to win the game against Packers.",
+          "generatedAt": "2025-08-16T19:50:18.636Z",
+          "probabilities": {
+            "away": "22.52%",
+            "home": "77.48%"
+          }
+        },
+        {
+          "type": "live",
+          "modelType": "two-way",
+          "description": "Colts is most likely to win the game against Packers.",
+          "generatedAt": "2025-08-16T20:00:23.109Z",
+          "probabilities": {
+            "away": "30.15%",
+            "home": "69.85%"
+          }
+        },
+        {
+          "type": "live",
+          "modelType": "two-way",
+          "description": "Colts is most likely to win the game against Packers.",
+          "generatedAt": "2025-08-16T20:10:17.744Z",
+          "probabilities": {
+            "away": "37.80%",
+            "home": "62.20%"
+          }
+        },
+        {
+          "type": "live",
+          "modelType": "two-way",
+          "description": "Colts is most likely to win the game against Packers.",
+          "generatedAt": "2025-08-16T20:20:18.421Z",
+          "probabilities": {
+            "away": "39.31%",
+            "home": "60.69%"
+          }
+        },
+        {
+          "type": "live",
+          "modelType": "two-way",
+          "description": "Colts is most likely to win the game against Packers.",
+          "generatedAt": "2025-08-16T20:30:14.413Z",
+          "probabilities": {
+            "away": "39.31%",
+            "home": "60.69%"
+          }
+        },
+        {
+          "type": "live",
+          "modelType": "two-way",
+          "description": "Colts is most likely to win the game against Packers.",
+          "generatedAt": "2025-08-16T20:40:15.755Z",
+          "probabilities": {
+            "away": "39.31%",
+            "home": "60.69%"
+          }
+        },
+        {
+          "type": "live",
+          "modelType": "two-way",
+          "description": "Colts is most likely to win the game against Packers.",
+          "generatedAt": "2025-08-16T20:50:13.676Z",
+          "probabilities": {
+            "away": "39.31%",
+            "home": "60.69%"
+          }
+        },
+        {
+          "type": "live",
+          "modelType": "two-way",
+          "description": "Colts is most likely to win the game against Packers.",
+          "generatedAt": "2025-08-16T21:00:16.357Z",
+          "probabilities": {
+            "away": "39.31%",
+            "home": "60.69%"
+          }
+        },
+        {
+          "type": "live",
+          "modelType": "two-way",
+          "description": "Colts is most likely to win the game against Packers.",
+          "generatedAt": "2025-08-16T21:10:13.619Z",
+          "probabilities": {
+            "away": "39.31%",
+            "home": "60.69%"
+          }
+        }
+      ],
+      "prematch": [
+        {
+          "type": "prematch",
+          "modelType": "two-way",
+          "description": "Colts is most likely to win the game against Packers.",
+          "generatedAt": "2025-08-11T01:13:31.299Z",
+          "probabilities": {
+            "away": "34.58%",
+            "home": "65.42%"
+          }
+        },
+        {
+          "type": "prematch",
+          "modelType": "two-way",
+          "description": "Colts is most likely to win the game against Packers.",
+          "generatedAt": "2025-08-12T06:38:39.501Z",
+          "probabilities": {
+            "away": "31.11%",
+            "home": "68.89%"
+          }
+        },
+        {
+          "type": "prematch",
+          "modelType": "two-way",
+          "description": "Colts is most likely to win the game against Packers.",
+          "generatedAt": "2025-08-13T01:13:08.079Z",
+          "probabilities": {
+            "away": "31.05%",
+            "home": "68.95%"
+          }
+        },
+        {
+          "type": "prematch",
+          "modelType": "two-way",
+          "description": "Colts is most likely to win the game against Packers.",
+          "generatedAt": "2025-08-14T01:12:58.727Z",
+          "probabilities": {
+            "away": "30.93%",
+            "home": "69.07%"
+          }
+        },
+        {
+          "type": "prematch",
+          "modelType": "two-way",
+          "description": "Colts is most likely to win the game against Packers.",
+          "generatedAt": "2025-08-15T01:12:45.153Z",
+          "probabilities": {
+            "away": "31.03%",
+            "home": "68.97%"
+          }
+        },
+        {
+          "type": "prematch",
+          "modelType": "two-way",
+          "description": "Colts is most likely to win the game against Packers.",
+          "generatedAt": "2025-08-16T01:12:33.347Z",
+          "probabilities": {
+            "away": "30.90%",
+            "home": "69.10%"
+          }
+        }
+      ]
+    },
+    "topPerformers": {
+      "homeTeam": [
+        {
+          "name": "Passing Yards",
+          "playerName": "Daniel Jones",
+          "playerPosition": "Quarterback",
+          "value": "101"
+        },
+        {
+          "name": "Passing Touchdowns",
+          "playerName": "Daniel Jones",
+          "playerPosition": "Quarterback",
+          "value": "0"
+        },
+        {
+          "name": "Interceptions Thrown",
+          "playerName": "Daniel Jones",
+          "playerPosition": "Quarterback",
+          "value": "0"
+        },
+        {
+          "name": "Rushing Attempts",
+          "playerName": "DJ Giddens",
+          "playerPosition": "Running Back",
+          "value": "6"
+        },
+        {
+          "name": "Rushing Yards",
+          "playerName": "DJ Giddens",
+          "playerPosition": "Running Back",
+          "value": "28"
+        },
+        {
+          "name": "Rushing Touchdowns",
+          "playerName": "DJ Giddens",
+          "playerPosition": "Running Back",
+          "value": "0"
+        },
+        {
+          "name": "Receptions",
+          "playerName": "Coleman Owen",
+          "playerPosition": "Wide Receiver",
+          "value": "4"
+        },
+        {
+          "name": "Receiving Yards",
+          "playerName": "Coleman Owen",
+          "playerPosition": "Wide Receiver",
+          "value": "46"
+        },
+        {
+          "name": "Receiving Touchdowns",
+          "playerName": "Coleman Owen",
+          "playerPosition": "Wide Receiver",
+          "value": "0"
+        }
+      ],
+      "awayTeam": [
+        {
+          "name": "Passing Yards",
+          "playerName": "Daniel Whelan",
+          "playerPosition": "Punter",
+          "value": "109"
+        },
+        {
+          "name": "Passing Touchdowns",
+          "playerName": "Daniel Whelan",
+          "playerPosition": "Punter",
+          "value": "0"
+        },
+        {
+          "name": "Interceptions Thrown",
+          "playerName": "Daniel Whelan",
+          "playerPosition": "Punter",
+          "value": "0"
+        },
+        {
+          "name": "Rushing Attempts",
+          "playerName": "Israel Abanikanda",
+          "playerPosition": "Running Back",
+          "value": "12"
+        },
+        {
+          "name": "Rushing Yards",
+          "playerName": "Israel Abanikanda",
+          "playerPosition": "Running Back",
+          "value": "43"
+        },
+        {
+          "name": "Rushing Touchdowns",
+          "playerName": "Israel Abanikanda",
+          "playerPosition": "Running Back",
+          "value": "1"
+        },
+        {
+          "name": "Receptions",
+          "playerName": "Cornelius Johnson",
+          "playerPosition": "Wide Receiver",
+          "value": "3"
+        },
+        {
+          "name": "Receiving Yards",
+          "playerName": "Cornelius Johnson",
+          "playerPosition": "Wide Receiver",
+          "value": "41"
+        },
+        {
+          "name": "Receiving Touchdowns",
+          "playerName": "Cornelius Johnson",
+          "playerPosition": "Wide Receiver",
+          "value": "0"
+        }
+      ]
+    },
+    "boxScores": {
+      "homeTeam": [
+        {
+          "playerName": "Eric Johnson II",
+          "statistics": [
+            {
+              "name": "Total Tackles",
+              "value": "10"
+            },
+            {
+              "name": "Solo",
+              "value": "3"
+            },
+            {
+              "name": "Assists",
+              "value": "7"
+            },
+            {
+              "name": "Sacks",
+              "value": "0"
+            },
+            {
+              "name": "Fumbles Forced",
+              "value": "0"
+            },
+            {
+              "name": "Pass Deflections",
+              "value": "0"
+            },
+            {
+              "name": "QB Hits",
+              "value": "0"
+            }
+          ]
+        },
+        {
+          "playerName": "Austin Ajiake",
+          "statistics": [
+            {
+              "name": "Total Tackles",
+              "value": "9"
+            },
+            {
+              "name": "Solo",
+              "value": "3"
+            },
+            {
+              "name": "Assists",
+              "value": "6"
+            },
+            {
+              "name": "Sacks",
+              "value": "0"
+            },
+            {
+              "name": "Fumbles Forced",
+              "value": "0"
+            },
+            {
+              "name": "Pass Deflections",
+              "value": "0"
+            },
+            {
+              "name": "QB Hits",
+              "value": "0"
+            },
+            {
+              "name": "Fumbles",
+              "value": "0"
+            },
+            {
+              "name": "Fumbles Lost",
+              "value": "0"
+            },
+            {
+              "name": "Fumbles Won",
+              "value": "1"
+            }
+          ]
+        },
+        {
+          "playerName": "Johnathan Edwards",
+          "statistics": [
+            {
+              "name": "Total Tackles",
+              "value": "6"
+            },
+            {
+              "name": "Solo",
+              "value": "2"
+            },
+            {
+              "name": "Assists",
+              "value": "4"
+            },
+            {
+              "name": "Sacks",
+              "value": "0"
+            },
+            {
+              "name": "Fumbles Forced",
+              "value": "0"
+            },
+            {
+              "name": "Pass Deflections",
+              "value": "0"
+            },
+            {
+              "name": "QB Hits",
+              "value": "0"
+            }
+          ]
+        },
+        {
+          "playerName": "Segun Olubi",
+          "statistics": [
+            {
+              "name": "Total Tackles",
+              "value": "5"
+            },
+            {
+              "name": "Solo",
+              "value": "2"
+            },
+            {
+              "name": "Assists",
+              "value": "3"
+            },
+            {
+              "name": "Sacks",
+              "value": "0"
+            },
+            {
+              "name": "Fumbles Forced",
+              "value": "0"
+            },
+            {
+              "name": "Pass Deflections",
+              "value": "0"
+            },
+            {
+              "name": "QB Hits",
+              "value": "0"
+            }
+          ]
+        },
+        {
+          "playerName": "Chris Lammons",
+          "statistics": [
+            {
+              "name": "Total Tackles",
+              "value": "4"
+            },
+            {
+              "name": "Solo",
+              "value": "2"
+            },
+            {
+              "name": "Assists",
+              "value": "2"
+            },
+            {
+              "name": "Sacks",
+              "value": "1"
+            },
+            {
+              "name": "Fumbles Forced",
+              "value": "0"
+            },
+            {
+              "name": "Pass Deflections",
+              "value": "3"
+            },
+            {
+              "name": "QB Hits",
+              "value": "1"
+            }
+          ]
+        },
+        {
+          "playerName": "Alex Johnson",
+          "statistics": [
+            {
+              "name": "Total Tackles",
+              "value": "4"
+            },
+            {
+              "name": "Solo",
+              "value": "2"
+            },
+            {
+              "name": "Assists",
+              "value": "2"
+            },
+            {
+              "name": "Sacks",
+              "value": "0"
+            },
+            {
+              "name": "Fumbles Forced",
+              "value": "0"
+            },
+            {
+              "name": "Pass Deflections",
+              "value": "0"
+            },
+            {
+              "name": "QB Hits",
+              "value": "0"
+            }
+          ]
+        },
+        {
+          "playerName": "Trey Washington",
+          "statistics": [
+            {
+              "name": "Total Tackles",
+              "value": "4"
+            },
+            {
+              "name": "Solo",
+              "value": "1"
+            },
+            {
+              "name": "Assists",
+              "value": "3"
+            },
+            {
+              "name": "Sacks",
+              "value": "0"
+            },
+            {
+              "name": "Fumbles Forced",
+              "value": "0"
+            },
+            {
+              "name": "Pass Deflections",
+              "value": "0"
+            },
+            {
+              "name": "QB Hits",
+              "value": "0"
+            }
+          ]
+        },
+        {
+          "playerName": "Samuel Womack III",
+          "statistics": [
+            {
+              "name": "Total Tackles",
+              "value": "3"
+            },
+            {
+              "name": "Solo",
+              "value": "3"
+            },
+            {
+              "name": "Assists",
+              "value": "0"
+            },
+            {
+              "name": "Sacks",
+              "value": "0"
+            },
+            {
+              "name": "Fumbles Forced",
+              "value": "0"
+            },
+            {
+              "name": "Pass Deflections",
+              "value": "0"
+            },
+            {
+              "name": "QB Hits",
+              "value": "0"
+            }
+          ]
+        },
+        {
+          "playerName": "Isaiah Land",
+          "statistics": [
+            {
+              "name": "Total Tackles",
+              "value": "3"
+            },
+            {
+              "name": "Solo",
+              "value": "2"
+            },
+            {
+              "name": "Assists",
+              "value": "1"
+            },
+            {
+              "name": "Sacks",
+              "value": "0"
+            },
+            {
+              "name": "Fumbles Forced",
+              "value": "0"
+            },
+            {
+              "name": "Pass Deflections",
+              "value": "1"
+            },
+            {
+              "name": "QB Hits",
+              "value": "0"
+            }
+          ]
+        },
+        {
+          "playerName": "Josh Tupou",
+          "statistics": [
+            {
+              "name": "Total Tackles",
+              "value": "3"
+            },
+            {
+              "name": "Solo",
+              "value": "0"
+            },
+            {
+              "name": "Assists",
+              "value": "3"
+            },
+            {
+              "name": "Sacks",
+              "value": "0"
+            },
+            {
+              "name": "Fumbles Forced",
+              "value": "0"
+            },
+            {
+              "name": "Pass Deflections",
+              "value": "0"
+            },
+            {
+              "name": "QB Hits",
+              "value": "0"
+            }
+          ]
+        },
+        {
+          "playerName": "Daniel Scott",
+          "statistics": [
+            {
+              "name": "Total Tackles",
+              "value": "2"
+            },
+            {
+              "name": "Solo",
+              "value": "2"
+            },
+            {
+              "name": "Assists",
+              "value": "0"
+            },
+            {
+              "name": "Sacks",
+              "value": "0"
+            },
+            {
+              "name": "Fumbles Forced",
+              "value": "0"
+            },
+            {
+              "name": "Pass Deflections",
+              "value": "0"
+            },
+            {
+              "name": "QB Hits",
+              "value": "0"
+            }
+          ]
+        },
+        {
+          "playerName": "Laiatu Latu",
+          "statistics": [
+            {
+              "name": "Total Tackles",
+              "value": "2"
+            },
+            {
+              "name": "Solo",
+              "value": "1"
+            },
+            {
+              "name": "Assists",
+              "value": "1"
+            },
+            {
+              "name": "Sacks",
+              "value": "0"
+            },
+            {
+              "name": "Fumbles Forced",
+              "value": "0"
+            },
+            {
+              "name": "Pass Deflections",
+              "value": "0"
+            },
+            {
+              "name": "QB Hits",
+              "value": "1"
+            }
+          ]
+        },
+        {
+          "playerName": "Duke Shelley",
+          "statistics": [
+            {
+              "name": "Total Tackles",
+              "value": "2"
+            },
+            {
+              "name": "Solo",
+              "value": "1"
+            },
+            {
+              "name": "Assists",
+              "value": "1"
+            },
+            {
+              "name": "Sacks",
+              "value": "0"
+            },
+            {
+              "name": "Fumbles Forced",
+              "value": "0"
+            },
+            {
+              "name": "Pass Deflections",
+              "value": "0"
+            },
+            {
+              "name": "QB Hits",
+              "value": "0"
+            }
+          ]
+        },
+        {
+          "playerName": "Tim Smith",
+          "statistics": [
+            {
+              "name": "Total Tackles",
+              "value": "2"
+            },
+            {
+              "name": "Solo",
+              "value": "1"
+            },
+            {
+              "name": "Assists",
+              "value": "1"
+            },
+            {
+              "name": "Sacks",
+              "value": "0"
+            },
+            {
+              "name": "Fumbles Forced",
+              "value": "1"
+            },
+            {
+              "name": "Pass Deflections",
+              "value": "0"
+            },
+            {
+              "name": "QB Hits",
+              "value": "1"
+            }
+          ]
+        },
+        {
+          "playerName": "Joe Bachie",
+          "statistics": [
+            {
+              "name": "Total Tackles",
+              "value": "2"
+            },
+            {
+              "name": "Solo",
+              "value": "0"
+            },
+            {
+              "name": "Assists",
+              "value": "2"
+            },
+            {
+              "name": "Sacks",
+              "value": "0"
+            },
+            {
+              "name": "Fumbles Forced",
+              "value": "0"
+            },
+            {
+              "name": "Pass Deflections",
+              "value": "0"
+            },
+            {
+              "name": "QB Hits",
+              "value": "1"
+            }
+          ]
+        },
+        {
+          "playerName": "Solomon DeShields",
+          "statistics": [
+            {
+              "name": "Total Tackles",
+              "value": "2"
+            },
+            {
+              "name": "Solo",
+              "value": "0"
+            },
+            {
+              "name": "Assists",
+              "value": "2"
+            },
+            {
+              "name": "Sacks",
+              "value": "0"
+            },
+            {
+              "name": "Fumbles Forced",
+              "value": "0"
+            },
+            {
+              "name": "Pass Deflections",
+              "value": "0"
+            },
+            {
+              "name": "QB Hits",
+              "value": "0"
+            }
+          ]
+        },
+        {
+          "playerName": "Hunter Wohler",
+          "statistics": [
+            {
+              "name": "Total Tackles",
+              "value": "1"
+            },
+            {
+              "name": "Solo",
+              "value": "1"
+            },
+            {
+              "name": "Assists",
+              "value": "0"
+            },
+            {
+              "name": "Sacks",
+              "value": "0"
+            },
+            {
+              "name": "Fumbles Forced",
+              "value": "0"
+            },
+            {
+              "name": "Pass Deflections",
+              "value": "0"
+            },
+            {
+              "name": "QB Hits",
+              "value": "0"
+            }
+          ]
+        },
+        {
+          "playerName": "Cameron McGrone",
+          "statistics": [
+            {
+              "name": "Total Tackles",
+              "value": "1"
+            },
+            {
+              "name": "Solo",
+              "value": "1"
+            },
+            {
+              "name": "Assists",
+              "value": "0"
+            },
+            {
+              "name": "Sacks",
+              "value": "0"
+            },
+            {
+              "name": "Fumbles Forced",
+              "value": "0"
+            },
+            {
+              "name": "Pass Deflections",
+              "value": "0"
+            },
+            {
+              "name": "QB Hits",
+              "value": "0"
+            }
+          ]
+        },
+        {
+          "playerName": "Durell Nchami",
+          "statistics": [
+            {
+              "name": "Total Tackles",
+              "value": "1"
+            },
+            {
+              "name": "Solo",
+              "value": "1"
+            },
+            {
+              "name": "Assists",
+              "value": "0"
+            },
+            {
+              "name": "Sacks",
+              "value": "0"
+            },
+            {
+              "name": "Fumbles Forced",
+              "value": "0"
+            },
+            {
+              "name": "Pass Deflections",
+              "value": "0"
+            },
+            {
+              "name": "QB Hits",
+              "value": "1"
+            }
+          ]
+        },
+        {
+          "playerName": "Ladarius Tennison",
+          "statistics": [
+            {
+              "name": "Total Tackles",
+              "value": "1"
+            },
+            {
+              "name": "Solo",
+              "value": "1"
+            },
+            {
+              "name": "Assists",
+              "value": "0"
+            },
+            {
+              "name": "Sacks",
+              "value": "0"
+            },
+            {
+              "name": "Fumbles Forced",
+              "value": "0"
+            },
+            {
+              "name": "Pass Deflections",
+              "value": "1"
+            },
+            {
+              "name": "QB Hits",
+              "value": "0"
+            }
+          ]
+        },
+        {
+          "playerName": "BJ Mayes",
+          "statistics": [
+            {
+              "name": "Total Tackles",
+              "value": "1"
+            },
+            {
+              "name": "Solo",
+              "value": "1"
+            },
+            {
+              "name": "Assists",
+              "value": "0"
+            },
+            {
+              "name": "Sacks",
+              "value": "0"
+            },
+            {
+              "name": "Fumbles Forced",
+              "value": "0"
+            },
+            {
+              "name": "Pass Deflections",
+              "value": "0"
+            },
+            {
+              "name": "QB Hits",
+              "value": "0"
+            }
+          ]
+        },
+        {
+          "playerName": "Grover Stewart",
+          "statistics": [
+            {
+              "name": "Total Tackles",
+              "value": "1"
+            },
+            {
+              "name": "Solo",
+              "value": "0"
+            },
+            {
+              "name": "Assists",
+              "value": "1"
+            },
+            {
+              "name": "Sacks",
+              "value": "0"
+            },
+            {
+              "name": "Fumbles Forced",
+              "value": "0"
+            },
+            {
+              "name": "Pass Deflections",
+              "value": "0"
+            },
+            {
+              "name": "QB Hits",
+              "value": "0"
+            }
+          ]
+        },
+        {
+          "playerName": "Adetomiwa Adebawore",
+          "statistics": [
+            {
+              "name": "Total Tackles",
+              "value": "1"
+            },
+            {
+              "name": "Solo",
+              "value": "0"
+            },
+            {
+              "name": "Assists",
+              "value": "1"
+            },
+            {
+              "name": "Sacks",
+              "value": "0"
+            },
+            {
+              "name": "Fumbles Forced",
+              "value": "0"
+            },
+            {
+              "name": "Pass Deflections",
+              "value": "0"
+            },
+            {
+              "name": "QB Hits",
+              "value": "0"
+            }
+          ]
+        },
+        {
+          "playerName": "Rodney Thomas II",
+          "statistics": [
+            {
+              "name": "Total Tackles",
+              "value": "1"
+            },
+            {
+              "name": "Solo",
+              "value": "0"
+            },
+            {
+              "name": "Assists",
+              "value": "1"
+            },
+            {
+              "name": "Sacks",
+              "value": "0"
+            },
+            {
+              "name": "Fumbles Forced",
+              "value": "0"
+            },
+            {
+              "name": "Pass Deflections",
+              "value": "0"
+            },
+            {
+              "name": "QB Hits",
+              "value": "0"
+            }
+          ]
+        },
+        {
+          "playerName": "Desmond Little",
+          "statistics": [
+            {
+              "name": "Total Tackles",
+              "value": "1"
+            },
+            {
+              "name": "Solo",
+              "value": "0"
+            },
+            {
+              "name": "Assists",
+              "value": "1"
+            },
+            {
+              "name": "Sacks",
+              "value": "0"
+            },
+            {
+              "name": "Fumbles Forced",
+              "value": "0"
+            },
+            {
+              "name": "Pass Deflections",
+              "value": "0"
+            },
+            {
+              "name": "QB Hits",
+              "value": "0"
+            }
+          ]
+        },
+        {
+          "playerName": "Devonta Davis",
+          "statistics": [
+            {
+              "name": "Total Tackles",
+              "value": "1"
+            },
+            {
+              "name": "Solo",
+              "value": "0"
+            },
+            {
+              "name": "Assists",
+              "value": "1"
+            },
+            {
+              "name": "Sacks",
+              "value": "0"
+            },
+            {
+              "name": "Fumbles Forced",
+              "value": "0"
+            },
+            {
+              "name": "Pass Deflections",
+              "value": "0"
+            },
+            {
+              "name": "QB Hits",
+              "value": "0"
+            }
+          ]
+        },
+        {
+          "playerName": "Daniel Jones",
+          "statistics": [
+            {
+              "name": "Fumbles",
+              "value": "1"
+            },
+            {
+              "name": "Fumbles Lost",
+              "value": "0"
+            },
+            {
+              "name": "Fumbles Won",
+              "value": "1"
+            },
+            {
+              "name": "Completed Passes",
+              "value": "7"
+            },
+            {
+              "name": "Passing Attempts",
+              "value": "11"
+            },
+            {
+              "name": "Passing Yards",
+              "value": "101"
+            },
+            {
+              "name": "Yards Per Pass",
+              "value": "9.2"
+            },
+            {
+              "name": "PassLong",
+              "value": "25"
+            },
+            {
+              "name": "Passing Touchdowns",
+              "value": "0"
+            },
+            {
+              "name": "Interceptions Thrown",
+              "value": "0"
+            },
+            {
+              "name": "PassRating",
+              "value": "93.4"
+            },
+            {
+              "name": "Rushing Attempts",
+              "value": "1"
+            },
+            {
+              "name": "Rushing Yards",
+              "value": "0"
+            },
+            {
+              "name": "Yards Per Rush",
+              "value": "0"
+            },
+            {
+              "name": "Rushing Touchdowns",
+              "value": "0"
+            },
+            {
+              "name": "Longest Run",
+              "value": "0"
+            }
+          ]
+        },
+        {
+          "playerName": "Anthony Gould",
+          "statistics": [
+            {
+              "name": "Fumbles",
+              "value": "1"
+            },
+            {
+              "name": "Fumbles Lost",
+              "value": "0"
+            },
+            {
+              "name": "Fumbles Won",
+              "value": "1"
+            },
+            {
+              "name": "Receptions",
+              "value": "3"
+            },
+            {
+              "name": "Receiving Yards",
+              "value": "30"
+            },
+            {
+              "name": "Targets",
+              "value": "3"
+            },
+            {
+              "name": "Receiving Average",
+              "value": "10.0"
+            },
+            {
+              "name": "Receiving Touchdowns",
+              "value": "0"
+            },
+            {
+              "name": "Longest Reception",
+              "value": "12"
+            },
+            {
+              "name": "Interceptions",
+              "value": "0"
+            },
+            {
+              "name": "Punt Returns",
+              "value": "1"
+            },
+            {
+              "name": "Yds",
+              "value": "-3"
+            },
+            {
+              "name": "Punt Return TDs",
+              "value": "0"
+            },
+            {
+              "name": "Longest Punt Return",
+              "value": "-3"
+            },
+            {
+              "name": "Punt Return Average",
+              "value": "-3.0"
+            }
+          ]
+        },
+        {
+          "playerName": "Coleman Owen",
+          "statistics": [
+            {
+              "name": "Receptions",
+              "value": "4"
+            },
+            {
+              "name": "Receiving Yards",
+              "value": "46"
+            },
+            {
+              "name": "Targets",
+              "value": "5"
+            },
+            {
+              "name": "Receiving Average",
+              "value": "11.5"
+            },
+            {
+              "name": "Receiving Touchdowns",
+              "value": "0"
+            },
+            {
+              "name": "Longest Reception",
+              "value": "21"
+            },
+            {
+              "name": "Interceptions",
+              "value": "0"
+            },
+            {
+              "name": "Kick Returns",
+              "value": "3"
+            },
+            {
+              "name": "Yds",
+              "value": "86"
+            },
+            {
+              "name": "Kick Return TDs",
+              "value": "0"
+            },
+            {
+              "name": "Longest Kick Return",
+              "value": "33"
+            },
+            {
+              "name": "Return Average",
+              "value": "28.7"
+            }
+          ]
+        },
+        {
+          "playerName": "Michael Pittman Jr.",
+          "statistics": [
+            {
+              "name": "Receptions",
+              "value": "2"
+            },
+            {
+              "name": "Receiving Yards",
+              "value": "31"
+            },
+            {
+              "name": "Targets",
+              "value": "3"
+            },
+            {
+              "name": "Receiving Average",
+              "value": "15.5"
+            },
+            {
+              "name": "Receiving Touchdowns",
+              "value": "0"
+            },
+            {
+              "name": "Longest Reception",
+              "value": "22"
+            },
+            {
+              "name": "Interceptions",
+              "value": "0"
+            }
+          ]
+        },
+        {
+          "playerName": "Drew Ogletree",
+          "statistics": [
+            {
+              "name": "Receptions",
+              "value": "2"
+            },
+            {
+              "name": "Receiving Yards",
+              "value": "28"
+            },
+            {
+              "name": "Targets",
+              "value": "2"
+            },
+            {
+              "name": "Receiving Average",
+              "value": "14.0"
+            },
+            {
+              "name": "Receiving Touchdowns",
+              "value": "0"
+            },
+            {
+              "name": "Longest Reception",
+              "value": "21"
+            },
+            {
+              "name": "Interceptions",
+              "value": "0"
+            }
+          ]
+        },
+        {
+          "playerName": "Mo Alie-Cox",
+          "statistics": [
+            {
+              "name": "Receptions",
+              "value": "2"
+            },
+            {
+              "name": "Receiving Yards",
+              "value": "25"
+            },
+            {
+              "name": "Targets",
+              "value": "2"
+            },
+            {
+              "name": "Receiving Average",
+              "value": "12.5"
+            },
+            {
+              "name": "Receiving Touchdowns",
+              "value": "0"
+            },
+            {
+              "name": "Longest Reception",
+              "value": "19"
+            },
+            {
+              "name": "Interceptions",
+              "value": "0"
+            }
+          ]
+        },
+        {
+          "playerName": "Jelani Woods",
+          "statistics": [
+            {
+              "name": "Receptions",
+              "value": "2"
+            },
+            {
+              "name": "Receiving Yards",
+              "value": "22"
+            },
+            {
+              "name": "Targets",
+              "value": "6"
+            },
+            {
+              "name": "Receiving Average",
+              "value": "11.0"
+            },
+            {
+              "name": "Receiving Touchdowns",
+              "value": "0"
+            },
+            {
+              "name": "Longest Reception",
+              "value": "11"
+            },
+            {
+              "name": "Interceptions",
+              "value": "0"
+            }
+          ]
+        },
+        {
+          "playerName": "Ulysses Bentley IV",
+          "statistics": [
+            {
+              "name": "Receptions",
+              "value": "2"
+            },
+            {
+              "name": "Receiving Yards",
+              "value": "13"
+            },
+            {
+              "name": "Targets",
+              "value": "3"
+            },
+            {
+              "name": "Receiving Average",
+              "value": "6.5"
+            },
+            {
+              "name": "Receiving Touchdowns",
+              "value": "0"
+            },
+            {
+              "name": "Longest Reception",
+              "value": "8"
+            },
+            {
+              "name": "Interceptions",
+              "value": "0"
+            },
+            {
+              "name": "Rushing Attempts",
+              "value": "7"
+            },
+            {
+              "name": "Rushing Yards",
+              "value": "27"
+            },
+            {
+              "name": "Yards Per Rush",
+              "value": "3.9"
+            },
+            {
+              "name": "Rushing Touchdowns",
+              "value": "0"
+            },
+            {
+              "name": "Longest Run",
+              "value": "7"
+            }
+          ]
+        },
+        {
+          "playerName": "Tyler Warren",
+          "statistics": [
+            {
+              "name": "Receptions",
+              "value": "1"
+            },
+            {
+              "name": "Receiving Yards",
+              "value": "25"
+            },
+            {
+              "name": "Targets",
+              "value": "3"
+            },
+            {
+              "name": "Receiving Average",
+              "value": "25.0"
+            },
+            {
+              "name": "Receiving Touchdowns",
+              "value": "0"
+            },
+            {
+              "name": "Longest Reception",
+              "value": "25"
+            },
+            {
+              "name": "Interceptions",
+              "value": "0"
+            }
+          ]
+        },
+        {
+          "playerName": "Ashton Dulin",
+          "statistics": [
+            {
+              "name": "Receptions",
+              "value": "1"
+            },
+            {
+              "name": "Receiving Yards",
+              "value": "18"
+            },
+            {
+              "name": "Targets",
+              "value": "3"
+            },
+            {
+              "name": "Receiving Average",
+              "value": "18.0"
+            },
+            {
+              "name": "Receiving Touchdowns",
+              "value": "0"
+            },
+            {
+              "name": "Longest Reception",
+              "value": "18"
+            },
+            {
+              "name": "Interceptions",
+              "value": "0"
+            }
+          ]
+        },
+        {
+          "playerName": "Will Mallory",
+          "statistics": [
+            {
+              "name": "Receptions",
+              "value": "1"
+            },
+            {
+              "name": "Receiving Yards",
+              "value": "11"
+            },
+            {
+              "name": "Targets",
+              "value": "3"
+            },
+            {
+              "name": "Receiving Average",
+              "value": "11.0"
+            },
+            {
+              "name": "Receiving Touchdowns",
+              "value": "0"
+            },
+            {
+              "name": "Longest Reception",
+              "value": "11"
+            },
+            {
+              "name": "Interceptions",
+              "value": "0"
+            }
+          ]
+        },
+        {
+          "playerName": "DJ Giddens",
+          "statistics": [
+            {
+              "name": "Receptions",
+              "value": "1"
+            },
+            {
+              "name": "Receiving Yards",
+              "value": "9"
+            },
+            {
+              "name": "Targets",
+              "value": "3"
+            },
+            {
+              "name": "Receiving Average",
+              "value": "9.0"
+            },
+            {
+              "name": "Receiving Touchdowns",
+              "value": "0"
+            },
+            {
+              "name": "Longest Reception",
+              "value": "9"
+            },
+            {
+              "name": "Interceptions",
+              "value": "0"
+            },
+            {
+              "name": "Rushing Attempts",
+              "value": "6"
+            },
+            {
+              "name": "Rushing Yards",
+              "value": "28"
+            },
+            {
+              "name": "Yards Per Rush",
+              "value": "4.7"
+            },
+            {
+              "name": "Rushing Touchdowns",
+              "value": "0"
+            },
+            {
+              "name": "Longest Run",
+              "value": "12"
+            },
+            {
+              "name": "Kick Returns",
+              "value": "1"
+            },
+            {
+              "name": "Yds",
+              "value": "27"
+            },
+            {
+              "name": "Kick Return TDs",
+              "value": "0"
+            },
+            {
+              "name": "Longest Kick Return",
+              "value": "27"
+            },
+            {
+              "name": "Return Average",
+              "value": "27.0"
+            }
+          ]
+        },
+        {
+          "playerName": "Ajou Ajou",
+          "statistics": [
+            {
+              "name": "Receptions",
+              "value": "1"
+            },
+            {
+              "name": "Receiving Yards",
+              "value": "9"
+            },
+            {
+              "name": "Targets",
+              "value": "2"
+            },
+            {
+              "name": "Receiving Average",
+              "value": "9.0"
+            },
+            {
+              "name": "Receiving Touchdowns",
+              "value": "0"
+            },
+            {
+              "name": "Longest Reception",
+              "value": "9"
+            },
+            {
+              "name": "Interceptions",
+              "value": "0"
+            }
+          ]
+        },
+        {
+          "playerName": "Adonai Mitchell",
+          "statistics": [
+            {
+              "name": "Receptions",
+              "value": "1"
+            },
+            {
+              "name": "Receiving Yards",
+              "value": "8"
+            },
+            {
+              "name": "Targets",
+              "value": "1"
+            },
+            {
+              "name": "Receiving Average",
+              "value": "8.0"
+            },
+            {
+              "name": "Receiving Touchdowns",
+              "value": "0"
+            },
+            {
+              "name": "Longest Reception",
+              "value": "8"
+            },
+            {
+              "name": "Interceptions",
+              "value": "0"
+            }
+          ]
+        },
+        {
+          "playerName": "Laquon Treadwell",
+          "statistics": [
+            {
+              "name": "Receptions",
+              "value": "0"
+            },
+            {
+              "name": "Receiving Yards",
+              "value": "0"
+            },
+            {
+              "name": "Targets",
+              "value": "1"
+            },
+            {
+              "name": "Receiving Average",
+              "value": "0.0"
+            },
+            {
+              "name": "Receiving Touchdowns",
+              "value": "0"
+            },
+            {
+              "name": "Longest Reception",
+              "value": "0"
+            },
+            {
+              "name": "Interceptions",
+              "value": "0"
+            }
+          ]
+        },
+        {
+          "playerName": "Anthony Richardson",
+          "statistics": [
+            {
+              "name": "Completed Passes",
+              "value": "6"
+            },
+            {
+              "name": "Passing Attempts",
+              "value": "11"
+            },
+            {
+              "name": "Passing Yards",
+              "value": "73"
+            },
+            {
+              "name": "Yards Per Pass",
+              "value": "6.6"
+            },
+            {
+              "name": "PassLong",
+              "value": "21"
+            },
+            {
+              "name": "Passing Touchdowns",
+              "value": "0"
+            },
+            {
+              "name": "Interceptions Thrown",
+              "value": "0"
+            },
+            {
+              "name": "PassRating",
+              "value": "75.2"
+            },
+            {
+              "name": "Rushing Attempts",
+              "value": "1"
+            },
+            {
+              "name": "Rushing Yards",
+              "value": "9"
+            },
+            {
+              "name": "Yards Per Rush",
+              "value": "9"
+            },
+            {
+              "name": "Rushing Touchdowns",
+              "value": "0"
+            },
+            {
+              "name": "Longest Run",
+              "value": "9"
+            }
+          ]
+        },
+        {
+          "playerName": "Riley Leonard",
+          "statistics": [
+            {
+              "name": "Completed Passes",
+              "value": "7"
+            },
+            {
+              "name": "Passing Attempts",
+              "value": "12"
+            },
+            {
+              "name": "Passing Yards",
+              "value": "64"
+            },
+            {
+              "name": "Yards Per Pass",
+              "value": "5.3"
+            },
+            {
+              "name": "PassLong",
+              "value": "11"
+            },
+            {
+              "name": "Passing Touchdowns",
+              "value": "0"
+            },
+            {
+              "name": "Interceptions Thrown",
+              "value": "0"
+            },
+            {
+              "name": "PassRating",
+              "value": "72.9"
+            },
+            {
+              "name": "Rushing Attempts",
+              "value": "2"
+            },
+            {
+              "name": "Rushing Yards",
+              "value": "10"
+            },
+            {
+              "name": "Yards Per Rush",
+              "value": "5"
+            },
+            {
+              "name": "Rushing Touchdowns",
+              "value": "0"
+            },
+            {
+              "name": "Longest Run",
+              "value": "8"
+            }
+          ]
+        },
+        {
+          "playerName": "Jason Bean",
+          "statistics": [
+            {
+              "name": "Completed Passes",
+              "value": "3"
+            },
+            {
+              "name": "Passing Attempts",
+              "value": "7"
+            },
+            {
+              "name": "Passing Yards",
+              "value": "37"
+            },
+            {
+              "name": "Yards Per Pass",
+              "value": "5.3"
+            },
+            {
+              "name": "PassLong",
+              "value": "21"
+            },
+            {
+              "name": "Passing Touchdowns",
+              "value": "0"
+            },
+            {
+              "name": "Interceptions Thrown",
+              "value": "0"
+            },
+            {
+              "name": "PassRating",
+              "value": "59.8"
+            }
+          ]
+        },
+        {
+          "playerName": "Tyler Goodson",
+          "statistics": [
+            {
+              "name": "Rushing Attempts",
+              "value": "2"
+            },
+            {
+              "name": "Rushing Yards",
+              "value": "10"
+            },
+            {
+              "name": "Yards Per Rush",
+              "value": "5"
+            },
+            {
+              "name": "Rushing Touchdowns",
+              "value": "1"
+            },
+            {
+              "name": "Longest Run",
+              "value": "7"
+            }
+          ]
+        },
+        {
+          "playerName": "Jonathan Taylor",
+          "statistics": [
+            {
+              "name": "Rushing Attempts",
+              "value": "1"
+            },
+            {
+              "name": "Rushing Yards",
+              "value": "9"
+            },
+            {
+              "name": "Yards Per Rush",
+              "value": "9"
+            },
+            {
+              "name": "Rushing Touchdowns",
+              "value": "0"
+            },
+            {
+              "name": "Longest Run",
+              "value": "9"
+            }
+          ]
+        },
+        {
+          "playerName": "Rigoberto Sanchez",
+          "statistics": [
+            {
+              "name": "Total Punts",
+              "value": "3"
+            },
+            {
+              "name": "Punt Yards",
+              "value": "157"
+            },
+            {
+              "name": "Punts in 20",
+              "value": "1"
+            },
+            {
+              "name": "Touchbacks",
+              "value": "1"
+            },
+            {
+              "name": "Longest Punt",
+              "value": "58"
+            },
+            {
+              "name": "Punt Average",
+              "value": "52.3"
+            }
+          ]
+        },
+        {
+          "playerName": "Spencer Shrader",
+          "statistics": [
+            {
+              "name": "Field Goals",
+              "value": "4"
+            },
+            {
+              "name": "Field Goal Attempts",
+              "value": "4"
+            },
+            {
+              "name": "Extra Points",
+              "value": "1"
+            },
+            {
+              "name": "XPA",
+              "value": "1"
+            },
+            {
+              "name": "Longest Field Goal",
+              "value": "56"
+            },
+            {
+              "name": "KickBlocked",
+              "value": "0"
+            }
+          ]
+        }
+      ],
+      "awayTeam": [
+        {
+          "playerName": "Israel Abanikanda",
+          "statistics": [
+            {
+              "name": "Kick Returns",
+              "value": "5"
+            },
+            {
+              "name": "Yds",
+              "value": "120"
+            },
+            {
+              "name": "Kick Return TDs",
+              "value": "0"
+            },
+            {
+              "name": "Longest Kick Return",
+              "value": "30"
+            },
+            {
+              "name": "Return Average",
+              "value": "24.0"
+            },
+            {
+              "name": "Rushing Attempts",
+              "value": "12"
+            },
+            {
+              "name": "Rushing Yards",
+              "value": "43"
+            },
+            {
+              "name": "Yards Per Rush",
+              "value": "3.6"
+            },
+            {
+              "name": "Rushing Touchdowns",
+              "value": "1"
+            },
+            {
+              "name": "Longest Run",
+              "value": "8"
+            }
+          ]
+        },
+        {
+          "playerName": "Corey Ballentine",
+          "statistics": [
+            {
+              "name": "Kick Returns",
+              "value": "1"
+            },
+            {
+              "name": "Yds",
+              "value": "22"
+            },
+            {
+              "name": "Kick Return TDs",
+              "value": "0"
+            },
+            {
+              "name": "Longest Kick Return",
+              "value": "22"
+            },
+            {
+              "name": "Return Average",
+              "value": "22.0"
+            },
+            {
+              "name": "Total Tackles",
+              "value": "2"
+            },
+            {
+              "name": "Solo",
+              "value": "2"
+            },
+            {
+              "name": "Assists",
+              "value": "0"
+            },
+            {
+              "name": "Sacks",
+              "value": "0"
+            },
+            {
+              "name": "Fumbles Forced",
+              "value": "0"
+            },
+            {
+              "name": "Pass Deflections",
+              "value": "0"
+            },
+            {
+              "name": "QB Hits",
+              "value": "0"
+            }
+          ]
+        },
+        {
+          "playerName": "Isaiah Simmons",
+          "statistics": [
+            {
+              "name": "Total Tackles",
+              "value": "9"
+            },
+            {
+              "name": "Solo",
+              "value": "5"
+            },
+            {
+              "name": "Assists",
+              "value": "4"
+            },
+            {
+              "name": "Sacks",
+              "value": "0"
+            },
+            {
+              "name": "Fumbles Forced",
+              "value": "0"
+            },
+            {
+              "name": "Pass Deflections",
+              "value": "0"
+            },
+            {
+              "name": "QB Hits",
+              "value": "0"
+            }
+          ]
+        },
+        {
+          "playerName": "Kristian Welch",
+          "statistics": [
+            {
+              "name": "Total Tackles",
+              "value": "7"
+            },
+            {
+              "name": "Solo",
+              "value": "5"
+            },
+            {
+              "name": "Assists",
+              "value": "2"
+            },
+            {
+              "name": "Sacks",
+              "value": "0"
+            },
+            {
+              "name": "Fumbles Forced",
+              "value": "0"
+            },
+            {
+              "name": "Pass Deflections",
+              "value": "1"
+            },
+            {
+              "name": "QB Hits",
+              "value": "0"
+            }
+          ]
+        },
+        {
+          "playerName": "Kamal Hadden",
+          "statistics": [
+            {
+              "name": "Total Tackles",
+              "value": "7"
+            },
+            {
+              "name": "Solo",
+              "value": "4"
+            },
+            {
+              "name": "Assists",
+              "value": "3"
+            },
+            {
+              "name": "Sacks",
+              "value": "0"
+            },
+            {
+              "name": "Fumbles Forced",
+              "value": "0"
+            },
+            {
+              "name": "Pass Deflections",
+              "value": "0"
+            },
+            {
+              "name": "QB Hits",
+              "value": "0"
+            }
+          ]
+        },
+        {
+          "playerName": "Johnathan Baldwin",
+          "statistics": [
+            {
+              "name": "Total Tackles",
+              "value": "6"
+            },
+            {
+              "name": "Solo",
+              "value": "3"
+            },
+            {
+              "name": "Assists",
+              "value": "3"
+            },
+            {
+              "name": "Sacks",
+              "value": "0"
+            },
+            {
+              "name": "Fumbles Forced",
+              "value": "0"
+            },
+            {
+              "name": "Pass Deflections",
+              "value": "0"
+            },
+            {
+              "name": "QB Hits",
+              "value": "0"
+            }
+          ]
+        },
+        {
+          "playerName": "Bo Melton",
+          "statistics": [
+            {
+              "name": "Total Tackles",
+              "value": "3"
+            },
+            {
+              "name": "Solo",
+              "value": "3"
+            },
+            {
+              "name": "Assists",
+              "value": "0"
+            },
+            {
+              "name": "Sacks",
+              "value": "0"
+            },
+            {
+              "name": "Fumbles Forced",
+              "value": "0"
+            },
+            {
+              "name": "Pass Deflections",
+              "value": "1"
+            },
+            {
+              "name": "QB Hits",
+              "value": "0"
+            }
+          ]
+        },
+        {
+          "playerName": "Nazir Stackhouse",
+          "statistics": [
+            {
+              "name": "Total Tackles",
+              "value": "3"
+            },
+            {
+              "name": "Solo",
+              "value": "2"
+            },
+            {
+              "name": "Assists",
+              "value": "1"
+            },
+            {
+              "name": "Sacks",
+              "value": "0"
+            },
+            {
+              "name": "Fumbles Forced",
+              "value": "0"
+            },
+            {
+              "name": "Pass Deflections",
+              "value": "1"
+            },
+            {
+              "name": "QB Hits",
+              "value": "0"
+            }
+          ]
+        },
+        {
+          "playerName": "Arron Mosby",
+          "statistics": [
+            {
+              "name": "Total Tackles",
+              "value": "3"
+            },
+            {
+              "name": "Solo",
+              "value": "1"
+            },
+            {
+              "name": "Assists",
+              "value": "2"
+            },
+            {
+              "name": "Sacks",
+              "value": "0"
+            },
+            {
+              "name": "Fumbles Forced",
+              "value": "0"
+            },
+            {
+              "name": "Pass Deflections",
+              "value": "0"
+            },
+            {
+              "name": "QB Hits",
+              "value": "0"
+            }
+          ]
+        },
+        {
+          "playerName": "Ty'Ron Hopper",
+          "statistics": [
+            {
+              "name": "Total Tackles",
+              "value": "2"
+            },
+            {
+              "name": "Solo",
+              "value": "2"
+            },
+            {
+              "name": "Assists",
+              "value": "0"
+            },
+            {
+              "name": "Sacks",
+              "value": "0"
+            },
+            {
+              "name": "Fumbles Forced",
+              "value": "0"
+            },
+            {
+              "name": "Pass Deflections",
+              "value": "0"
+            },
+            {
+              "name": "QB Hits",
+              "value": "0"
+            }
+          ]
+        },
+        {
+          "playerName": "Tyron Herring",
+          "statistics": [
+            {
+              "name": "Total Tackles",
+              "value": "2"
+            },
+            {
+              "name": "Solo",
+              "value": "2"
+            },
+            {
+              "name": "Assists",
+              "value": "0"
+            },
+            {
+              "name": "Sacks",
+              "value": "0"
+            },
+            {
+              "name": "Fumbles Forced",
+              "value": "0"
+            },
+            {
+              "name": "Pass Deflections",
+              "value": "1"
+            },
+            {
+              "name": "QB Hits",
+              "value": "0"
+            }
+          ]
+        },
+        {
+          "playerName": "Kitan Oladapo",
+          "statistics": [
+            {
+              "name": "Total Tackles",
+              "value": "1"
+            },
+            {
+              "name": "Solo",
+              "value": "1"
+            },
+            {
+              "name": "Assists",
+              "value": "0"
+            },
+            {
+              "name": "Sacks",
+              "value": "0"
+            },
+            {
+              "name": "Fumbles Forced",
+              "value": "0"
+            },
+            {
+              "name": "Pass Deflections",
+              "value": "1"
+            },
+            {
+              "name": "QB Hits",
+              "value": "0"
+            }
+          ]
+        },
+        {
+          "playerName": "Kingsley Enagbare",
+          "statistics": [
+            {
+              "name": "Total Tackles",
+              "value": "1"
+            },
+            {
+              "name": "Solo",
+              "value": "1"
+            },
+            {
+              "name": "Assists",
+              "value": "0"
+            },
+            {
+              "name": "Sacks",
+              "value": "0"
+            },
+            {
+              "name": "Fumbles Forced",
+              "value": "0"
+            },
+            {
+              "name": "Pass Deflections",
+              "value": "0"
+            },
+            {
+              "name": "QB Hits",
+              "value": "0"
+            }
+          ]
+        },
+        {
+          "playerName": "Warren Brinson",
+          "statistics": [
+            {
+              "name": "Total Tackles",
+              "value": "1"
+            },
+            {
+              "name": "Solo",
+              "value": "1"
+            },
+            {
+              "name": "Assists",
+              "value": "0"
+            },
+            {
+              "name": "Sacks",
+              "value": "0"
+            },
+            {
+              "name": "Fumbles Forced",
+              "value": "0"
+            },
+            {
+              "name": "Pass Deflections",
+              "value": "0"
+            },
+            {
+              "name": "QB Hits",
+              "value": "1"
+            }
+          ]
+        },
+        {
+          "playerName": "Deslin Alexandre",
+          "statistics": [
+            {
+              "name": "Total Tackles",
+              "value": "1"
+            },
+            {
+              "name": "Solo",
+              "value": "1"
+            },
+            {
+              "name": "Assists",
+              "value": "0"
+            },
+            {
+              "name": "Sacks",
+              "value": "1"
+            },
+            {
+              "name": "Fumbles Forced",
+              "value": "0"
+            },
+            {
+              "name": "Pass Deflections",
+              "value": "0"
+            },
+            {
+              "name": "QB Hits",
+              "value": "1"
+            }
+          ]
+        },
+        {
+          "playerName": "Micah Robinson",
+          "statistics": [
+            {
+              "name": "Total Tackles",
+              "value": "1"
+            },
+            {
+              "name": "Solo",
+              "value": "1"
+            },
+            {
+              "name": "Assists",
+              "value": "0"
+            },
+            {
+              "name": "Sacks",
+              "value": "0"
+            },
+            {
+              "name": "Fumbles Forced",
+              "value": "0"
+            },
+            {
+              "name": "Pass Deflections",
+              "value": "0"
+            },
+            {
+              "name": "QB Hits",
+              "value": "0"
+            }
+          ]
+        },
+        {
+          "playerName": "Jamon Dumas-Johnson",
+          "statistics": [
+            {
+              "name": "Total Tackles",
+              "value": "1"
+            },
+            {
+              "name": "Solo",
+              "value": "1"
+            },
+            {
+              "name": "Assists",
+              "value": "0"
+            },
+            {
+              "name": "Sacks",
+              "value": "0"
+            },
+            {
+              "name": "Fumbles Forced",
+              "value": "0"
+            },
+            {
+              "name": "Pass Deflections",
+              "value": "0"
+            },
+            {
+              "name": "QB Hits",
+              "value": "1"
+            }
+          ]
+        },
+        {
+          "playerName": "Omar Brown",
+          "statistics": [
+            {
+              "name": "Total Tackles",
+              "value": "1"
+            },
+            {
+              "name": "Solo",
+              "value": "0"
+            },
+            {
+              "name": "Assists",
+              "value": "1"
+            },
+            {
+              "name": "Sacks",
+              "value": "0"
+            },
+            {
+              "name": "Fumbles Forced",
+              "value": "0"
+            },
+            {
+              "name": "Pass Deflections",
+              "value": "0"
+            },
+            {
+              "name": "QB Hits",
+              "value": "0"
+            }
+          ]
+        },
+        {
+          "playerName": "Keith Randolph Jr.",
+          "statistics": [
+            {
+              "name": "Total Tackles",
+              "value": "0"
+            },
+            {
+              "name": "Solo",
+              "value": "0"
+            },
+            {
+              "name": "Assists",
+              "value": "0"
+            },
+            {
+              "name": "Sacks",
+              "value": "0"
+            },
+            {
+              "name": "Fumbles Forced",
+              "value": "0"
+            },
+            {
+              "name": "Pass Deflections",
+              "value": "2"
+            },
+            {
+              "name": "QB Hits",
+              "value": "0"
+            }
+          ]
+        },
+        {
+          "playerName": "Karl Brooks",
+          "statistics": [
+            {
+              "name": "Total Tackles",
+              "value": "0"
+            },
+            {
+              "name": "Solo",
+              "value": "0"
+            },
+            {
+              "name": "Assists",
+              "value": "0"
+            },
+            {
+              "name": "Sacks",
+              "value": "0"
+            },
+            {
+              "name": "Fumbles Forced",
+              "value": "0"
+            },
+            {
+              "name": "Pass Deflections",
+              "value": "1"
+            },
+            {
+              "name": "QB Hits",
+              "value": "0"
+            }
+          ]
+        },
+        {
+          "playerName": "Emanuel Wilson",
+          "statistics": [
+            {
+              "name": "Rushing Attempts",
+              "value": "5"
+            },
+            {
+              "name": "Rushing Yards",
+              "value": "33"
+            },
+            {
+              "name": "Yards Per Rush",
+              "value": "6.6"
+            },
+            {
+              "name": "Rushing Touchdowns",
+              "value": "0"
+            },
+            {
+              "name": "Longest Run",
+              "value": "11"
+            },
+            {
+              "name": "Receptions",
+              "value": "1"
+            },
+            {
+              "name": "Receiving Yards",
+              "value": "32"
+            },
+            {
+              "name": "Targets",
+              "value": "2"
+            },
+            {
+              "name": "Receiving Average",
+              "value": "32.0"
+            },
+            {
+              "name": "Receiving Touchdowns",
+              "value": "0"
+            },
+            {
+              "name": "Longest Reception",
+              "value": "32"
+            },
+            {
+              "name": "Fumbles",
+              "value": "1"
+            },
+            {
+              "name": "Fumbles Lost",
+              "value": "1"
+            },
+            {
+              "name": "Fumbles Won",
+              "value": "0"
+            }
+          ]
+        },
+        {
+          "playerName": "Amar Johnson",
+          "statistics": [
+            {
+              "name": "Rushing Attempts",
+              "value": "7"
+            },
+            {
+              "name": "Rushing Yards",
+              "value": "22"
+            },
+            {
+              "name": "Yards Per Rush",
+              "value": "3.1"
+            },
+            {
+              "name": "Rushing Touchdowns",
+              "value": "1"
+            },
+            {
+              "name": "Longest Run",
+              "value": "9"
+            },
+            {
+              "name": "Receptions",
+              "value": "1"
+            },
+            {
+              "name": "Receiving Yards",
+              "value": "11"
+            },
+            {
+              "name": "Targets",
+              "value": "1"
+            },
+            {
+              "name": "Receiving Average",
+              "value": "11.0"
+            },
+            {
+              "name": "Receiving Touchdowns",
+              "value": "0"
+            },
+            {
+              "name": "Longest Reception",
+              "value": "11"
+            }
+          ]
+        },
+        {
+          "playerName": "Sean Clifford",
+          "statistics": [
+            {
+              "name": "Rushing Attempts",
+              "value": "3"
+            },
+            {
+              "name": "Rushing Yards",
+              "value": "19"
+            },
+            {
+              "name": "Yards Per Rush",
+              "value": "6.3"
+            },
+            {
+              "name": "Rushing Touchdowns",
+              "value": "1"
+            },
+            {
+              "name": "Longest Run",
+              "value": "11"
+            },
+            {
+              "name": "Completed Passes",
+              "value": "1"
+            },
+            {
+              "name": "Passing Attempts",
+              "value": "4"
+            },
+            {
+              "name": "Passing Yards",
+              "value": "11"
+            },
+            {
+              "name": "Yards Per Pass",
+              "value": "2.8"
+            },
+            {
+              "name": "PassLong",
+              "value": "11"
+            },
+            {
+              "name": "Passing Touchdowns",
+              "value": "0"
+            },
+            {
+              "name": "Interceptions Thrown",
+              "value": "0"
+            },
+            {
+              "name": "PassRating",
+              "value": "39.6"
+            }
+          ]
+        },
+        {
+          "playerName": "Tyrion Davis-Price",
+          "statistics": [
+            {
+              "name": "Rushing Attempts",
+              "value": "4"
+            },
+            {
+              "name": "Rushing Yards",
+              "value": "18"
+            },
+            {
+              "name": "Yards Per Rush",
+              "value": "4.5"
+            },
+            {
+              "name": "Rushing Touchdowns",
+              "value": "0"
+            },
+            {
+              "name": "Longest Run",
+              "value": "7"
+            }
+          ]
+        },
+        {
+          "playerName": "MarShawn Lloyd",
+          "statistics": [
+            {
+              "name": "Rushing Attempts",
+              "value": "6"
+            },
+            {
+              "name": "Rushing Yards",
+              "value": "15"
+            },
+            {
+              "name": "Yards Per Rush",
+              "value": "2.5"
+            },
+            {
+              "name": "Rushing Touchdowns",
+              "value": "0"
+            },
+            {
+              "name": "Longest Run",
+              "value": "4"
+            },
+            {
+              "name": "Receptions",
+              "value": "1"
+            },
+            {
+              "name": "Receiving Yards",
+              "value": "33"
+            },
+            {
+              "name": "Targets",
+              "value": "4"
+            },
+            {
+              "name": "Receiving Average",
+              "value": "33.0"
+            },
+            {
+              "name": "Receiving Touchdowns",
+              "value": "0"
+            },
+            {
+              "name": "Longest Reception",
+              "value": "33"
+            }
+          ]
+        },
+        {
+          "playerName": "Christopher Brooks",
+          "statistics": [
+            {
+              "name": "Rushing Attempts",
+              "value": "2"
+            },
+            {
+              "name": "Rushing Yards",
+              "value": "5"
+            },
+            {
+              "name": "Yards Per Rush",
+              "value": "2.5"
+            },
+            {
+              "name": "Rushing Touchdowns",
+              "value": "0"
+            },
+            {
+              "name": "Longest Run",
+              "value": "4"
+            }
+          ]
+        },
+        {
+          "playerName": "Daniel Whelan",
+          "statistics": [
+            {
+              "name": "Rushing Attempts",
+              "value": "1"
+            },
+            {
+              "name": "Rushing Yards",
+              "value": "4"
+            },
+            {
+              "name": "Yards Per Rush",
+              "value": "4"
+            },
+            {
+              "name": "Rushing Touchdowns",
+              "value": "0"
+            },
+            {
+              "name": "Longest Run",
+              "value": "4"
+            },
+            {
+              "name": "Completed Passes",
+              "value": "7"
+            },
+            {
+              "name": "Passing Attempts",
+              "value": "11"
+            },
+            {
+              "name": "Passing Yards",
+              "value": "109"
+            },
+            {
+              "name": "Yards Per Pass",
+              "value": "9.9"
+            },
+            {
+              "name": "PassLong",
+              "value": "32"
+            },
+            {
+              "name": "Passing Touchdowns",
+              "value": "0"
+            },
+            {
+              "name": "Interceptions Thrown",
+              "value": "0"
+            },
+            {
+              "name": "PassRating",
+              "value": "96.4"
+            },
+            {
+              "name": "Total Punts",
+              "value": "2"
+            },
+            {
+              "name": "Punt Yards",
+              "value": "89"
+            },
+            {
+              "name": "Punts in 20",
+              "value": "2"
+            },
+            {
+              "name": "Touchbacks",
+              "value": "0"
+            },
+            {
+              "name": "Longest Punt",
+              "value": "50"
+            },
+            {
+              "name": "Punt Average",
+              "value": "44.5"
+            }
+          ]
+        },
+        {
+          "playerName": "Cornelius Johnson",
+          "statistics": [
+            {
+              "name": "Receptions",
+              "value": "3"
+            },
+            {
+              "name": "Receiving Yards",
+              "value": "41"
+            },
+            {
+              "name": "Targets",
+              "value": "4"
+            },
+            {
+              "name": "Receiving Average",
+              "value": "13.7"
+            },
+            {
+              "name": "Receiving Touchdowns",
+              "value": "0"
+            },
+            {
+              "name": "Longest Reception",
+              "value": "18"
+            }
+          ]
+        },
+        {
+          "playerName": "Mecole Hardman",
+          "statistics": [
+            {
+              "name": "Receptions",
+              "value": "2"
+            },
+            {
+              "name": "Receiving Yards",
+              "value": "27"
+            },
+            {
+              "name": "Targets",
+              "value": "4"
+            },
+            {
+              "name": "Receiving Average",
+              "value": "13.5"
+            },
+            {
+              "name": "Receiving Touchdowns",
+              "value": "0"
+            },
+            {
+              "name": "Longest Reception",
+              "value": "21"
+            },
+            {
+              "name": "Punt Returns",
+              "value": "1"
+            },
+            {
+              "name": "Yds",
+              "value": "10"
+            },
+            {
+              "name": "Punt Return TDs",
+              "value": "0"
+            },
+            {
+              "name": "Longest Punt Return",
+              "value": "10"
+            },
+            {
+              "name": "Punt Return Average",
+              "value": "10.0"
+            }
+          ]
+        },
+        {
+          "playerName": "Johnny Lumpkin",
+          "statistics": [
+            {
+              "name": "Receptions",
+              "value": "2"
+            },
+            {
+              "name": "Receiving Yards",
+              "value": "22"
+            },
+            {
+              "name": "Targets",
+              "value": "3"
+            },
+            {
+              "name": "Receiving Average",
+              "value": "11.0"
+            },
+            {
+              "name": "Receiving Touchdowns",
+              "value": "0"
+            },
+            {
+              "name": "Longest Reception",
+              "value": "11"
+            }
+          ]
+        },
+        {
+          "playerName": "Julian Hicks",
+          "statistics": [
+            {
+              "name": "Receptions",
+              "value": "1"
+            },
+            {
+              "name": "Receiving Yards",
+              "value": "14"
+            },
+            {
+              "name": "Targets",
+              "value": "2"
+            },
+            {
+              "name": "Receiving Average",
+              "value": "14.0"
+            },
+            {
+              "name": "Receiving Touchdowns",
+              "value": "0"
+            },
+            {
+              "name": "Longest Reception",
+              "value": "14"
+            }
+          ]
+        },
+        {
+          "playerName": "Malik Heath",
+          "statistics": [
+            {
+              "name": "Receptions",
+              "value": "1"
+            },
+            {
+              "name": "Receiving Yards",
+              "value": "9"
+            },
+            {
+              "name": "Targets",
+              "value": "3"
+            },
+            {
+              "name": "Receiving Average",
+              "value": "9.0"
+            },
+            {
+              "name": "Receiving Touchdowns",
+              "value": "0"
+            },
+            {
+              "name": "Longest Reception",
+              "value": "9"
+            }
+          ]
+        },
+        {
+          "playerName": "John FitzPatrick",
+          "statistics": [
+            {
+              "name": "Receptions",
+              "value": "1"
+            },
+            {
+              "name": "Receiving Yards",
+              "value": "9"
+            },
+            {
+              "name": "Targets",
+              "value": "2"
+            },
+            {
+              "name": "Receiving Average",
+              "value": "9.0"
+            },
+            {
+              "name": "Receiving Touchdowns",
+              "value": "0"
+            },
+            {
+              "name": "Longest Reception",
+              "value": "9"
+            }
+          ]
+        },
+        {
+          "playerName": "Ben Sims",
+          "statistics": [
+            {
+              "name": "Receptions",
+              "value": "1"
+            },
+            {
+              "name": "Receiving Yards",
+              "value": "5"
+            },
+            {
+              "name": "Targets",
+              "value": "1"
+            },
+            {
+              "name": "Receiving Average",
+              "value": "5.0"
+            },
+            {
+              "name": "Receiving Touchdowns",
+              "value": "0"
+            },
+            {
+              "name": "Longest Reception",
+              "value": "5"
+            }
+          ]
+        },
+        {
+          "playerName": "Isaiah Neyor",
+          "statistics": [
+            {
+              "name": "Receptions",
+              "value": "0"
+            },
+            {
+              "name": "Receiving Yards",
+              "value": "0"
+            },
+            {
+              "name": "Targets",
+              "value": "3"
+            },
+            {
+              "name": "Receiving Average",
+              "value": "0.0"
+            },
+            {
+              "name": "Receiving Touchdowns",
+              "value": "0"
+            },
+            {
+              "name": "Longest Reception",
+              "value": "0"
+            }
+          ]
+        },
+        {
+          "playerName": "Malik Willis",
+          "statistics": [
+            {
+              "name": "Completed Passes",
+              "value": "6"
+            },
+            {
+              "name": "Passing Attempts",
+              "value": "14"
+            },
+            {
+              "name": "Passing Yards",
+              "value": "83"
+            },
+            {
+              "name": "Yards Per Pass",
+              "value": "5.9"
+            },
+            {
+              "name": "PassLong",
+              "value": "33"
+            },
+            {
+              "name": "Passing Touchdowns",
+              "value": "0"
+            },
+            {
+              "name": "Interceptions Thrown",
+              "value": "0"
+            },
+            {
+              "name": "PassRating",
+              "value": "62.5"
+            }
+          ]
+        },
+        {
+          "playerName": "Mark McNamee",
+          "statistics": [
+            {
+              "name": "Field Goals",
+              "value": "1"
+            },
+            {
+              "name": "Field Goal Attempts",
+              "value": "2"
+            },
+            {
+              "name": "Extra Points",
+              "value": "2"
+            },
+            {
+              "name": "XPA",
+              "value": "3"
+            },
+            {
+              "name": "Longest Field Goal",
+              "value": "43"
+            },
+            {
+              "name": "KickBlocked",
+              "value": "0"
+            }
+          ]
+        },
+        {
+          "playerName": "Daniel Whelan",
+          "statistics": [
+            {
+              "name": "Total Punts",
+              "value": "3"
+            },
+            {
+              "name": "Punt Yards",
+              "value": "148"
+            },
+            {
+              "name": "Punts in 20",
+              "value": "3"
+            },
+            {
+              "name": "Touchbacks",
+              "value": "0"
+            },
+            {
+              "name": "Longest Punt",
+              "value": "59"
+            },
+            {
+              "name": "Punt Average",
+              "value": "49.3"
+            }
+          ]
+        }
+      ]
+    },
+    "matchStatistics": {
+      "homeTeam": {
+        "statistics": [
+          {
+            "name": "Rushing Attempts",
+            "value": "20"
+          },
+          {
+            "name": "Possession",
+            "value": "27:42"
+          },
+          {
+            "name": "Completed/Attempted",
+            "value": "23/41"
+          },
+          {
+            "name": "Penalties",
+            "value": "11"
+          },
+          {
+            "name": "Passing Yards",
+            "value": "267"
+          },
+          {
+            "name": "Rushing Yards",
+            "value": "93"
+          },
+          {
+            "name": "Yards",
+            "value": "360"
+          },
+          {
+            "name": "Penalty Yards",
+            "value": "103"
+          },
+          {
+            "name": "Yards Per Pass",
+            "value": "6.4"
+          },
+          {
+            "name": "Yards Per Rush",
+            "value": "4.7"
+          },
+          {
+            "name": "Plays",
+            "value": "62"
+          },
+          {
+            "name": "Passing Touchdowns",
+            "value": "0"
+          },
+          {
+            "name": "Rushing Touchdowns",
+            "value": "1"
+          },
+          {
+            "name": "Yards Per Play",
+            "value": "5.8"
+          },
+          {
+            "name": "Interceptions Thrown",
+            "value": "0"
+          },
+          {
+            "name": "QB Sacks",
+            "value": "1"
+          },
+          {
+            "name": "1st Downs",
+            "value": "22"
+          },
+          {
+            "name": "Passing 1st Downs",
+            "value": "13"
+          },
+          {
+            "name": "Rushing 1st Downs",
+            "value": "7"
+          },
+          {
+            "name": "Penalty 1st Downs",
+            "value": "2"
+          },
+          {
+            "name": "3rd Down Efficiency",
+            "value": "3/11"
+          },
+          {
+            "name": "4th Down Efficiency",
+            "value": "0/1"
+          },
+          {
+            "name": "Red Zone Success",
+            "value": "1/4"
+          }
+        ]
+      },
+      "awayTeam": {
+        "statistics": [
+          {
+            "name": "Rushing Attempts",
+            "value": "40"
+          },
+          {
+            "name": "Possession",
+            "value": "32:18"
+          },
+          {
+            "name": "Completed/Attempted",
+            "value": "14/29"
+          },
+          {
+            "name": "Penalties",
+            "value": "12"
+          },
+          {
+            "name": "Passing Yards",
+            "value": "197"
+          },
+          {
+            "name": "Rushing Yards",
+            "value": "159"
+          },
+          {
+            "name": "Yards",
+            "value": "356"
+          },
+          {
+            "name": "Penalty Yards",
+            "value": "95"
+          },
+          {
+            "name": "Yards Per Pass",
+            "value": "6.6"
+          },
+          {
+            "name": "Yards Per Rush",
+            "value": "4"
+          },
+          {
+            "name": "Plays",
+            "value": "70"
+          },
+          {
+            "name": "Passing Touchdowns",
+            "value": "0"
+          },
+          {
+            "name": "Rushing Touchdowns",
+            "value": "3"
+          },
+          {
+            "name": "Yards Per Play",
+            "value": "5.1"
+          },
+          {
+            "name": "Interceptions Thrown",
+            "value": "0"
+          },
+          {
+            "name": "QB Sacks",
+            "value": "1"
+          },
+          {
+            "name": "1st Downs",
+            "value": "24"
+          },
+          {
+            "name": "Passing 1st Downs",
+            "value": "10"
+          },
+          {
+            "name": "Rushing 1st Downs",
+            "value": "9"
+          },
+          {
+            "name": "Penalty 1st Downs",
+            "value": "5"
+          },
+          {
+            "name": "3rd Down Efficiency",
+            "value": "8/16"
+          },
+          {
+            "name": "4th Down Efficiency",
+            "value": "4/4"
+          },
+          {
+            "name": "Red Zone Success",
+            "value": "3/3"
+          }
+        ]
+      }
+    }
+  }
+]

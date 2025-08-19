@@ -3,5 +3,4 @@
 **/*.pyc
 **/*.pyo
 **/cache/
-**/match_cache/
 http_cache.sqlite
