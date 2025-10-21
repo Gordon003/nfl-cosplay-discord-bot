@@ -106,7 +106,7 @@ class NFLCommands(commands.Cog, name="NFL Commands"):
     async def get_team_schedule(self, ctx, *, team_name):
         # get team ids from name
         team_name_lower = team_name.lower().replace(" ", "_")
-        team_data = self.data_manager.get_team_info_by_team_key(team_name_lower)
+        team_data = self.data_manager.get_team_data_by_team_key(team_name_lower)
         team_id = team_data["id"]
 
         # call nfl api
@@ -130,7 +130,7 @@ class NFLCommands(commands.Cog, name="NFL Commands"):
 
         # get total drama character
         char_key = self.data_manager.get_character_key_by_team_key(team_name_lower)
-        char_name = self.data_manager.get_character_info_by_character_key(char_key)[
+        char_name = self.data_manager.get_character_data_by_character_key(char_key)[
             "name"
         ]
 
@@ -263,7 +263,7 @@ class NFLCommands(commands.Cog, name="NFL Commands"):
     @nfl.command(name="injuries", help="Get injuries for a team", usage="<team_name>")
     async def get_nfl_team_injuries(self, ctx, *, team_name):
         try:
-            team_info = self.data_manager.get_team_info_by_team_key(team_name.lower())
+            team_info = self.data_manager.get_team_data_by_team_key(team_name.lower())
             injuries = await self.nfl_api_manager.get_nfl_team_injuries(
                 team_info["nflApiId"]
             )

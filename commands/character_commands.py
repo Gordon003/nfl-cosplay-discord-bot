@@ -51,11 +51,11 @@ class CharacterCommands(commands.Cog, name="Character Commands"):
 
         # get team info
         team_key = team_name.lower()
-        team_info = self.data_manager.get_team_info_by_team_key(team_key)
+        team_info = self.data_manager.get_team_data_by_team_key(team_key)
 
         # get character info
         char_key = self.data_manager.get_character_key_by_team_key(team_key)
-        char_info = self.data_manager.get_character_info_by_character_key(char_key)
+        char_info = self.data_manager.get_character_data_by_character_key(char_key)
 
         if char_key is None:
             await ctx.send(f"Team '{team_name}' not found!")
@@ -80,11 +80,11 @@ class CharacterCommands(commands.Cog, name="Character Commands"):
 
         # get character info
         char_key = character_name.lower()
-        char_info = self.data_manager.get_character_info_by_character_key(char_key)
+        char_info = self.data_manager.get_character_data_by_character_key(char_key)
 
         # get team info
         team_key = self.data_manager.get_team_key_by_character_key(char_key)
-        team_info = self.data_manager.get_team_info_by_team_key(team_key)
+        team_info = self.data_manager.get_team_data_by_team_key(team_key)
 
         if team_key is None:
             await ctx.send(f"Character '{character_name}' not been assigned to a team!")
@@ -132,10 +132,10 @@ class CharacterCommands(commands.Cog, name="Character Commands"):
         character_team_map_list = []
         for team_key in self.data_manager.get_all_team_keys():
             char_key = self.data_manager.get_character_key_by_team_key(team_key)
-            char_name = self.data_manager.get_character_info_by_character_key(char_key)[
+            char_name = self.data_manager.get_character_data_by_character_key(char_key)[
                 "name"
             ]
-            team_name = self.data_manager.get_team_info_by_team_key(team_key)[
+            team_name = self.data_manager.get_team_data_by_team_key(team_key)[
                 "abbreviation"
             ]
             character_team_map_list.append([char_name, team_name])
@@ -165,10 +165,10 @@ class CharacterCommands(commands.Cog, name="Character Commands"):
         rand_char_key = self.data_manager.get_character_key_by_team_key(rand_team_key)
 
         # Get character and team info
-        char_name = self.data_manager.get_character_info_by_character_key(
+        char_name = self.data_manager.get_character_data_by_character_key(
             rand_char_key
         )["name"]
-        team_name = self.data_manager.get_team_info_by_team_key(rand_team_key)["name"]
+        team_name = self.data_manager.get_team_data_by_team_key(rand_team_key)["name"]
 
         embed = discord.Embed(
             title=f"🏈 {team_name}",
@@ -185,11 +185,11 @@ class CharacterCommands(commands.Cog, name="Character Commands"):
 
         # get character info
         char_key = character_name.lower()
-        char_info = self.data_manager.get_character_info_by_character_key(char_key)
+        char_info = self.data_manager.get_character_data_by_character_key(char_key)
 
         # get team info
         team_key = self.data_manager.get_team_key_by_character_key(char_key)
-        team_info = self.data_manager.get_team_info_by_team_key(team_key)
+        team_info = self.data_manager.get_team_data_by_team_key(team_key)
 
         if team_key is None:
             await ctx.send(f"Character '{character_name}' not been assigned to a team!")

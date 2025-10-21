@@ -63,20 +63,20 @@ class StoryCommands(commands.Cog, name="Story Commands"):
             game_id = game["id"]
 
             home_team_key = game["homeTeam"]["name"].lower().replace(" ", "_")
-            home_team_info = self.data_manager.get_team_info_by_team_key(home_team_key)
+            home_team_info = self.data_manager.get_team_data_by_team_key(home_team_key)
             home_team_char_key = self.data_manager.get_character_key_by_team_key(
                 home_team_key
             )
-            home_team_char_info = self.data_manager.get_character_info_by_character_key(
+            home_team_char_info = self.data_manager.get_character_data_by_character_key(
                 home_team_char_key
             )
 
             away_team_key = game["awayTeam"]["name"].lower().replace(" ", "_")
-            away_team_info = self.data_manager.get_team_info_by_team_key(away_team_key)
+            away_team_info = self.data_manager.get_team_data_by_team_key(away_team_key)
             away_team_char_key = self.data_manager.get_character_key_by_team_key(
                 away_team_key
             )
-            away_team_char_info = self.data_manager.get_character_info_by_character_key(
+            away_team_char_info = self.data_manager.get_character_data_by_character_key(
                 away_team_char_key
             )
 
@@ -191,22 +191,22 @@ class StoryCommands(commands.Cog, name="Story Commands"):
         game_response = response[0]
 
         home_team_key = game_response["homeTeam"]["name"].lower().replace(" ", "_")
-        home_team_info = self.data_manager.get_team_info_by_team_key(home_team_key)
+        home_team_info = self.data_manager.get_team_data_by_team_key(home_team_key)
         home_team_id = game_response["homeTeam"]["id"]
         home_team_char_key = self.data_manager.get_character_key_by_team_key(
             home_team_key
         )
-        home_team_char_info = self.data_manager.get_character_info_by_character_key(
+        home_team_char_info = self.data_manager.get_character_data_by_character_key(
             home_team_char_key
         )
 
         away_team_key = game_response["awayTeam"]["name"].lower().replace(" ", "_")
-        away_team_info = self.data_manager.get_team_info_by_team_key(away_team_key)
+        away_team_info = self.data_manager.get_team_data_by_team_key(away_team_key)
         away_team_id = game_response["awayTeam"]["id"]
         away_team_char_key = self.data_manager.get_character_key_by_team_key(
             away_team_key
         )
-        away_team_char_info = self.data_manager.get_character_info_by_character_key(
+        away_team_char_info = self.data_manager.get_character_data_by_character_key(
             away_team_char_key
         )
 
