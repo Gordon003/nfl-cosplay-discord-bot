@@ -3,6 +3,7 @@ import discord
 from discord.ext import commands
 from loguru import logger
 from table2ascii import table2ascii, PresetStyle
+from utils.color import COLOR_PURPLE
 from utils.nfl_schedule import (
     get_next_scheduled_games_by_team_id,
     get_gameweek_by_offset,
@@ -27,7 +28,7 @@ class NFLCommands(commands.Cog, name="NFL Commands"):
             embed = discord.Embed(
                 title="🏈 NFL Commands",
                 description="Use these commands to explore NFL teams and characters!",
-                color=0x800080,
+                color=COLOR_PURPLE,
             )
             embed.add_field(
                 name="Commands:",

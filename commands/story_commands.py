@@ -2,6 +2,7 @@ import time
 import discord
 from discord.ext import commands
 from loguru import logger
+from utils.color import COLOR_PURPLE
 from utils.nfl_schedule import get_gameweek_by_offset
 from utils.date import convert_date
 
@@ -20,7 +21,7 @@ class StoryCommands(commands.Cog, name="Story Commands"):
             embed = discord.Embed(
                 title="🏈 Story Commands",
                 description="Use these commands to generate a story!",
-                color=0x800080,
+                color=COLOR_PURPLE,
             )
             embed.add_field(
                 name="Commands:",

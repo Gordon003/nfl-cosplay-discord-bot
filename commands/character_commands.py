@@ -4,6 +4,7 @@ from discord.ext import commands
 from loguru import logger
 from table2ascii import table2ascii, PresetStyle
 from utils import parse_discord_arg
+from utils.color import COLOR_LIME, COLOR_PURPLE
 
 
 class CharacterCommands(commands.Cog, name="Character Commands"):
@@ -19,7 +20,7 @@ class CharacterCommands(commands.Cog, name="Character Commands"):
             embed = discord.Embed(
                 title="📺🏈 Character NFL Commands",
                 description="Use these commands to explore character-team assignments!",
-                color=0x800080,
+                color=COLOR_PURPLE,
             )
             embed.add_field(
                 name="Commands:",
@@ -64,7 +65,7 @@ class CharacterCommands(commands.Cog, name="Character Commands"):
         embed = discord.Embed(
             title=f"🏈 {team_info['name']}",
             description=f"**Character:** {char_info['name']}",
-            color=0x00FF00,
+            color=COLOR_LIME,
         )
         await ctx.send(embed=embed)
 
@@ -93,7 +94,7 @@ class CharacterCommands(commands.Cog, name="Character Commands"):
         embed = discord.Embed(
             title=f"👩 {char_info['name']}",
             description=f"**Team:** {team_info['name']}",
-            color=0x00FF00,
+            color=COLOR_LIME,
         )
         await ctx.send(embed=embed)
 
@@ -172,7 +173,7 @@ class CharacterCommands(commands.Cog, name="Character Commands"):
         embed = discord.Embed(
             title=f"🏈 {team_name}",
             description=f"**Character:** {char_name}",
-            color=0x00FF00,
+            color=COLOR_LIME,
         )
         await ctx.send(embed=embed)
 
