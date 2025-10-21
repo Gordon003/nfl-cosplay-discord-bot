@@ -10,12 +10,13 @@ from loguru import logger
 
 # Load env
 load_dotenv()
-TOKEN = os.getenv('DISCORD_TOKEN')
-GUILD = os.getenv('DISCORD_GUILD')
+TOKEN = os.getenv("DISCORD_TOKEN")
+GUILD = os.getenv("DISCORD_GUILD")
 
 # Bot setup
 intents = discord.Intents.default()
 intents.message_content = True
+
 
 class MyBot(commands.Bot):
 
@@ -29,10 +30,10 @@ class MyBot(commands.Bot):
         self.nfl_api_manager = NFLAPIManager(cache_dir="./cache")
 
     async def on_ready(self):
-        logger.info(f'{self.user} has connected to Discord!')
+        logger.info(f"{self.user} has connected to Discord!")
         for guild in self.guilds:
-            logger.info(f'Connected to: {guild.name} (id: {guild.id})')
-        
+            logger.info(f"Connected to: {guild.name} (id: {guild.id})")
+
         # Load cogs after bot is ready
         await self.load_cogs()
 
@@ -41,7 +42,9 @@ class MyBot(commands.Bot):
         if isinstance(error, commands.CommandNotFound):
             await ctx.send(f"❌ Command not found! Try `!help` for available commands.")
         elif isinstance(error, commands.MissingRequiredArgument):
-            await ctx.send(f"❌ Missing required argument! Check `!help {ctx.command}` for usage.")
+            await ctx.send(
+                f"❌ Missing required argument! Check `!help {ctx.command}` for usage."
+            )
         elif isinstance(error, commands.MissingPermissions):
             await ctx.send(f"❌ You don't have permission to use this command!")
         else:
@@ -52,22 +55,24 @@ class MyBot(commands.Bot):
         """Load all command modules"""
         try:
             # Load Character commands
-            await self.load_extension('commands.character_commands')
+            await self.load_extension("commands.character_commands")
             logger.info("✅ Loaded Character commands")
-            
+
             # Load NFL commands
-            await self.load_extension('commands.nfl_commands')
+            await self.load_extension("commands.nfl_commands")
             logger.info("✅ Loaded NFL commands")
 
             # Load Story commands
-            await self.load_extension('commands.story_commands')
+            await self.load_extension("commands.story_commands")
             logger.info("✅ Loaded Story commands")
-            
+
         except Exception as e:
             logger.error(f"❌ Failed to load cogs: {e}")
 
+
 # Create bot instance
-bot = MyBot(command_prefix='!', intents=intents)
+bot = MyBot(command_prefix="!", intents=intents)
+
 
 async def main():
     """Main function to start the bot"""
@@ -75,6 +80,7 @@ async def main():
         await bot.start(TOKEN)
     except Exception as e:
         logger.error(f"❌ Failed to start bot: {e}")
+
 
 if __name__ == "__main__":
     asyncio.run(main())

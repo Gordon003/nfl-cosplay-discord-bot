@@ -1,9 +1,10 @@
 import json
 from loguru import logger
 
+
 def load_json(file_path):
     try:
-        with open(file_path, 'r', encoding='utf-8') as f:
+        with open(file_path, "r", encoding="utf-8") as f:
             return json.load(f)
     except FileNotFoundError:
         logger.error(f"❌ Teams file not found: {file_path}")
@@ -15,16 +16,19 @@ def load_json(file_path):
 
 def load_nfl_teams():
     """Load NFL teams from JSON file"""
-    return load_json('data/nfl_teams.json')
+    return load_json("data/nfl_teams.json")
+
 
 def load_characters():
     """Load Characters from JSON file"""
-    return load_json('data/characters.json')
-    
+    return load_json("data/characters.json")
+
+
 def load_nfl_team_character_mapping():
     """Load Characters x NFL Mapping from JSON file"""
-    return load_json('data/character_nfl_mapping.json')
+    return load_json("data/character_nfl_mapping.json")
+
 
 def load_storyline():
     """Load Storyline from JSON file"""
-    return load_json('data/storyline.json')
+    return load_json("data/storyline.json")
