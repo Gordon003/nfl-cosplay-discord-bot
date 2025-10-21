@@ -52,7 +52,7 @@ class NFLCommands(commands.Cog, name="NFL Commands"):
     async def get_gameweek(self, ctx, period: str = "current"):
         # get latest scores from NFL API
         try:
-            response = await self.bot.nfl_api_manager.get_nfl_matches()
+            response = await self.bot.nfl_api_manager.get_nfl_all_matches()
         except:
             await ctx.send(nfl_api_matches_error)
             return
@@ -111,7 +111,7 @@ class NFLCommands(commands.Cog, name="NFL Commands"):
 
         # call nfl api
         try:
-            response = await self.bot.nfl_api_manager.get_nfl_matches()
+            response = await self.bot.nfl_api_manager.get_nfl_all_matches()
         except Exception as e:
             await ctx.send(f"Failed to get matches: {e}")
             return
@@ -153,7 +153,7 @@ class NFLCommands(commands.Cog, name="NFL Commands"):
     async def get_upcoming_week_games(self, ctx):
         """Get latest scores from previous week"""
         try:
-            response = await self.bot.nfl_api_manager.get_nfl_matches()
+            response = await self.bot.nfl_api_manager.get_nfl_all_matches()
         except:
             await ctx.send(nfl_api_matches_error)
             return

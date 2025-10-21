@@ -44,7 +44,7 @@ class StoryCommands(commands.Cog, name="Story Commands"):
     async def story_gameweek(self, ctx, period: str = "current"):
         # get latest scores from NFL API
         try:
-            response = await self.bot.nfl_api_manager.get_nfl_matches()
+            response = await self.bot.nfl_api_manager.get_nfl_all_matches()
         except Exception as e:
             await ctx.send(f"Failed to get matches: {e}")
             return
@@ -183,7 +183,7 @@ class StoryCommands(commands.Cog, name="Story Commands"):
 
         # get latest scores from NFL API
         try:
-            response = await self.bot.nfl_api_manager.get_nfl_specific_match(match_id)
+            response = await self.bot.nfl_api_manager.get_nfl_specific_matches(match_id)
         except Exception as e:
             await ctx.send(f"Failed to get match {match_id}: {e}")
             return

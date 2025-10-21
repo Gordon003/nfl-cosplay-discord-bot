@@ -8,6 +8,7 @@ from utils.read_json import (
     load_storyline,
 )
 
+DATA_CACHE_EXPIRATION_HOUR = 24
 
 class DataManager:
 
@@ -25,7 +26,7 @@ class DataManager:
             logger.error(f"❌ Error loading static data: {e}")
 
         # load cache
-        self.cache = APICache(cache_dir="./cache", expiration_hours=24)
+        self.cache = APICache(cache_dir="./cache", expiration_hours=DATA_CACHE_EXPIRATION_HOUR)
         logger.debug("✅ Loaded API Cache")
 
     ### CHARACTERS AND NFL TEAMS ###

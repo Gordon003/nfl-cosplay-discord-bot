@@ -1,5 +1,4 @@
 import os
-import pickle
 from loguru import logger
 import requests
 import json
@@ -88,8 +87,8 @@ class NFLAPIManager:
             logger.error(f"Request failed: {response.status_code} - {response.text}")
             return None
 
-    async def get_nfl_matches(self):
-        """Get NFL matches from the API"""
+    async def get_nfl_all_matches(self):
+        """Get all NFL matches from API"""
 
         full_url = f"{self.base_nfl_ncca_api_url}/matches"
 
@@ -103,8 +102,8 @@ class NFLAPIManager:
             logger.error(f"Failed to get NFL matches: {e}")
             raise Exception("Failed to get NFL matches")
 
-    async def get_nfl_specific_match(self, matchid):
-        """Get a specific NFL match by ID"""
+    async def get_nfl_specific_matches(self, matchid):
+        """Get a specific NFL matches by ID"""
 
         # check if matchid is already cached
         cache_file = os.path.join(self.match_cache_dir, f"{matchid}.json")
